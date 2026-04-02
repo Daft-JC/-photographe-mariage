@@ -31,3 +31,101 @@ h1, h2, h3, h4, h5 {
   line-height: 1.15;
   letter-spacing: 0.02em;
 }
+
+/* ─── RESPONSIVE LAYOUT CLASSES ─── */
+
+.px-site { padding-left: 3rem; padding-right: 3rem; }
+
+.grid-home-portfolio {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  gap: 1rem;
+}
+
+.grid-2col-about  { display: grid; grid-template-columns: 1fr 1fr; gap: 5rem; align-items: center; }
+.grid-2col-intro  { display: grid; grid-template-columns: 1fr 1fr; gap: 6rem; align-items: center; }
+.grid-philosophy  { display: grid; grid-template-columns: repeat(3, 1fr); gap: 4rem; }
+.grid-steps       { display: grid; grid-template-columns: repeat(4, 1fr); gap: 3rem; }
+.grid-formules    { display: grid; grid-template-columns: repeat(3, 1fr); gap: 2rem; }
+.grid-articles    { display: grid; grid-template-columns: repeat(2, 1fr); gap: 4rem 3rem; }
+.grid-contact-layout { display: grid; grid-template-columns: 1fr 1.8fr; gap: 7rem; align-items: start; }
+
+.grid-featured-article {
+  display: grid;
+  grid-template-columns: 1.2fr 1fr;
+  gap: 4rem;
+  align-items: center;
+  text-decoration: none;
+  color: inherit;
+}
+
+.grid-instagram {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 0.5rem;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.grid-footer {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr 1fr;
+  gap: 3rem;
+  margin-bottom: 3rem;
+}
+
+/* ─── MOBILE ─── */
+@media (max-width: 768px) {
+
+  .px-site { padding-left: 1.25rem; padding-right: 1.25rem; }
+
+  /* Portfolio home grid → ligne + 2 carrés */
+  .grid-home-portfolio { grid-template-columns: 1fr 1fr; }
+  .grid-home-portfolio > a:nth-child(1) {
+    grid-column: 1 / -1 !important;
+    grid-row: auto !important;
+    aspect-ratio: 16/9 !important;
+  }
+  .grid-home-portfolio > a:nth-child(2) {
+    grid-column: 1 / -1 !important;
+    grid-row: auto !important;
+    aspect-ratio: 16/9 !important;
+  }
+  .grid-home-portfolio > a:nth-child(3),
+  .grid-home-portfolio > a:nth-child(4) {
+    grid-column: span 1 !important;
+    grid-row: auto !important;
+    aspect-ratio: 1/1 !important;
+  }
+
+  /* 2-col → 1-col */
+  .grid-2col-about,
+  .grid-2col-intro  { grid-template-columns: 1fr; gap: 2.5rem; }
+
+  /* 3-col → 1-col */
+  .grid-philosophy,
+  .grid-formules    { grid-template-columns: 1fr; gap: 2rem; }
+
+  /* Articles 2-col → 1-col */
+  .grid-articles    { grid-template-columns: 1fr; gap: 2.5rem; }
+
+  /* Featured article → stack */
+  .grid-featured-article { grid-template-columns: 1fr; gap: 2rem; }
+
+  /* 4-col steps → 2-col */
+  .grid-steps       { grid-template-columns: 1fr 1fr; gap: 2rem; }
+
+  /* Instagram → 3-col */
+  .grid-instagram   { grid-template-columns: repeat(3, 1fr); padding-left: 1.25rem; padding-right: 1.25rem; }
+
+  /* Footer → 2-col */
+  .grid-footer      { grid-template-columns: 1fr 1fr; gap: 2rem; }
+
+  /* Contact → stack */
+  .grid-contact-layout { grid-template-columns: 1fr; gap: 2.5rem; }
+}
+
+@media (max-width: 480px) {
+  .grid-footer  { grid-template-columns: 1fr; }
+  .grid-steps   { grid-template-columns: 1fr; }
+}

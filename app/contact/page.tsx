@@ -111,16 +111,8 @@ export default function Contact() {
       {/* Formulaire + infos */}
       <section style={{ background: '#F8F5F2', padding: '2rem 0 7rem' }}>
         <div
-          style={{
-            maxWidth: '1200px',
-            margin: '0 auto',
-            padding: '0 3rem',
-            display: 'grid',
-            gridTemplateColumns: '1fr 1.8fr',
-            gap: '7rem',
-            alignItems: 'start',
-          }}
-          className='grid-cols-1 lg:grid-cols-2'
+          className='grid-contact-layout px-site'
+          style={{ maxWidth: '1200px', margin: '0 auto' }}
         >
           {/* Infos */}
           <div style={{ paddingTop: '0.5rem' }}>

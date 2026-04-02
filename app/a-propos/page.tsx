@@ -62,16 +62,8 @@ export default function APropos() {
       {/* Intro — portrait + texte */}
       <section style={{ background: '#F8F5F2', padding: '2rem 0 7rem' }}>
         <div
-          style={{
-            maxWidth: '1400px',
-            margin: '0 auto',
-            padding: '0 3rem',
-            display: 'grid',
-            gridTemplateColumns: '1fr 1fr',
-            gap: '6rem',
-            alignItems: 'center',
-          }}
-          className='grid-cols-1 md:grid-cols-2'
+          className='grid-2col-intro px-site'
+          style={{ maxWidth: '1400px', margin: '0 auto' }}
         >
           <div style={{ position: 'relative', aspectRatio: '4/5', overflow: 'hidden', borderRadius: '4px' }}>
             <Image
@@ -141,7 +133,7 @@ export default function APropos() {
 
       {/* Vision & approche */}
       <section style={{ background: '#F8F5F2', padding: '7rem 0' }}>
-        <div style={{ maxWidth: '1400px', margin: '0 auto', padding: '0 3rem' }}>
+        <div className='px-site' style={{ maxWidth: '1400px', margin: '0 auto' }}>
           <div style={{ textAlign: 'center', marginBottom: '5rem' }}>
             <span
               style={{
@@ -167,14 +159,7 @@ export default function APropos() {
             </h2>
           </div>
 
-          <div
-            style={{
-              display: 'grid',
-              gridTemplateColumns: 'repeat(3, 1fr)',
-              gap: '4rem',
-            }}
-            className='grid-cols-1 md:grid-cols-3'
-          >
+          <div className='grid-philosophy'>
             {[
               {
                 num: '01',

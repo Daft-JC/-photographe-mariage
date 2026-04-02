@@ -115,15 +115,7 @@ export default function Journal() {
         <div style={{ maxWidth: '1400px', margin: '0 auto', padding: '0 3rem' }}>
           <Link
             href={`/journal/${featured.slug}`}
-            style={{
-              display: 'grid',
-              gridTemplateColumns: '1.2fr 1fr',
-              gap: '4rem',
-              alignItems: 'center',
-              textDecoration: 'none',
-              color: 'inherit',
-            }}
-            className='group grid-cols-1 md:grid-cols-2'
+            className='grid-featured-article group'
           >
             <div style={{ position: 'relative', aspectRatio: '16/10', overflow: 'hidden', borderRadius: '4px' }}>
               <Image
@@ -189,14 +181,7 @@ export default function Journal() {
       {/* Grille articles */}
       <section style={{ background: '#F8F5F2', padding: '5rem 0 7rem' }}>
         <div style={{ maxWidth: '1400px', margin: '0 auto', padding: '0 3rem' }}>
-          <div
-            style={{
-              display: 'grid',
-              gridTemplateColumns: 'repeat(2, 1fr)',
-              gap: '4rem 3rem',
-            }}
-            className='grid-cols-1 md:grid-cols-2'
-          >
+          <div className='grid-articles'>
             {rest.map((article) => (
               <Link
                 key={article.slug}

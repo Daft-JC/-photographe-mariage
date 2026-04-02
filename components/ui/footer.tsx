@@ -4,16 +4,8 @@ export default function Footer() {
   return (
     <footer style={{ background: '#1A1A1A', color: '#F8F5F2', padding: '5rem 0 2rem' }}>
       <div
-        style={{
-          maxWidth: '1400px',
-          margin: '0 auto',
-          padding: '0 3rem',
-          display: 'grid',
-          gridTemplateColumns: '2fr 1fr 1fr 1fr',
-          gap: '3rem',
-          marginBottom: '3rem',
-        }}
-        className='grid-cols-1 md:grid-cols-4'
+        className='grid-footer px-site'
+        style={{ maxWidth: '1400px', margin: '0 auto' }}
       >
         <div>
           <Link href='/' style={{ fontFamily: 'var(--font-heading)', fontSize: '1.2rem', display: 'block', marginBottom: '1.2rem' }}>
@@ -54,10 +46,12 @@ export default function Footer() {
         </div>
       </div>
       <div
+        className='px-site'
         style={{
           maxWidth: '1400px',
           margin: '0 auto',
-          padding: '2rem 3rem 0',
+          paddingTop: '2rem',
+          paddingBottom: 0,
           borderTop: '1px solid rgba(255,255,255,0.08)',
           display: 'flex',
           justifyContent: 'space-between',

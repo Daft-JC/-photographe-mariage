@@ -148,14 +148,7 @@ export default function Services() {
             </h2>
           </div>
 
-          <div
-            style={{
-              display: 'grid',
-              gridTemplateColumns: 'repeat(4, 1fr)',
-              gap: '3rem',
-            }}
-            className='grid-cols-1 sm:grid-cols-2 lg:grid-cols-4'
-          >
+          <div className='grid-steps'>
             {steps.map((step) => (
               <div key={step.num} style={{ textAlign: 'center' }}>
                 <span
@@ -220,14 +213,7 @@ export default function Services() {
             </p>
           </div>
 
-          <div
-            style={{
-              display: 'grid',
-              gridTemplateColumns: 'repeat(3, 1fr)',
-              gap: '2rem',
-            }}
-            className='grid-cols-1 md:grid-cols-3'
-          >
+          <div className='grid-formules'>
             {formules.map((f) => (
               <div
                 key={f.label}

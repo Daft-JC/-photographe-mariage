@@ -48,8 +48,8 @@ export default function Home() {
       >
 
         {/* ── PORTFOLIO APERÇU ── */}
-        <section style={{ background: '#F8F5F2', padding: '7rem 0' }}>
-          <div style={{ maxWidth: '1400px', margin: '0 auto', padding: '0 3rem' }}>
+        <section style={{ background: '#F8F5F2', padding: '5rem 0' }}>
+          <div className='px-site' style={{ maxWidth: '1400px', margin: '0 auto' }}>
             <div style={{ textAlign: 'center', marginBottom: '4rem' }}>
               <span
                 style={{
@@ -77,14 +77,7 @@ export default function Home() {
             </div>
 
             {/* Grid */}
-            <div
-              style={{
-                display: 'grid',
-                gridTemplateColumns: 'repeat(12, 1fr)',
-                gridTemplateRows: 'auto',
-                gap: '1rem',
-              }}
-            >
+            <div className='grid-home-portfolio'>
               {/* Image 1 — tall left */}
               <Link
                 href='/portfolio'
@@ -158,18 +151,10 @@ export default function Home() {
         </section>
 
         {/* ── À PROPOS TEASER ── */}
-        <section style={{ background: '#F8F5F2', padding: '7rem 0' }}>
+        <section style={{ background: '#F8F5F2', padding: '5rem 0' }}>
           <div
-            style={{
-              maxWidth: '1400px',
-              margin: '0 auto',
-              padding: '0 3rem',
-              display: 'grid',
-              gridTemplateColumns: '1fr 1fr',
-              gap: '5rem',
-              alignItems: 'center',
-            }}
-            className='grid-cols-1 md:grid-cols-2'
+            className='grid-2col-about px-site'
+            style={{ maxWidth: '1400px', margin: '0 auto' }}
           >
             <div style={{ position: 'relative', aspectRatio: '3/4', overflow: 'hidden', borderRadius: '4px' }}>
               <Image
@@ -330,8 +315,8 @@ export default function Home() {
         </section>
 
         {/* ── INSTAGRAM ── */}
-        <section style={{ background: '#F8F5F2', padding: '7rem 0' }}>
-          <div style={{ maxWidth: '1400px', margin: '0 auto', padding: '0 3rem', textAlign: 'center', marginBottom: '3rem' }}>
+        <section style={{ background: '#F8F5F2', padding: '5rem 0' }}>
+          <div className='px-site' style={{ maxWidth: '1400px', margin: '0 auto', textAlign: 'center', marginBottom: '3rem' }}>
             <span
               style={{
                 fontFamily: 'var(--font-body)',
@@ -362,17 +347,7 @@ export default function Home() {
               @lamartinastudio
             </a>
           </div>
-          <div
-            style={{
-              display: 'grid',
-              gridTemplateColumns: 'repeat(6, 1fr)',
-              gap: '0.5rem',
-              maxWidth: '1400px',
-              margin: '0 auto',
-              padding: '0 3rem',
-            }}
-            className='grid-cols-3 md:grid-cols-6'
-          >
+          <div className='grid-instagram px-site'>
             {instaPhotos.map((src, i) => (
               <div key={i} style={{ position: 'relative', aspectRatio: '1/1', overflow: 'hidden' }} className='group cursor-pointer'>
                 <Image src={src} alt='' fill className='object-cover transition-transform duration-500 group-hover:scale-110' />
