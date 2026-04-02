@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact — Lamartina Studio</title>
+  <meta name="description" content="Contactez Alessio Lamartina pour votre mariage. Vérifiez les disponibilités et demandez un devis." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500;1,600&family=Raleway:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav class="nav scrolled" id="nav">
+    <div class="nav-inner">
+      <a href="index.html" class="nav-logo">Lamartina <span>Studio</span></a>
+      <ul class="nav-links">
+        <li><a href="index.html">Accueil</a></li>
+        <li><a href="portfolio.html">Portfolio</a></li>
+        <li><a href="a-propos.html">À propos</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="blog.html">Journal</a></li>
+      </ul>
+      <a href="contact.html" class="nav-cta" style="border-color:var(--color-accent);color:var(--color-accent);">Me contacter</a>
+      <button class="nav-toggle" id="navToggle" aria-label="Menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+  <div class="nav-mobile" id="navMobile">
+    <button class="nav-mobile-close" id="navMobileClose">✕ Fermer</button>
+    <a href="index.html">Accueil</a>
+    <a href="portfolio.html">Portfolio</a>
+    <a href="a-propos.html">À propos</a>
+    <a href="services.html">Services</a>
+    <a href="blog.html">Journal</a>
+    <a href="contact.html">Contact</a>
+  </div>
+
+  <!-- PAGE HERO -->
+  <div class="page-hero" style="margin-top: var(--nav-h);">
+    <div class="page-hero-bg" style="background-image: url('https://loremflickr.com/1920/800/wedding,flowers,romantic?lock=9');"></div>
+    <div class="page-hero-overlay"></div>
+    <div class="page-hero-content">
+      <span class="label">Parlons de votre projet</span>
+      <h1>Contact</h1>
+    </div>
+  </div>
+
+  <!-- CONTACT PRINCIPAL -->
+  <section class="contact-section">
+    <div class="contact-inner">
+
+      <!-- INFORMATIONS -->
+      <div class="contact-info">
+        <span class="label fade-up">Entrons en contact</span>
+        <h2 class="fade-up delay-1">Votre mariage mérite<br><em>la plus belle attention</em></h2>
+        <p class="fade-up delay-2">Dites-moi tout sur votre grand jour. Plus vous me donnez de détails, mieux je pourrai vous proposer un accompagnement à la hauteur de vos rêves.</p>
+        <p class="fade-up delay-3">Je réponds à chaque message personnellement, en général sous 48h. Hâte de vous lire.</p>
+
+        <div class="contact-details fade-up delay-3">
+          <div class="contact-detail">
+            <span class="c-label">Email</span>
+            <span class="c-value"><a href="mailto:hello@lamartinastudio.com">hello@lamartinastudio.com</a></span>
+          </div>
+          <div class="contact-detail">
+            <span class="c-label">Téléphone</span>
+            <span class="c-value"><a href="tel:+33600000000">+33 6 00 00 00 00</a></span>
+          </div>
+          <div class="contact-detail">
+            <span class="c-label">Basé à</span>
+            <span class="c-value">Paris, France<br><small style="color:var(--color-gray-m); font-size:0.8em;">Disponible partout en Europe &amp; au-delà</small></span>
+          </div>
+          <div class="contact-detail">
+            <span class="c-label">Délai de réponse</span>
+            <span class="c-value">Sous 48 heures</span>
+          </div>
+        </div>
+
+        <div class="contact-socials fade-up delay-4">
+          <a href="#">Instagram</a>
+          <a href="#">Pinterest</a>
+          <a href="#">Facebook</a>
+        </div>
+      </div>
+
+      <!-- FORMULAIRE -->
+      <div class="contact-form-wrap fade-up delay-2">
+        <form class="contact-form-el">
+          <div class="form-row">
+            <div class="form-group">
+              <label class="form-lbl" for="prenom">Prénom</label>
+              <input class="form-input" type="text" id="prenom" name="prenom" placeholder="Marie" required />
+            </div>
+            <div class="form-group">
+              <label class="form-lbl" for="nom">Nom</label>
+              <input class="form-input" type="text" id="nom" name="nom" placeholder="Dupont" required />
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label class="form-lbl" for="email">Adresse email</label>
+            <input class="form-input" type="email" id="email" name="email" placeholder="marie@exemple.fr" required />
+          </div>
+
+          <div class="form-row">
+            <div class="form-group">
+              <label class="form-lbl" for="date">Date du mariage</label>
+              <input class="form-input" type="date" id="date" name="date" />
+            </div>
+            <div class="form-group">
+              <label class="form-lbl" for="lieu">Lieu du mariage</label>
+              <input class="form-input" type="text" id="lieu" name="lieu" placeholder="Château en Provence…" />
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label class="form-lbl" for="formule">Formule souhaitée</label>
+            <select class="form-input" id="formule" name="formule">
+              <option value="">Je ne sais pas encore…</option>
+              <option value="elopement">Elopement (demi-journée)</option>
+              <option value="journee">Mariage — Une journée</option>
+              <option value="deux-jours">Mariage — Deux jours</option>
+              <option value="autre">Autre / À discuter</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label class="form-lbl" for="message">Votre message</label>
+            <textarea class="form-textarea" id="message" name="message" placeholder="Parlez-moi de vous, de votre mariage, de ce qui compte le plus pour vous en termes de photos…" required></textarea>
+          </div>
+
+          <button type="submit" class="btn btn-primary form-submit">Envoyer mon message</button>
+        </form>
+
+        <div class="form-success">
+          <h3>Merci pour votre message !</h3>
+          <p>Je reviendrai vers vous très bientôt, en général sous 48 heures.<br>Hâte de découvrir votre projet !</p>
+          <br>
+          <a href="portfolio.html" class="btn btn-outline">Découvrir le portfolio</a>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section style="padding: 5rem 0; background: var(--color-white);">
+    <div class="container text-center">
+      <span class="label fade-up">Questions fréquentes</span>
+      <h2 class="fade-up delay-1" style="margin: 0.5rem 0 4rem;">Vous vous demandez…</h2>
+      <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 3rem; text-align: left;" class="fade-up delay-2">
+        <div>
+          <h4 style="font-family: var(--font-heading); font-size: 1.15rem; margin-bottom: 0.8rem;">Vous couvrez quelle région ?</h4>
+          <p style="font-size:0.85rem; line-height:1.9;">Basé en France, je me déplace partout en Europe. L'Italie — ma terre d'origine — a une place particulière dans mon cœur et dans mon esthétique.</p>
+        </div>
+        <div>
+          <h4 style="font-family: var(--font-heading); font-size: 1.15rem; margin-bottom: 0.8rem;">Combien de temps à l'avance ?</h4>
+          <p style="font-size:0.85rem; line-height:1.9;">Les meilleures dates partent 12 à 18 mois à l'avance. Je vous conseille de me contacter le plus tôt possible pour vérifier la disponibilité de votre date.</p>
+        </div>
+        <div>
+          <h4 style="font-family: var(--font-heading); font-size: 1.15rem; margin-bottom: 0.8rem;">Comment réserver ?</h4>
+          <p style="font-size:0.85rem; line-height:1.9;">Après notre appel découverte, je vous envoie un devis et un contrat. La date est sécurisée avec un acompte de 30%. Simple et transparent.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a href="index.html" class="footer-brand-logo">Lamartina <span>Studio</span></a>
+        <p>Photographe de mariage haut de gamme, spécialisé dans les mariages élégants et intimistes en France, Italie et partout en Europe.</p>
+        <div class="footer-brand-social">
+          <a href="#">Instagram</a><a href="#">Pinterest</a><a href="#">Facebook</a>
+        </div>
+      </div>
+      <div class="footer-col"><h4>Navigation</h4><ul>
+        <li><a href="index.html">Accueil</a></li>
+        <li><a href="portfolio.html">Portfolio</a></li>
+        <li><a href="a-propos.html">À propos</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="blog.html">Journal</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul></div>
+      <div class="footer-col"><h4>Portfolio</h4><ul>
+        <li><a href="portfolio.html">Amore</a></li>
+        <li><a href="portfolio.html">Il Giorno</a></li>
+        <li><a href="portfolio.html">Dettagli</a></li>
+        <li><a href="portfolio.html">Ispirazione</a></li>
+      </ul></div>
+      <div class="footer-col"><h4>Contact</h4><ul>
+        <li><a href="mailto:hello@lamartinastudio.com">hello@lamartinastudio.com</a></li>
+        <li><a href="tel:+33600000000">+33 6 00 00 00 00</a></li>
+        <li><a href="contact.html">Disponibilités</a></li>
+      </ul></div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2024 Lamartina Studio — Photographe de Mariage</span>
+      <span>Réalisé avec <span style="color:#be2828">♥</span> &nbsp;·&nbsp; <a href="#">Mentions légales</a></span>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

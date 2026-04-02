@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Journal — Lamartina Studio</title>
+  <meta name="description" content="Le journal d'Alessio Lamartina : reportages de mariages, inspirations et conseils." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500;1,600&family=Raleway:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav class="nav scrolled" id="nav">
+    <div class="nav-inner">
+      <a href="index.html" class="nav-logo">Lamartina <span>Studio</span></a>
+      <ul class="nav-links">
+        <li><a href="index.html">Accueil</a></li>
+        <li><a href="portfolio.html">Portfolio</a></li>
+        <li><a href="a-propos.html">À propos</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="blog.html" class="active">Journal</a></li>
+      </ul>
+      <a href="contact.html" class="nav-cta">Me contacter</a>
+      <button class="nav-toggle" id="navToggle" aria-label="Menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+  <div class="nav-mobile" id="navMobile">
+    <button class="nav-mobile-close" id="navMobileClose">✕ Fermer</button>
+    <a href="index.html">Accueil</a>
+    <a href="portfolio.html">Portfolio</a>
+    <a href="a-propos.html">À propos</a>
+    <a href="services.html">Services</a>
+    <a href="blog.html">Journal</a>
+    <a href="contact.html">Contact</a>
+  </div>
+
+  <!-- PAGE HERO -->
+  <div class="page-hero" style="margin-top: var(--nav-h);">
+    <div class="page-hero-bg" style="background-image: url('https://loremflickr.com/1920/800/bride,groom,wedding?lock=10');"></div>
+    <div class="page-hero-overlay"></div>
+    <div class="page-hero-content">
+      <span class="label">Histoires & Inspirations</span>
+      <h1>Journal</h1>
+    </div>
+  </div>
+
+  <!-- BLOG -->
+  <section class="blog-section">
+    <div class="blog-inner">
+
+      <div class="blog-header">
+        <span class="label fade-up">Le journal</span>
+        <h2 class="fade-up delay-1">Reportages, réflexions<br><em>et inspirations</em></h2>
+        <p class="fade-up delay-2" style="max-width:520px; margin:0 auto;">Un espace pour partager les mariages qui m'ont touché, mes réflexions sur la photographie et des conseils pour votre grand jour.</p>
+      </div>
+
+      <!-- Article à la une -->
+      <div class="blog-featured fade-up">
+        <div class="blog-card-img" style="height: 480px;">
+          <img src="https://loremflickr.com/1200/800/wedding,tuscany,couple?lock=51" alt="Mariage en Toscane" loading="lazy" />
+        </div>
+        <div class="blog-featured-text">
+          <span class="blog-cat">Reportage mariage</span>
+          <h3>Valentina & Marco — Un mariage sous le soleil de Toscane</h3>
+          <p>Entre les vignes dorées et les cyprès centenaires, Valentina et Marco ont dit oui dans la lumière la plus belle qui soit. Un mariage intimiste, vibrant d'authenticité, que j'ai eu la chance de capturer de la première à la dernière minute.</p>
+          <span class="blog-meta">15 septembre 2024 &nbsp;·&nbsp; 8 min de lecture</span>
+          <br/><br/>
+          <a href="#" class="btn btn-outline" style="font-size:0.68rem;">Lire le reportage</a>
+        </div>
+      </div>
+
+      <!-- Grille articles -->
+      <div class="blog-grid">
+
+        <div class="blog-card fade-up delay-1">
+          <div class="blog-card-img">
+            <img src="https://loremflickr.com/800/540/wedding,beach,elopement?lock=52" alt="Elopement en bord de mer" loading="lazy" />
+          </div>
+          <span class="blog-cat">Elopement</span>
+          <h3>Lucie & Thomas — Elopement au bord des falaises bretonnes</h3>
+          <p>Juste eux deux, le vent, les vagues et la lumière rasante d'un matin d'octobre. Un elopement comme j'en rêvais.</p>
+          <span class="blog-meta">3 octobre 2024 &nbsp;·&nbsp; 5 min</span>
+        </div>
+
+        <div class="blog-card fade-up delay-2">
+          <div class="blog-card-img">
+            <img src="https://loremflickr.com/800/540/wedding,bride,preparation?lock=53" alt="Conseils photo mariage" loading="lazy" />
+          </div>
+          <span class="blog-cat">Conseils</span>
+          <h3>5 choses à savoir avant de choisir votre photographe de mariage</h3>
+          <p>Un mariage, une seule chance de le photographier. Voici les questions essentielles à poser avant de signer.</p>
+          <span class="blog-meta">20 août 2024 &nbsp;·&nbsp; 7 min</span>
+        </div>
+
+        <div class="blog-card fade-up delay-3">
+          <div class="blog-card-img">
+            <img src="https://loremflickr.com/800/540/wedding,ceremony,church?lock=54" alt="Grand mariage" loading="lazy" />
+          </div>
+          <span class="blog-cat">Reportage mariage</span>
+          <h3>Camille & Julien — Grand mariage au Château de la Motte</h3>
+          <p>200 invités, une nuit de juillet étoilée et deux mariés rayonnants. La fête dans toute sa splendeur.</p>
+          <span class="blog-meta">28 juillet 2024 &nbsp;·&nbsp; 6 min</span>
+        </div>
+
+        <div class="blog-card fade-up delay-1">
+          <div class="blog-card-img">
+            <img src="https://loremflickr.com/800/540/wedding,sunset,couple?lock=55" alt="Heure magique mariage" loading="lazy" />
+          </div>
+          <span class="blog-cat">Inspiration</span>
+          <h3>Pourquoi l'heure magique est indispensable dans vos photos</h3>
+          <p>La golden hour, ce moment de grâce photographique. Comment l'intégrer dans votre planning de mariage.</p>
+          <span class="blog-meta">10 juin 2024 &nbsp;·&nbsp; 4 min</span>
+        </div>
+
+        <div class="blog-card fade-up delay-2">
+          <div class="blog-card-img">
+            <img src="https://loremflickr.com/800/540/wedding,italy,bride?lock=56" alt="Mariage en Italie" loading="lazy" />
+          </div>
+          <span class="blog-cat">Destination</span>
+          <h3>Se marier en Italie : tout ce qu'il faut savoir</h3>
+          <p>La Toscane, le lac de Côme, la Côte Amalfitaine… L'Italie est une scène de mariage incomparable. Guide pratique.</p>
+          <span class="blog-meta">5 mai 2024 &nbsp;·&nbsp; 9 min</span>
+        </div>
+
+        <div class="blog-card fade-up delay-3">
+          <div class="blog-card-img">
+            <img src="https://loremflickr.com/800/540/couple,engagement,romance?lock=57" alt="Séance engagement" loading="lazy" />
+          </div>
+          <span class="blog-cat">Conseils</span>
+          <h3>La séance engagement : pourquoi c'est indispensable</h3>
+          <p>Apprendre à se connaître avant le grand jour, créer des souvenirs supplémentaires, briser la gêne devant l'objectif…</p>
+          <span class="blog-meta">15 avril 2024 &nbsp;·&nbsp; 5 min</span>
+        </div>
+
+      </div>
+
+      <div class="text-center fade-up" style="margin-top: 4rem;">
+        <a href="#" class="btn btn-outline">Voir plus d'articles</a>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- NEWSLETTER -->
+  <section style="padding: 6rem 0; background: var(--color-white);">
+    <div class="container text-center">
+      <span class="label fade-up">Newsletter</span>
+      <h2 class="fade-up delay-1" style="margin: 0.5rem 0 1rem;">Inspirations &amp; coulisses</h2>
+      <p class="fade-up delay-2" style="max-width: 480px; margin: 0 auto 2rem;">Rejoignez les couples qui reçoivent mes reportages, mes inspirations et mes conseils. Doux, rare, sans spam.</p>
+      <form class="fade-up delay-3" style="display:flex; gap:0; max-width:420px; margin:0 auto;" onsubmit="return false;">
+        <input type="email" placeholder="votre@email.fr" class="form-input" style="flex:1; border-right:none;" />
+        <button type="submit" class="btn btn-primary" style="white-space:nowrap; padding: 0.95rem 1.5rem;">S'abonner</button>
+      </form>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="cta-section">
+    <div class="cta-bg" style="background-image: url('https://loremflickr.com/1920/800/wedding,couple,happy?lock=11');"></div>
+    <div class="cta-overlay"></div>
+    <div class="cta-content">
+      <span class="label">Votre tour</span>
+      <h2>Prêts à écrire<br><em>votre histoire ?</em></h2>
+      <p>Votre mariage mérite d'être raconté avec autant de soin et de beauté.</p>
+      <a href="contact.html" class="btn btn-outline-w">Me contacter</a>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a href="index.html" class="footer-brand-logo">Lamartina <span>Studio</span></a>
+        <p>Photographe de mariage haut de gamme, spécialisé dans les mariages élégants et intimistes en France, Italie et partout en Europe.</p>
+        <div class="footer-brand-social">
+          <a href="#">Instagram</a><a href="#">Pinterest</a><a href="#">Facebook</a>
+        </div>
+      </div>
+      <div class="footer-col"><h4>Navigation</h4><ul>
+        <li><a href="index.html">Accueil</a></li>
+        <li><a href="portfolio.html">Portfolio</a></li>
+        <li><a href="a-propos.html">À propos</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="blog.html">Journal</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul></div>
+      <div class="footer-col"><h4>Portfolio</h4><ul>
+        <li><a href="portfolio.html">Amore</a></li>
+        <li><a href="portfolio.html">Il Giorno</a></li>
+        <li><a href="portfolio.html">Dettagli</a></li>
+        <li><a href="portfolio.html">Ispirazione</a></li>
+      </ul></div>
+      <div class="footer-col"><h4>Contact</h4><ul>
+        <li><a href="mailto:hello@lamartinastudio.com">hello@lamartinastudio.com</a></li>
+        <li><a href="tel:+33600000000">+33 6 00 00 00 00</a></li>
+        <li><a href="contact.html">Disponibilités</a></li>
+      </ul></div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2024 Lamartina Studio — Photographe de Mariage</span>
+      <span>Réalisé avec <span style="color:#be2828">♥</span> &nbsp;·&nbsp; <a href="#">Mentions légales</a></span>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

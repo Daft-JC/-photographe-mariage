@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Portfolio — Lamartina Studio</title>
+  <meta name="description" content="Portfolio de Lamartina Studio : mariages, couples, détails et éditorial." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500;1,600&family=Raleway:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav class="nav scrolled" id="nav">
+    <div class="nav-inner">
+      <a href="index.html" class="nav-logo">Lamartina <span>Studio</span></a>
+      <ul class="nav-links">
+        <li><a href="index.html">Accueil</a></li>
+        <li><a href="portfolio.html" class="active">Portfolio</a></li>
+        <li><a href="a-propos.html">À propos</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="blog.html">Journal</a></li>
+      </ul>
+      <a href="contact.html" class="nav-cta">Me contacter</a>
+      <button class="nav-toggle" id="navToggle" aria-label="Menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+  <div class="nav-mobile" id="navMobile">
+    <button class="nav-mobile-close" id="navMobileClose">✕ Fermer</button>
+    <a href="index.html">Accueil</a>
+    <a href="portfolio.html">Portfolio</a>
+    <a href="a-propos.html">À propos</a>
+    <a href="services.html">Services</a>
+    <a href="blog.html">Journal</a>
+    <a href="contact.html">Contact</a>
+  </div>
+
+  <!-- PAGE HERO -->
+  <div class="page-hero" style="margin-top: var(--nav-h);">
+    <div class="page-hero-bg" style="background-image: url('https://loremflickr.com/1920/800/wedding,bride,ceremony?lock=3');"></div>
+    <div class="page-hero-overlay"></div>
+    <div class="page-hero-content">
+      <span class="label">Galerie</span>
+      <h1>Portfolio</h1>
+    </div>
+  </div>
+
+  <!-- FILTRES -->
+  <div class="portfolio-filter-bar">
+    <div class="filter-tabs">
+      <button class="filter-tab active" data-filter="all">Tout</button>
+      <button class="filter-tab" data-filter="amore">Amore — Couples</button>
+      <button class="filter-tab" data-filter="il-giorno">Il Giorno — Mariages</button>
+      <button class="filter-tab" data-filter="dettagli">Dettagli — Détails</button>
+      <button class="filter-tab" data-filter="ispirazione">Ispirazione — Éditorial</button>
+    </div>
+  </div>
+
+  <!-- GALERIE MASONRY -->
+  <main style="background: var(--color-bg);">
+    <div class="portfolio-masonry">
+
+      <div class="gallery-item" data-category="amore">
+        <img src="https://loremflickr.com/800/1100/bride,couple,wedding?lock=101" alt="Couple amoureux" loading="lazy" />
+        <div class="gallery-item-overlay"><svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="1"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg></div>
+      </div>
+
+      <div class="gallery-item" data-category="il-giorno">
+        <img src="https://loremflickr.com/800/540/wedding,ceremony,church?lock=102" alt="Cérémonie de mariage" loading="lazy" />
+        <div class="gallery-item-overlay"><svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="1"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg></div>
+      </div>
+
+      <div class="gallery-item" data-category="dettagli">
+        <img src="https://loremflickr.com/800/800/wedding,flowers,bouquet?lock=103" alt="Bouquet de mariée" loading="lazy" />
+        <div class="gallery-item-overlay"><svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="1"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg></div>
+      </div>
+
+      <div class="gallery-item" data-category="amore">
+        <img src="https://loremflickr.com/800/600/bride,groom,couple?lock=104" alt="Portrait du couple" loading="lazy" />
+        <div class="gallery-item-overlay"><svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="1"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg></div>
+      </div>
+
+      <div class="gallery-item" data-category="ispirazione">
+        <img src="https://loremflickr.com/800/1050/bride,fashion,wedding?lock=105" alt="Portrait éditorial mariée" loading="lazy" />
+        <div class="gallery-item-overlay"><svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="1"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg></div>
+      </div>
+
+      <div class="gallery-item" data-category="il-giorno">
+        <img src="https://loremflickr.com/800/600/wedding,reception,dinner?lock=106" alt="Réception de mariage" loading="lazy" />
+        <div class="gallery-item-overlay"><svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="1"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg></div>
+      </div>
+
+      <div class="gallery-item" data-category="dettagli">
+        <img src="https://loremflickr.com/800/560/wedding,ring,jewelry?lock=107" alt="Alliances de mariage" loading="lazy" />
+        <div class="gallery-item-overlay"><svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="1"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg></div>
+      </div>
+
+      <div class="gallery-item" data-category="amore">
+        <img src="https://loremflickr.com/800/1000/couple,romance,wedding?lock=108" alt="Regard amoureux" loading="lazy" />
+        <div class="gallery-item-overlay"><svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="1"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg></div>
+      </div>
+
+      <div class="gallery-item" data-category="il-giorno">
+        <img src="https://loremflickr.com/800/750/wedding,dance,couple?lock=109" alt="Première danse" loading="lazy" />
+        <div class="gallery-item-overlay"><svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="1"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg></div>
+      </div>
+
+      <div class="gallery-item" data-category="ispirazione">
+        <img src="https://loremflickr.com/800/600/bride,editorial,fashion?lock=110" alt="Photo de mode mariage" loading="lazy" />
+        <div class="gallery-item-overlay"><svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="1"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg></div>
+      </div>
+
+      <div class="gallery-item" data-category="dettagli">
+        <img src="https://loremflickr.com/800/900/wedding,dress,bride?lock=111" alt="Robe de mariée" loading="lazy" />
+        <div class="gallery-item-overlay"><svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="1"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg></div>
+      </div>
+
+      <div class="gallery-item" data-category="amore">
+        <img src="https://loremflickr.com/800/540/couple,sunset,wedding?lock=112" alt="Couple au coucher du soleil" loading="lazy" />
+        <div class="gallery-item-overlay"><svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="1"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg></div>
+      </div>
+
+      <div class="gallery-item" data-category="il-giorno">
+        <img src="https://loremflickr.com/800/1100/wedding,vows,ceremony?lock=113" alt="Échange des vœux" loading="lazy" />
+        <div class="gallery-item-overlay"><svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="1"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg></div>
+      </div>
+
+      <div class="gallery-item" data-category="ispirazione">
+        <img src="https://loremflickr.com/800/700/bride,portrait,wedding?lock=114" alt="Portrait artistique mariée" loading="lazy" />
+        <div class="gallery-item-overlay"><svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="1"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg></div>
+      </div>
+
+      <div class="gallery-item" data-category="dettagli">
+        <img src="https://loremflickr.com/800/600/wedding,table,decoration?lock=115" alt="Décoration table de mariage" loading="lazy" />
+        <div class="gallery-item-overlay"><svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="1"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg></div>
+      </div>
+
+      <div class="gallery-item" data-category="amore">
+        <img src="https://loremflickr.com/800/1050/wedding,couple,embrace?lock=116" alt="Étreinte des mariés" loading="lazy" />
+        <div class="gallery-item-overlay"><svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="1"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg></div>
+      </div>
+
+      <div class="gallery-item" data-category="il-giorno">
+        <img src="https://loremflickr.com/800/580/wedding,guests,celebration?lock=117" alt="Célébration mariage" loading="lazy" />
+        <div class="gallery-item-overlay"><svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="1"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg></div>
+      </div>
+
+      <div class="gallery-item" data-category="ispirazione">
+        <img src="https://loremflickr.com/800/1000/bride,veil,wedding?lock=118" alt="Voile de mariée" loading="lazy" />
+        <div class="gallery-item-overlay"><svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="1"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg></div>
+      </div>
+
+    </div>
+  </main>
+
+  <!-- CTA -->
+  <section class="cta-section">
+    <div class="cta-bg" style="background-image: url('https://loremflickr.com/1920/800/wedding,couple,romantic?lock=5');"></div>
+    <div class="cta-overlay"></div>
+    <div class="cta-content">
+      <span class="label">Votre tour</span>
+      <h2>Vous avez un mariage à venir ?</h2>
+      <p>Discutons de votre projet et créons ensemble de belles images qui traverseront le temps.</p>
+      <a href="contact.html" class="btn btn-outline-w">Me contacter</a>
+    </div>
+  </section>
+
+  <!-- LIGHTBOX -->
+  <div class="lightbox" id="lightbox">
+    <div class="lightbox-img-wrap">
+      <button class="lightbox-close">✕ Fermer</button>
+      <img class="lightbox-img" src="" alt="Photo agrandie" />
+      <button class="lightbox-nav lightbox-prev">&#8592;</button>
+      <button class="lightbox-nav lightbox-next">&#8594;</button>
+    </div>
+  </div>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a href="index.html" class="footer-brand-logo">Lamartina <span>Studio</span></a>
+        <p>Photographe de mariage haut de gamme, spécialisé dans les mariages élégants et intimistes en France, Italie et partout en Europe.</p>
+        <div class="footer-brand-social">
+          <a href="#">Instagram</a><a href="#">Pinterest</a><a href="#">Facebook</a>
+        </div>
+      </div>
+      <div class="footer-col"><h4>Navigation</h4><ul>
+        <li><a href="index.html">Accueil</a></li>
+        <li><a href="portfolio.html">Portfolio</a></li>
+        <li><a href="a-propos.html">À propos</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="blog.html">Journal</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul></div>
+      <div class="footer-col"><h4>Portfolio</h4><ul>
+        <li><a href="portfolio.html">Amore</a></li>
+        <li><a href="portfolio.html">Il Giorno</a></li>
+        <li><a href="portfolio.html">Dettagli</a></li>
+        <li><a href="portfolio.html">Ispirazione</a></li>
+      </ul></div>
+      <div class="footer-col"><h4>Contact</h4><ul>
+        <li><a href="mailto:hello@lamartinastudio.com">hello@lamartinastudio.com</a></li>
+        <li><a href="tel:+33600000000">+33 6 00 00 00 00</a></li>
+        <li><a href="contact.html">Disponibilités</a></li>
+      </ul></div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2024 Lamartina Studio — Photographe de Mariage</span>
+      <span>Réalisé avec <span style="color:#be2828">♥</span> &nbsp;·&nbsp; <a href="#">Mentions légales</a></span>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
