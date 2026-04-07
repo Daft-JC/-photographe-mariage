@@ -1,11 +1,103 @@
+import Script from 'next/script';
 import Image from 'next/image';
 import Link from 'next/link';
 import Nav from '@/components/ui/nav';
 import Footer from '@/components/ui/footer';
 
-export const metadata = {
-  title: 'Services & Expérience — Lamartina Studio',
-  description: "Découvrez l'expérience Lamartina Studio et les formules de photographie de mariage proposées.",
+import type { Metadata } from 'next';
+
+const SITE_URL = 'https://www.lamartinastudio.com';
+
+export const metadata: Metadata = {
+  title: 'Services & Tarifs — Formules Photographie de Mariage',
+  description:
+    "Découvrez les formules et tarifs de Lamartina Studio pour votre reportage photo de mariage. Demi-journée, journée complète, séance engagement. Photographe haut de gamme disponible en France, Italie et Europe.",
+  keywords: [
+    'tarif photographe mariage',
+    'prix photographe mariage France',
+    'prix photographe mariage Provence',
+    'formule photographe mariage',
+    'prestation photographe mariage',
+    'offre photographe mariage',
+    'devis photographe mariage',
+    'package photographe mariage',
+    'photographe mariage journée complète',
+    'photographe mariage demi-journée',
+    'séance engagement tarif',
+    'séance couple avant mariage prix',
+    'combien coûte photographe mariage',
+    'budget photographe mariage',
+    'wedding photographer price France',
+    'wedding photography packages France',
+    'luxury wedding photographer rates',
+    'fine art wedding photographer pricing',
+    'Lamartina Studio tarifs',
+    'Lamartina Studio formules',
+    'livraison galerie mariage',
+    'galerie haute résolution mariage',
+    'retouche photo mariage',
+  ],
+  alternates: {
+    canonical: `${SITE_URL}/services`,
+  },
+  openGraph: {
+    title: 'Services & Tarifs — Lamartina Studio',
+    description:
+      'Formules et tarifs pour votre reportage photo de mariage haut de gamme avec Alessio Lamartina.',
+    url: `${SITE_URL}/services`,
+    type: 'website',
+  },
+};
+
+const servicesLd = {
+  '@context': 'https://schema.org',
+  '@graph': [
+    {
+      '@type': 'BreadcrumbList',
+      itemListElement: [
+        { '@type': 'ListItem', position: 1, name: 'Accueil', item: 'https://www.lamartinastudio.com' },
+        { '@type': 'ListItem', position: 2, name: 'Services', item: 'https://www.lamartinastudio.com/services' },
+      ],
+    },
+    {
+      '@type': 'Service',
+      name: 'Reportage Photo de Mariage',
+      provider: { '@type': 'LocalBusiness', name: 'Lamartina Studio' },
+      serviceType: 'Photographie de mariage',
+      description: 'Reportage photo de mariage haut de gamme en France, Italie et Europe. Style naturel, émotionnel et intemporel. Livraison en galerie haute résolution sous 6 à 8 semaines.',
+      areaServed: ['France', 'Italie', 'Europe'],
+      hasOfferCatalog: {
+        '@type': 'OfferCatalog',
+        name: 'Formules de Photographie de Mariage',
+        itemListElement: [
+          {
+            '@type': 'Offer',
+            itemOffered: {
+              '@type': 'Service',
+              name: 'Demi-journée',
+              description: 'Couverture demi-journée de votre mariage (4 heures environ). Idéale pour les cérémonies civiles ou mariages intimistes.',
+            },
+          },
+          {
+            '@type': 'Offer',
+            itemOffered: {
+              '@type': 'Service',
+              name: 'Journée complète',
+              description: 'Couverture complète de votre mariage du matin au dîner. Présence discrète et attentive tout au long de la journée.',
+            },
+          },
+          {
+            '@type': 'Offer',
+            itemOffered: {
+              '@type': 'Service',
+              name: 'Séance Engagement',
+              description: 'Séance photo de couple avant le mariage. Idéale pour apprendre à se connaître et créer des souvenirs inoubliables.',
+            },
+          },
+        ],
+      },
+    },
+  ],
 };
 
 const steps = [
@@ -61,6 +153,12 @@ const formules = [
 export default function Services() {
   return (
     <>
+      <Script
+        id='json-ld-services'
+        type='application/ld+json'
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(servicesLd) }}
+        strategy='beforeInteractive'
+      />
       <Nav />
 
       {/* Hero */}

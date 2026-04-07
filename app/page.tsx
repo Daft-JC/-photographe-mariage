@@ -1,7 +1,21 @@
+import type { Metadata } from 'next';
+import Script from 'next/script';
 import Nav from '@/components/ui/nav';
 import ScrollExpandMedia from '@/components/ui/scroll-expansion-hero';
 import Image from 'next/image';
 import Link from 'next/link';
+
+const SITE_URL = 'https://www.lamartinastudio.com';
+
+export const metadata: Metadata = {
+  alternates: { canonical: SITE_URL },
+  openGraph: {
+    url: SITE_URL,
+    title: 'Lamartina Studio — Photographe de Mariage France & Italie',
+    description:
+      'Alessio Lamartina, photographe de mariage haut de gamme en France, Italie et Europe. Reportages élégants, émotionnels et intemporels en Provence, Côte d\'Azur, Toscane, Paris, Monaco.',
+  },
+};
 
 const portfolioItems = [
   {
@@ -35,13 +49,74 @@ const instaPhotos = [
   'https://images.unsplash.com/photo-1460978812857-470ed1c77af0?q=80&w=400&auto=format&fit=crop',
 ];
 
+const homeFaqLd = {
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: [
+    {
+      '@type': 'Question',
+      name: 'Où travaillez-vous en tant que photographe de mariage ?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'Je travaille principalement en France (Provence, Côte d\'Azur, Paris, Lyon, Bordeaux) et en Italie (Toscane, Rome, Florence, Côte Amalfitaine, Lac de Côme). Je suis également disponible pour des mariages destination partout en Europe : Espagne, Grèce, Portugal, Monaco, Suisse et ailleurs.',
+      },
+    },
+    {
+      '@type': 'Question',
+      name: 'Combien de temps à l\'avance faut-il réserver un photographe de mariage ?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'Je recommande de réserver idéalement 12 à 18 mois avant votre mariage, surtout pour les dates de printemps et d\'été très demandées. N\'hésitez pas à me contacter même si votre mariage est dans moins d\'un an — des dates restent parfois disponibles.',
+      },
+    },
+    {
+      '@type': 'Question',
+      name: 'Quel est votre style de photographie de mariage ?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'Mon approche est naturelle, documentaire et élégante. Je privilégie la lumière naturelle, les émotions authentiques et les moments spontanés. Mon esthétique est fine art : des images lumineuses, intemporelles, qui ressemblent à de véritables peintures.',
+      },
+    },
+    {
+      '@type': 'Question',
+      name: 'Combien de photos recevons-nous après le mariage ?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'Pour une journée complète, vous recevrez entre 400 et 700 images soigneusement sélectionnées et retouchées, livrées en haute résolution dans une galerie privée en ligne. La livraison se fait sous 6 à 8 semaines.',
+      },
+    },
+    {
+      '@type': 'Question',
+      name: 'Proposez-vous des séances engagement avant le mariage ?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'Oui, je propose des séances engagement (séance photo de couple avant le mariage). C\'est une excellente façon de faire connaissance et de vous mettre à l\'aise devant l\'objectif avant le grand jour. Ces séances peuvent avoir lieu en Provence, en Italie ou dans le lieu de votre choix.',
+      },
+    },
+    {
+      '@type': 'Question',
+      name: 'Vous déplacez-vous pour des mariages hors de France ?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'Absolument. Je suis un photographe de mariage destination et je voyage régulièrement en Italie, en Espagne, en Grèce, au Portugal, en Suisse et dans toute l\'Europe. Les frais de déplacement sont calculés en fonction de la destination.',
+      },
+    },
+  ],
+};
+
 export default function Home() {
   return (
     <>
+      <Script
+        id='json-ld-home-faq'
+        type='application/ld+json'
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(homeFaqLd) }}
+        strategy='beforeInteractive'
+      />
       <Nav />
       <ScrollExpandMedia
-        mediaSrc='https://images.unsplash.com/photo-1519741497674-611481863552?q=80&w=1280&auto=format&fit=crop'
-        bgImageSrc='https://images.unsplash.com/photo-1523438885200-e635ba2c371e?q=80&w=1920&auto=format&fit=crop'
+        mediaSrc='https://images.unsplash.com/photo-1520854221256-17451cc331bf?q=80&w=1280&auto=format&fit=crop'
+        bgImageSrc='https://images.unsplash.com/photo-1532712938310-34cb3982ef74?q=80&w=1920&auto=format&fit=crop'
         title='Lamartina Studio'
         subtitle='Photographe de Mariage · France · Italie · Europe'
         scrollToExpand='Défiler pour découvrir'

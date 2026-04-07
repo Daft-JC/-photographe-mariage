@@ -13,7 +13,8 @@ import { motion } from 'framer-motion';
 
 interface ScrollExpandMediaProps {
   mediaSrc: string;
-  bgImageSrc: string;
+  bgImageSrc?: string;
+  bgColor?: string;
   title?: string;
   subtitle?: string;
   scrollToExpand?: string;
@@ -23,6 +24,7 @@ interface ScrollExpandMediaProps {
 const ScrollExpandMedia = ({
   mediaSrc,
   bgImageSrc,
+  bgColor = 'linear-gradient(135deg, #F5EDE0 0%, #EDD8BB 40%, #E2C9A8 70%, #D9BFA0 100%)',
   title,
   subtitle,
   scrollToExpand = 'Défiler pour découvrir',
@@ -106,19 +108,18 @@ const ScrollExpandMedia = ({
       <section className='relative flex flex-col items-center justify-start min-h-[100dvh]'>
         <div className='relative w-full flex flex-col items-center min-h-[100dvh]'>
 
-          {/* Background image — fades out as media expands */}
+          {/* Background — fades out as media expands */}
           <motion.div
             className='absolute inset-0 z-0 h-full'
+            style={{
+              backgroundImage: bgImageSrc ? `url("${bgImageSrc}")` : undefined,
+              backgroundSize: 'cover',
+              backgroundPosition: 'center',
+              background: bgImageSrc ? undefined : bgColor,
+            }}
             animate={{ opacity: 1 - scrollProgress }}
             transition={{ duration: 0.1 }}
           >
-            <Image
-              src={bgImageSrc}
-              alt='Background'
-              fill
-              className='object-cover object-center'
-              priority
-            />
             <div className='absolute inset-0 bg-black/30' />
           </motion.div>
 

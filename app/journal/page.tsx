@@ -1,11 +1,51 @@
+import Script from 'next/script';
 import Image from 'next/image';
 import Link from 'next/link';
 import Nav from '@/components/ui/nav';
 import Footer from '@/components/ui/footer';
 
-export const metadata = {
-  title: 'Journal — Lamartina Studio',
-  description: 'Reportages, histoires et inspirations par Alessio Lamartina, photographe de mariage.',
+import type { Metadata } from 'next';
+
+const SITE_URL = 'https://www.lamartinastudio.com';
+
+export const metadata: Metadata = {
+  title: 'Journal — Reportages & Histoires de Mariages',
+  description:
+    'Le journal de Lamartina Studio : reportages complets, histoires de couples et inspirations mariage. Mariages en Toscane, Provence, Côte d\'Azur, Paris et toute l\'Europe par Alessio Lamartina.',
+  keywords: [
+    'blog photographe mariage',
+    'journal photographe mariage',
+    'reportage mariage blog',
+    'histoire mariage Toscane',
+    'mariage Provence reportage',
+    'inspiration mariage photo',
+    'blog mariage haut de gamme',
+    'témoignage mariage photographe',
+    'mariage France blog',
+    'mariage Italie blog',
+    'mariage destination reportage',
+    'wedding blog France',
+    'wedding stories France',
+    'real weddings Provence',
+    'real weddings Tuscany',
+    'inspiration mariage champêtre',
+    'inspiration mariage château',
+    'inspiration mariage villa',
+    'shooting mariage extérieur',
+    'photos mariage plein air',
+    'Lamartina Studio journal',
+    'Alessio Lamartina blog',
+  ],
+  alternates: {
+    canonical: `${SITE_URL}/journal`,
+  },
+  openGraph: {
+    title: 'Journal — Reportages & Histoires de Mariages',
+    description:
+      'Reportages complets, histoires de couples et inspirations mariage par Alessio Lamartina.',
+    url: `${SITE_URL}/journal`,
+    type: 'website',
+  },
 };
 
 const articles = [
@@ -56,12 +96,47 @@ const articles = [
   },
 ];
 
+const journalLd = {
+  '@context': 'https://schema.org',
+  '@graph': [
+    {
+      '@type': 'BreadcrumbList',
+      itemListElement: [
+        { '@type': 'ListItem', position: 1, name: 'Accueil', item: 'https://www.lamartinastudio.com' },
+        { '@type': 'ListItem', position: 2, name: 'Journal', item: 'https://www.lamartinastudio.com/journal' },
+      ],
+    },
+    {
+      '@type': 'Blog',
+      name: 'Journal — Lamartina Studio',
+      description: 'Reportages complets et histoires de mariages par Alessio Lamartina, photographe de mariage haut de gamme.',
+      url: 'https://www.lamartinastudio.com/journal',
+      author: {
+        '@type': 'Person',
+        name: 'Alessio Lamartina',
+        url: 'https://www.lamartinastudio.com/a-propos',
+      },
+      publisher: {
+        '@type': 'Organization',
+        name: 'Lamartina Studio',
+        url: 'https://www.lamartinastudio.com',
+      },
+    },
+  ],
+};
+
 export default function Journal() {
   const featured = articles[0];
   const rest = articles.slice(1);
 
   return (
     <>
+      <Script
+        id='json-ld-journal'
+        type='application/ld+json'
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(journalLd) }}
+        strategy='beforeInteractive'
+      />
       <Nav />
 
       {/* Hero */}

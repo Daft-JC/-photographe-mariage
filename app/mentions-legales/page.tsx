@@ -1,5 +1,13 @@
+import type { Metadata } from 'next';
 import Nav from '@/components/ui/nav';
 import Footer from '@/components/ui/footer';
+
+export const metadata: Metadata = {
+  title: 'Mentions Légales',
+  description: 'Mentions légales de Lamartina Studio, photographe de mariage professionnel.',
+  robots: { index: false, follow: false },
+  alternates: { canonical: 'https://www.lamartinastudio.com/mentions-legales' },
+};
 
 const Section = ({ title, children }: { title: string; children: React.ReactNode }) => (
   <div style={{ marginBottom: '3.5rem' }}>

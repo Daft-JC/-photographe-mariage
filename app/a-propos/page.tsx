@@ -1,16 +1,100 @@
+import Script from 'next/script';
 import Image from 'next/image';
 import Link from 'next/link';
 import Nav from '@/components/ui/nav';
 import Footer from '@/components/ui/footer';
 
-export const metadata = {
-  title: 'À propos — Lamartina Studio',
-  description: "Découvrez l'univers d'Alessio Lamartina, photographe de mariage haut de gamme en France, Italie et Europe.",
+import type { Metadata } from 'next';
+
+const SITE_URL = 'https://www.lamartinastudio.com';
+
+export const metadata: Metadata = {
+  title: 'À propos — Alessio Lamartina, Photographe de Mariage',
+  description:
+    "Découvrez l'univers d'Alessio Lamartina, photographe de mariage haut de gamme basé en Provence. Son histoire, sa vision artistique et sa philosophie du reportage photo de mariage en France, Italie et Europe.",
+  keywords: [
+    'Alessio Lamartina photographe',
+    'à propos photographe mariage',
+    'photographe mariage Provence biographie',
+    'photographe franco-italien mariage',
+    'histoire photographe mariage',
+    'vision photographe mariage',
+    'style photographe mariage',
+    'photographe mariage artistique Provence',
+    'who is Alessio Lamartina',
+    'about wedding photographer France',
+    'Lamartina Studio à propos',
+    'photographe mariage naturel émotionnel',
+    'reportage mariage discret',
+    'photographe mariage sensible',
+  ],
+  alternates: {
+    canonical: `${SITE_URL}/a-propos`,
+  },
+  openGraph: {
+    title: 'À propos — Alessio Lamartina, Photographe de Mariage',
+    description:
+      "Découvrez l'univers d'Alessio Lamartina, photographe de mariage haut de gamme en Provence, France, Italie et Europe.",
+    url: `${SITE_URL}/a-propos`,
+    type: 'profile',
+    images: [
+      {
+        url: `${SITE_URL}/og-apropos.jpg`,
+        width: 1200,
+        height: 630,
+        alt: 'Alessio Lamartina — Photographe de Mariage',
+      },
+    ],
+  },
+};
+
+const aproposLd = {
+  '@context': 'https://schema.org',
+  '@graph': [
+    {
+      '@type': 'BreadcrumbList',
+      itemListElement: [
+        { '@type': 'ListItem', position: 1, name: 'Accueil', item: 'https://www.lamartinastudio.com' },
+        { '@type': 'ListItem', position: 2, name: 'À propos', item: 'https://www.lamartinastudio.com/a-propos' },
+      ],
+    },
+    {
+      '@type': 'ProfilePage',
+      mainEntity: {
+        '@type': 'Person',
+        name: 'Alessio Lamartina',
+        givenName: 'Alessio',
+        familyName: 'Lamartina',
+        jobTitle: 'Photographe de Mariage',
+        description:
+          'Photographe de mariage haut de gamme basé en Provence, spécialisé dans les reportages élégants et émotionnels en France, Italie et Europe.',
+        url: 'https://www.lamartinastudio.com/a-propos',
+        image: 'https://www.lamartinastudio.com/alessio-lamartina.jpg',
+        knowsLanguage: ['fr', 'it', 'en'],
+        nationality: { '@type': 'Country', name: 'Italy' },
+        sameAs: [
+          'https://www.instagram.com/lamartinastudio',
+          'https://www.pinterest.fr/lamartinastudio',
+        ],
+        worksFor: {
+          '@type': 'LocalBusiness',
+          name: 'Lamartina Studio',
+          url: 'https://www.lamartinastudio.com',
+        },
+      },
+    },
+  ],
 };
 
 export default function APropos() {
   return (
     <>
+      <Script
+        id='json-ld-apropos'
+        type='application/ld+json'
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(aproposLd) }}
+        strategy='beforeInteractive'
+      />
       <Nav />
 
       {/* Hero */}
