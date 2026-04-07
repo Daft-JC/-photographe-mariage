@@ -257,6 +257,102 @@ export default function Home() {
           </span>
         </section>
 
+        {/* ── TÉMOIGNAGES ── */}
+        <section style={{ background: '#F8F5F2', padding: '6rem 0' }}>
+          <div className='px-site' style={{ maxWidth: '1400px', margin: '0 auto' }}>
+            <div style={{ textAlign: 'center', marginBottom: '4rem' }}>
+              <span
+                style={{
+                  fontFamily: 'var(--font-body)',
+                  fontSize: '0.68rem',
+                  fontWeight: 500,
+                  letterSpacing: '0.28em',
+                  textTransform: 'uppercase',
+                  color: '#be2828',
+                  display: 'block',
+                  marginBottom: '1rem',
+                }}
+              >
+                Ce qu'ils en disent
+              </span>
+              <h2 style={{ fontFamily: 'var(--font-heading)', fontSize: 'clamp(1.8rem,3.5vw,3rem)' }}>
+                Des mots qui <em>touchent le cœur</em>
+              </h2>
+            </div>
+
+            <div
+              style={{
+                display: 'grid',
+                gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))',
+                gap: '2.5rem',
+              }}
+            >
+              {[
+                {
+                  quote: "Alessio a su capter exactement ce que nous voulions — des émotions brutes, des regards vrais. On a pleuré en découvrant les photos. Un travail d'une sensibilité rare.",
+                  name: 'Sophie & Maxime',
+                  detail: 'Mariage à Martigues · Juin 2024',
+                },
+                {
+                  quote: "Une discrétion absolue le jour J, et des images qui racontent notre histoire comme un film. Chaque photo est une peinture. Nous recommandons Alessio les yeux fermés.",
+                  name: 'Camille & Julien',
+                  detail: 'Mariage à Marseille · Septembre 2023',
+                },
+                {
+                  quote: "Depuis nos fiançailles jusqu'au lendemain du mariage, Alessio nous a accompagnés avec une élégance et une générosité incroyables. Les photos sont au-delà de nos espérances.",
+                  name: 'Lucie & Thomas',
+                  detail: 'Mariage à Aix-en-Provence · Mai 2024',
+                },
+              ].map(({ quote, name, detail }) => (
+                <div
+                  key={name}
+                  style={{
+                    background: '#fff',
+                    padding: '3rem 2.5rem',
+                    borderTop: '2px solid #be2828',
+                  }}
+                >
+                  <p
+                    style={{
+                      fontFamily: 'var(--font-heading)',
+                      fontSize: '1.05rem',
+                      fontStyle: 'italic',
+                      color: '#1A1A1A',
+                      lineHeight: 1.7,
+                      marginBottom: '2rem',
+                    }}
+                  >
+                    « {quote} »
+                  </p>
+                  <div>
+                    <span
+                      style={{
+                        fontFamily: 'var(--font-heading)',
+                        fontSize: '1rem',
+                        display: 'block',
+                        marginBottom: '0.25rem',
+                      }}
+                    >
+                      {name}
+                    </span>
+                    <span
+                      style={{
+                        fontFamily: 'var(--font-body)',
+                        fontSize: '0.68rem',
+                        letterSpacing: '0.18em',
+                        textTransform: 'uppercase',
+                        color: '#9a9590',
+                      }}
+                    >
+                      {detail}
+                    </span>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
         {/* ── CTA ── */}
         <section style={{ position: 'relative', minHeight: '500px', display: 'flex', alignItems: 'center', justifyContent: 'center', overflow: 'hidden' }}>
           <Image
@@ -426,7 +522,7 @@ export default function Home() {
             <span style={{ fontSize: '0.78rem', color: '#9a9590' }}>© 2024 Lamartina Studio — Photographe de Mariage</span>
             <span style={{ fontSize: '0.78rem', color: '#9a9590' }}>
               Réalisé avec <span style={{ color: '#be2828' }}>♥</span> &nbsp;·&nbsp;{' '}
-              <a href='#' className='hover:text-[#F8F5F2] transition-colors'>Mentions légales</a>
+              <a href='/mentions-legales' className='hover:text-[#F8F5F2] transition-colors'>Mentions légales</a>
             </span>
           </div>
         </footer>

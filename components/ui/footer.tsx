@@ -62,7 +62,7 @@ export default function Footer() {
         <span style={{ fontSize: '0.78rem', color: '#9a9590' }}>© 2025 Lamartina Studio — Photographe de Mariage</span>
         <span style={{ fontSize: '0.78rem', color: '#9a9590' }}>
           Réalisé avec <span style={{ color: '#be2828' }}>♥</span> &nbsp;·&nbsp;{' '}
-          <a href='#' className='hover:text-[#F8F5F2] transition-colors'>Mentions légales</a>
+          <a href='/mentions-legales' className='hover:text-[#F8F5F2] transition-colors'>Mentions légales</a>
         </span>
       </div>
     </footer>

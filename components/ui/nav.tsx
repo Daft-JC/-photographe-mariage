@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from 'react';
 import Link from 'next/link';
+import { usePathname } from 'next/navigation';
 
 const links = [
   { href: '/', label: 'Accueil' },
@@ -14,6 +15,8 @@ const links = [
 export default function Nav() {
   const [scrolled, setScrolled] = useState(false);
   const [mobileOpen, setMobileOpen] = useState(false);
+  const pathname = usePathname();
+  const isHome = pathname === '/';
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 20);
@@ -26,9 +29,9 @@ export default function Nav() {
       <nav
         className='fixed top-0 left-0 right-0 z-50 transition-all duration-500'
         style={{
-          background: scrolled ? 'rgba(248,245,242,0.96)' : 'transparent',
-          backdropFilter: scrolled ? 'blur(12px)' : 'none',
-          borderBottom: scrolled ? '1px solid #e8e4e0' : '1px solid transparent',
+          background: (scrolled || !isHome) ? 'rgba(248,245,242,0.96)' : 'transparent',
+          backdropFilter: (scrolled || !isHome) ? 'blur(12px)' : 'none',
+          borderBottom: (scrolled || !isHome) ? '1px solid #e8e4e0' : '1px solid transparent',
         }}
       >
         <div
@@ -41,7 +44,7 @@ export default function Nav() {
             className='text-lg tracking-[0.08em]'
             style={{
               fontFamily: 'var(--font-heading)',
-              color: scrolled ? '#1A1A1A' : '#F8F5F2',
+              color: (scrolled || !isHome) ? '#1A1A1A' : '#F8F5F2',
               fontWeight: 400,
             }}
           >
@@ -57,7 +60,7 @@ export default function Nav() {
                   className='text-xs tracking-[0.22em] uppercase font-light transition-colors duration-200 hover:opacity-60'
                   style={{
                     fontFamily: 'var(--font-body)',
-                    color: scrolled ? '#1A1A1A' : '#F8F5F2',
+                    color: (scrolled || !isHome) ? '#1A1A1A' : '#F8F5F2',
                   }}
                 >
                   {l.label}
@@ -72,18 +75,18 @@ export default function Nav() {
             className='hidden md:inline-block text-xs tracking-[0.22em] uppercase px-6 py-3 border transition-all duration-300'
             style={{
               fontFamily: 'var(--font-body)',
-              color: scrolled ? '#1A1A1A' : '#F8F5F2',
-              borderColor: scrolled ? '#1A1A1A' : 'rgba(255,255,255,0.55)',
+              color: (scrolled || !isHome) ? '#1A1A1A' : '#F8F5F2',
+              borderColor: (scrolled || !isHome) ? '#1A1A1A' : 'rgba(255,255,255,0.55)',
             }}
             onMouseEnter={(e) => {
               const el = e.currentTarget as HTMLElement;
-              el.style.background = scrolled ? '#1A1A1A' : '#fff';
-              el.style.color = scrolled ? '#F8F5F2' : '#1A1A1A';
+              el.style.background = (scrolled || !isHome) ? '#1A1A1A' : '#fff';
+              el.style.color = (scrolled || !isHome) ? '#F8F5F2' : '#1A1A1A';
             }}
             onMouseLeave={(e) => {
               const el = e.currentTarget as HTMLElement;
               el.style.background = 'transparent';
-              el.style.color = scrolled ? '#1A1A1A' : '#F8F5F2';
+              el.style.color = (scrolled || !isHome) ? '#1A1A1A' : '#F8F5F2';
             }}
           >
             Me contacter
@@ -99,7 +102,7 @@ export default function Nav() {
               <span
                 key={i}
                 className='block w-6 h-px'
-                style={{ background: scrolled ? '#1A1A1A' : '#F8F5F2' }}
+                style={{ background: (scrolled || !isHome) ? '#1A1A1A' : '#F8F5F2' }}
               />
             ))}
           </button>
