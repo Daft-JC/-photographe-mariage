@@ -182,10 +182,10 @@ const ScrollExpandMedia = ({
               {/* Title — splits and slides apart */}
               <div className='flex flex-col items-center justify-center gap-2 w-full relative z-10 pointer-events-none'>
                 <motion.h1
-                  className='text-5xl md:text-6xl lg:text-7xl font-light italic'
+                  className='text-5xl md:text-6xl lg:text-7xl font-light'
                   style={{
-                    fontFamily: 'var(--font-heading)',
-                    color: '#F8F5F2',
+                    fontFamily: 'Peristiwa, serif',
+                    color: '#be2828',
                     transform: `translateX(-${textShift}vw)`,
                     textShadow: '0 2px 20px rgba(0,0,0,0.3)',
                   }}
