@@ -143,7 +143,7 @@ export default function Home() {
               <h2
                 style={{ fontFamily: 'var(--font-heading)', fontSize: 'clamp(2rem,4vw,3.5rem)', marginBottom: '1.2rem' }}
               >
-                Chaque mariage,<br />une histoire <em style={{ fontFamily: 'Peristiwa, serif', color: '#be2828', fontStyle: 'normal', textTransform: 'none' }}>unica</em>
+                Chaque mariage,<br />une histoire <em style={{ fontFamily: 'var(--font-heading)', color: '#be2828', fontStyle: 'normal', textTransform: 'none' }}>unique</em>
               </h2>
               <p style={{ fontSize: '0.92rem', color: '#3d3d3d', letterSpacing: '0.025em', maxWidth: '520px', margin: '0 auto' }}>
                 Des instants volés, des regards complices, des émotions sincères.<br />
