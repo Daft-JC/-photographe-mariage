@@ -317,7 +317,7 @@ export default function Home() {
               margin: '0 auto 1rem',
             }}
           >
-            « La photographie est la seule langue<br />qui puisse être comprise partout dans le monde. »
+            « Fotografare è scegliere. È guardare il mondo con occhi nuovi. »
           </p>
           <span
             style={{
@@ -325,10 +325,10 @@ export default function Home() {
               fontSize: '0.72rem',
               letterSpacing: '0.22em',
               textTransform: 'uppercase',
-              color: '#9a9590',
+              color: '#1A1A1A',
             }}
           >
-            Bruno Barbey
+            Gianni Berengo Gardin
           </span>
         </section>
 
