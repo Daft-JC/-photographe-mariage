@@ -14,6 +14,7 @@ import { motion } from 'framer-motion';
 interface ScrollExpandMediaProps {
   mediaSrc: string;
   bgImageSrc?: string;
+  bgVideoSrc?: string;
   bgColor?: string;
   title?: string;
   subtitle?: string;
@@ -24,6 +25,7 @@ interface ScrollExpandMediaProps {
 const ScrollExpandMedia = ({
   mediaSrc,
   bgImageSrc,
+  bgVideoSrc,
   bgColor = 'linear-gradient(135deg, #F5EDE0 0%, #EDD8BB 40%, #E2C9A8 70%, #D9BFA0 100%)',
   title,
   subtitle,
@@ -110,17 +112,28 @@ const ScrollExpandMedia = ({
 
           {/* Background — fades out as media expands */}
           <motion.div
-            className='absolute inset-0 z-0 h-full'
-            style={{
+            className='absolute inset-0 z-0 h-full overflow-hidden'
+            style={!bgVideoSrc ? {
               backgroundImage: bgImageSrc ? `url("${bgImageSrc}")` : undefined,
               backgroundSize: 'cover',
               backgroundPosition: 'center',
               background: bgImageSrc ? undefined : bgColor,
-            }}
+            } : {}}
             animate={{ opacity: 1 - scrollProgress }}
             transition={{ duration: 0.1 }}
           >
-            <div className='absolute inset-0 bg-black/30' />
+            {bgVideoSrc && (
+              <video
+                autoPlay
+                muted
+                loop
+                playsInline
+                style={{ position: 'absolute', inset: 0, width: '100%', height: '100%', objectFit: 'cover' }}
+              >
+                <source src={bgVideoSrc} type='video/mp4' />
+              </video>
+            )}
+            <div className='absolute inset-0 bg-black/40' />
           </motion.div>
 
           <div className='container mx-auto flex flex-col items-center justify-start relative z-10'>

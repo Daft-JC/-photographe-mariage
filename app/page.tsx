@@ -116,7 +116,7 @@ export default function Home() {
       <Nav />
       <ScrollExpandMedia
         mediaSrc='https://images.unsplash.com/photo-1520854221256-17451cc331bf?q=80&w=1280&auto=format&fit=crop'
-        bgImageSrc='https://images.unsplash.com/photo-1532712938310-34cb3982ef74?q=80&w=1920&auto=format&fit=crop'
+        bgVideoSrc='https://assets.mixkit.co/videos/40591/40591-1080.mp4'
         title='Maison La Martina'
         subtitle='Photographe de Mariage · France · Italie · Europe'
         scrollToExpand='Défiler pour découvrir'
