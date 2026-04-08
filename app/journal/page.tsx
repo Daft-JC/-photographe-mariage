@@ -11,7 +11,7 @@ const SITE_URL = 'https://www.lamartinastudio.com';
 export const metadata: Metadata = {
   title: 'Journal — Reportages & Histoires de Mariages',
   description:
-    'Le journal de Maison La Martina : reportages complets, histoires de couples et inspirations mariage. Mariages en Toscane, Provence, Côte d\'Azur, Paris et toute l\'Europe par Alessio Lamartina.',
+    'Le journal de Maison La Martina : reportages complets, histoires de couples et inspirations mariage. Mariages en Toscane, Provence, Côte d\'Azur, Paris et toute l\'Europe par Alessio La Martina.',
   keywords: [
     'blog photographe mariage',
     'journal photographe mariage',
@@ -34,7 +34,7 @@ export const metadata: Metadata = {
     'shooting mariage extérieur',
     'photos mariage plein air',
     'Maison La Martina journal',
-    'Alessio Lamartina blog',
+    'Alessio La Martina blog',
   ],
   alternates: {
     canonical: `${SITE_URL}/journal`,
@@ -42,7 +42,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'Journal — Reportages & Histoires de Mariages',
     description:
-      'Reportages complets, histoires de couples et inspirations mariage par Alessio Lamartina.',
+      'Reportages complets, histoires de couples et inspirations mariage par Alessio La Martina.',
     url: `${SITE_URL}/journal`,
     type: 'website',
   },
@@ -109,11 +109,11 @@ const journalLd = {
     {
       '@type': 'Blog',
       name: 'Journal — Maison La Martina',
-      description: 'Reportages complets et histoires de mariages par Alessio Lamartina, photographe de mariage haut de gamme.',
+      description: 'Reportages complets et histoires de mariages par Alessio La Martina, photographe de mariage haut de gamme.',
       url: 'https://www.lamartinastudio.com/journal',
       author: {
         '@type': 'Person',
-        name: 'Alessio Lamartina',
+        name: 'Alessio La Martina',
         url: 'https://www.lamartinastudio.com/a-propos',
       },
       publisher: {

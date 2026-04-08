@@ -9,11 +9,11 @@ import type { Metadata } from 'next';
 const SITE_URL = 'https://www.lamartinastudio.com';
 
 export const metadata: Metadata = {
-  title: 'À propos — Alessio Lamartina, Photographe de Mariage',
+  title: 'À propos — Alessio La Martina, Photographe de Mariage',
   description:
-    "Découvrez l'univers d'Alessio Lamartina, photographe de mariage haut de gamme basé en Provence. Son histoire, sa vision artistique et sa philosophie du reportage photo de mariage en France, Italie et Europe.",
+    "Découvrez l'univers d'Alessio La Martina, photographe de mariage haut de gamme basé en Provence. Son histoire, sa vision artistique et sa philosophie du reportage photo de mariage en France, Italie et Europe.",
   keywords: [
-    'Alessio Lamartina photographe',
+    'Alessio La Martina photographe',
     'à propos photographe mariage',
     'photographe mariage Provence biographie',
     'photographe franco-italien mariage',
@@ -21,7 +21,7 @@ export const metadata: Metadata = {
     'vision photographe mariage',
     'style photographe mariage',
     'photographe mariage artistique Provence',
-    'who is Alessio Lamartina',
+    'who is Alessio La Martina',
     'about wedding photographer France',
     'Maison La Martina à propos',
     'photographe mariage naturel émotionnel',
@@ -32,9 +32,9 @@ export const metadata: Metadata = {
     canonical: `${SITE_URL}/a-propos`,
   },
   openGraph: {
-    title: 'À propos — Alessio Lamartina, Photographe de Mariage',
+    title: 'À propos — Alessio La Martina, Photographe de Mariage',
     description:
-      "Découvrez l'univers d'Alessio Lamartina, photographe de mariage haut de gamme en Provence, France, Italie et Europe.",
+      "Découvrez l'univers d'Alessio La Martina, photographe de mariage haut de gamme en Provence, France, Italie et Europe.",
     url: `${SITE_URL}/a-propos`,
     type: 'profile',
     images: [
@@ -42,7 +42,7 @@ export const metadata: Metadata = {
         url: `${SITE_URL}/og-apropos.jpg`,
         width: 1200,
         height: 630,
-        alt: 'Alessio Lamartina — Photographe de Mariage',
+        alt: 'Alessio La Martina — Photographe de Mariage',
       },
     ],
   },
@@ -62,7 +62,7 @@ const aproposLd = {
       '@type': 'ProfilePage',
       mainEntity: {
         '@type': 'Person',
-        name: 'Alessio Lamartina',
+        name: 'Alessio La Martina',
         givenName: 'Alessio',
         familyName: 'Lamartina',
         jobTitle: 'Photographe de Mariage',
@@ -152,7 +152,7 @@ export default function APropos() {
           <div style={{ position: 'relative', aspectRatio: '4/5', overflow: 'hidden', borderRadius: '4px' }}>
             <Image
               src='https://images.unsplash.com/photo-1570696516188-ade861b84a49?q=80&w=800&auto=format&fit=crop'
-              alt='Alessio Lamartina, photographe'
+              alt='Alessio La Martina, photographe'
               fill
               className='object-cover'
             />
@@ -169,7 +169,7 @@ export default function APropos() {
               Tout a commencé<br /><em>par un voyage</em>
             </h2>
             <p style={{ fontSize: '0.92rem', color: '#3d3d3d', letterSpacing: '0.025em', marginBottom: '1.2rem', lineHeight: 1.9 }}>
-              Je suis Alessio Lamartina. Ce qui a tout déclenché, c'est une année passée en Australie — une année où j'ai pu consacrer entièrement mon temps à la photographie, et où j'ai compris que c'était ma voie.
+              Je suis Alessio La Martina. Ce qui a tout déclenché, c'est une année passée en Australie — une année où j'ai pu consacrer entièrement mon temps à la photographie, et où j'ai compris que c'était ma voie.
             </p>
             <p style={{ fontSize: '0.92rem', color: '#3d3d3d', letterSpacing: '0.025em', marginBottom: '1.2rem', lineHeight: 1.9 }}>
               De retour en Europe, c'est la photographie de mariage qui m'a touché au cœur. La lumière du jour J, l'émotion brute, la beauté des moments qui ne se répètent jamais — c'est là que j'ai trouvé mon langage.
@@ -211,7 +211,7 @@ export default function APropos() {
             color: '#9a9590',
           }}
         >
-          Alessio Lamartina
+          Alessio La Martina
         </span>
       </section>
 

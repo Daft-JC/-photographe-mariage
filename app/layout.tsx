@@ -15,7 +15,7 @@ export const metadata: Metadata = {
   },
 
   description:
-    "Alessio Lamartina, photographe de mariage haut de gamme en France, Italie et Europe. Reportages élégants, émotionnels et intemporels. Mariages en Provence, Côte d'Azur, Toscane, Paris, Monaco. Disponible pour des mariages destination partout en Europe.",
+    "Alessio La Martina, photographe de mariage haut de gamme en France, Italie et Europe. Reportages élégants, émotionnels et intemporels. Mariages en Provence, Côte d'Azur, Toscane, Paris, Monaco. Disponible pour des mariages destination partout en Europe.",
 
   keywords: [
     // Termes principaux FR
@@ -149,13 +149,13 @@ export const metadata: Metadata = {
     'destination wedding photographer',
     // Marque
     'Maison La Martina',
-    'Alessio Lamartina',
-    'Alessio Lamartina photographe',
+    'Alessio La Martina',
+    'Alessio La Martina photographe',
     'Lamartina photographe mariage',
   ],
 
-  authors: [{ name: 'Alessio Lamartina', url: SITE_URL }],
-  creator: 'Alessio Lamartina',
+  authors: [{ name: 'Alessio La Martina', url: SITE_URL }],
+  creator: 'Alessio La Martina',
   publisher: 'Maison La Martina',
 
   robots: {
@@ -187,7 +187,7 @@ export const metadata: Metadata = {
     siteName: SITE_NAME,
     title: 'Maison La Martina — Photographe de Mariage France & Italie',
     description:
-      'Alessio Lamartina, photographe de mariage haut de gamme en France, Italie et Europe. Reportages élégants, émotionnels et intemporels.',
+      'Alessio La Martina, photographe de mariage haut de gamme en France, Italie et Europe. Reportages élégants, émotionnels et intemporels.',
     images: [
       {
         url: OG_IMAGE,
@@ -203,7 +203,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: 'Maison La Martina — Photographe de Mariage France & Italie',
     description:
-      'Alessio Lamartina, photographe de mariage haut de gamme en France, Italie et Europe.',
+      'Alessio La Martina, photographe de mariage haut de gamme en France, Italie et Europe.',
     images: [OG_IMAGE],
     creator: '@lamartinastudio',
     site: '@lamartinastudio',
@@ -254,9 +254,9 @@ const jsonLd = {
       '@type': 'LocalBusiness',
       '@id': `${SITE_URL}/#business`,
       name: 'Maison La Martina',
-      alternateName: ['Alessio Lamartina Photographe', 'Lamartina Wedding Photography'],
+      alternateName: ['Alessio La Martina Photographe', 'Lamartina Wedding Photography'],
       description:
-        'Alessio Lamartina est photographe de mariage haut de gamme spécialisé dans les reportages élégants, émotionnels et intemporels en France, Italie et partout en Europe.',
+        'Alessio La Martina est photographe de mariage haut de gamme spécialisé dans les reportages élégants, émotionnels et intemporels en France, Italie et partout en Europe.',
       url: SITE_URL,
       logo: {
         '@type': 'ImageObject',
@@ -356,7 +356,7 @@ const jsonLd = {
     {
       '@type': 'Person',
       '@id': `${SITE_URL}/#person`,
-      name: 'Alessio Lamartina',
+      name: 'Alessio La Martina',
       givenName: 'Alessio',
       familyName: 'Lamartina',
       jobTitle: 'Photographe de Mariage',

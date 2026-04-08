@@ -43,7 +43,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'Services & Tarifs — Maison La Martina',
     description:
-      'Formules et tarifs pour votre reportage photo de mariage haut de gamme avec Alessio Lamartina.',
+      'Formules et tarifs pour votre reportage photo de mariage haut de gamme avec Alessio La Martina.',
     url: `${SITE_URL}/services`,
     type: 'website',
   },

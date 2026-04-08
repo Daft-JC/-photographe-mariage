@@ -28,7 +28,7 @@ export const metadata: Metadata = {
     'photos détails mariage',
     'inspiration mariage photo',
     'Maison La Martina portfolio',
-    'Alessio Lamartina photos',
+    'Alessio La Martina photos',
   ],
   alternates: {
     canonical: `${SITE_URL}/portfolio`,
@@ -65,7 +65,7 @@ export default function PortfolioLayout({ children }: { children: React.ReactNod
     url: `${SITE_URL}/portfolio`,
     author: {
       '@type': 'Person',
-      name: 'Alessio Lamartina',
+      name: 'Alessio La Martina',
       url: `${SITE_URL}/a-propos`,
     },
     genre: 'Photographie de mariage',

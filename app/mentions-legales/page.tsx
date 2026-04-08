@@ -83,7 +83,7 @@ export default function MentionsLegales() {
 
           <Section title="1. Éditeur du site">
             <p><strong>Raison sociale :</strong> Maison La Martina</p>
-            <p><strong>Nom :</strong> Alessio Lamartina</p>
+            <p><strong>Nom :</strong> Alessio La Martina</p>
             <p><strong>Statut :</strong> [Auto-entrepreneur / SASU / EURL — à compléter]</p>
             <p><strong>SIRET :</strong> [XXX XXX XXX XXXXX — à compléter]</p>
             <p><strong>Adresse :</strong> [Votre adresse — à compléter], Martigues, France</p>
@@ -92,7 +92,7 @@ export default function MentionsLegales() {
           </Section>
 
           <Section title="2. Directeur de la publication">
-            <p>Alessio Lamartina, en qualité de responsable du site lamartinastudio.com.</p>
+            <p>Alessio La Martina, en qualité de responsable du site lamartinastudio.com.</p>
           </Section>
 
           <Section title="3. Hébergement">
@@ -106,13 +106,13 @@ export default function MentionsLegales() {
           <Section title="4. Propriété intellectuelle">
             <p>
               L'ensemble du contenu de ce site — photographies, textes, logo, mise en page — est la propriété exclusive
-              d'Alessio Lamartina et est protégé par les lois françaises et internationales relatives au droit d'auteur
+              d'Alessio La Martina et est protégé par les lois françaises et internationales relatives au droit d'auteur
               et à la propriété intellectuelle.
             </p>
             <p style={{ marginTop: '0.8rem' }}>
               Toute reproduction, représentation, modification, publication ou adaptation de tout ou partie des éléments
               de ce site, quel que soit le moyen ou le procédé utilisé, est interdite sans l'autorisation préalable et
-              écrite d'Alessio Lamartina.
+              écrite d'Alessio La Martina.
             </p>
           </Section>
 
@@ -147,7 +147,7 @@ export default function MentionsLegales() {
           <Section title="8. Limitation de responsabilité">
             <p>
               Maison La Martina s'efforce d'assurer l'exactitude et la mise à jour des informations diffusées sur ce site.
-              Toutefois, Alessio Lamartina ne peut garantir l'exhaustivité ni l'absence d'erreur des informations publiées
+              Toutefois, Alessio La Martina ne peut garantir l'exhaustivité ni l'absence d'erreur des informations publiées
               et ne pourra être tenu responsable de tout dommage résultant de l'utilisation de ce site.
             </p>
           </Section>

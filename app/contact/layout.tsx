@@ -5,7 +5,7 @@ const SITE_URL = 'https://www.lamartinastudio.com';
 export const metadata: Metadata = {
   title: 'Contact & Disponibilités — Réservez votre Mariage',
   description:
-    'Contactez Alessio Lamartina pour votre mariage en France, Italie ou Europe. Vérifiez les disponibilités et demandez un devis personnalisé pour votre reportage photo de mariage haut de gamme.',
+    'Contactez Alessio La Martina pour votre mariage en France, Italie ou Europe. Vérifiez les disponibilités et demandez un devis personnalisé pour votre reportage photo de mariage haut de gamme.',
   keywords: [
     'contact photographe mariage',
     'réserver photographe mariage',
@@ -16,7 +16,7 @@ export const metadata: Metadata = {
     'prix photographe mariage Provence',
     'réservation photographe mariage',
     'booking wedding photographer France',
-    'contacter Alessio Lamartina',
+    'contacter Alessio La Martina',
     'Maison La Martina contact',
     'demande devis mariage',
     'photographe mariage disponible',
@@ -30,7 +30,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'Contact — Maison La Martina',
     description:
-      'Contactez Alessio Lamartina pour votre mariage. Vérifiez les disponibilités et obtenez un devis personnalisé.',
+      'Contactez Alessio La Martina pour votre mariage. Vérifiez les disponibilités et obtenez un devis personnalisé.',
     url: `${SITE_URL}/contact`,
     type: 'website',
   },
@@ -41,7 +41,7 @@ export default function ContactLayout({ children }: { children: React.ReactNode 
     '@context': 'https://schema.org',
     '@type': 'ContactPage',
     name: 'Contact — Maison La Martina',
-    description: 'Page de contact pour réserver Alessio Lamartina pour votre mariage.',
+    description: 'Page de contact pour réserver Alessio La Martina pour votre mariage.',
     url: `${SITE_URL}/contact`,
     mainEntity: {
       '@type': 'LocalBusiness',

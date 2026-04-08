@@ -13,7 +13,7 @@ export const metadata: Metadata = {
     url: SITE_URL,
     title: 'Maison La Martina — Photographe de Mariage France & Italie',
     description:
-      'Alessio Lamartina, photographe de mariage haut de gamme en France, Italie et Europe. Reportages élégants, émotionnels et intemporels en Provence, Côte d\'Azur, Toscane, Paris, Monaco.',
+      'Alessio La Martina, photographe de mariage haut de gamme en France, Italie et Europe. Reportages élégants, émotionnels et intemporels en Provence, Côte d\'Azur, Toscane, Paris, Monaco.',
   },
 };
 
@@ -234,7 +234,7 @@ export default function Home() {
             <div style={{ position: 'relative', aspectRatio: '3/4', overflow: 'hidden', borderRadius: '4px' }}>
               <Image
                 src='https://images.unsplash.com/photo-1570696516188-ade861b84a49?q=80&w=700&auto=format&fit=crop'
-                alt='Alessio Lamartina, photographe'
+                alt='Alessio La Martina, photographe'
                 fill
                 className='object-cover'
               />
@@ -258,7 +258,7 @@ export default function Home() {
                 Je crois que la beauté<br /><em>est dans l'instant vrai</em>
               </h2>
               <p style={{ fontSize: '0.92rem', color: '#3d3d3d', letterSpacing: '0.025em', marginBottom: '1.2rem' }}>
-                Je suis Alessio Lamartina. Ce qui a tout déclenché, c'est une année passée en Australie — une année où j'ai pu consacrer entièrement mon temps à la photographie, et où j'ai compris que c'était ma voie.
+                Je suis Alessio La Martina. Ce qui a tout déclenché, c'est une année passée en Australie — une année où j'ai pu consacrer entièrement mon temps à la photographie, et où j'ai compris que c'était ma voie.
               </p>
               <p style={{ fontSize: '0.92rem', color: '#3d3d3d', letterSpacing: '0.025em', marginBottom: '2.5rem' }}>
                 De retour en Europe, c'est la photographie de mariage qui m'a touché au cœur. La lumière du jour J, l'émotion brute, la beauté des moments qui ne se répètent jamais — c'est là que j'ai trouvé mon langage.
@@ -292,7 +292,7 @@ export default function Home() {
                   marginTop: '0.5rem',
                 }}
               >
-                Alessio Lamartina
+                Alessio La Martina
               </span>
             </div>
           </div>
