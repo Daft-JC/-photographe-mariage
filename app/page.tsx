@@ -389,9 +389,8 @@ export default function Home() {
                 >
                   <p
                     style={{
-                      fontFamily: 'var(--font-heading)',
+                      fontFamily: 'Peristiwa, serif',
                       fontSize: '1.05rem',
-                      fontStyle: 'italic',
                       color: '#1A1A1A',
                       lineHeight: 1.7,
                       marginBottom: '2rem',
@@ -402,8 +401,9 @@ export default function Home() {
                   <div>
                     <span
                       style={{
-                        fontFamily: 'var(--font-heading)',
+                        fontFamily: 'Peristiwa, serif',
                         fontSize: '1rem',
+                        color: '#be2828',
                         display: 'block',
                         marginBottom: '0.25rem',
                       }}
