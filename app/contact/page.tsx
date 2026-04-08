@@ -1,6 +1,7 @@
 'use client';
 
 import { useState } from 'react';
+import Image from 'next/image';
 import Nav from '@/components/ui/nav';
 import Footer from '@/components/ui/footer';
 
@@ -27,222 +28,367 @@ export default function Contact() {
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setLoading(true);
-    // Simulation envoi — à connecter à un service email (Resend, Nodemailer, etc.)
     await new Promise((r) => setTimeout(r, 1200));
     setLoading(false);
     setSent(true);
     setForm(empty);
   };
 
-  const inputStyle: React.CSSProperties = {
-    width: '100%',
-    background: 'transparent',
-    border: 'none',
-    borderBottom: '1px solid #e8e4e0',
-    padding: '0.8rem 0',
-    fontFamily: 'var(--font-body)',
-    fontSize: '0.88rem',
-    color: '#1A1A1A',
-    outline: 'none',
-    letterSpacing: '0.025em',
-  };
-
-  const labelStyle: React.CSSProperties = {
-    fontFamily: 'var(--font-body)',
-    fontSize: '0.62rem',
-    fontWeight: 500,
-    letterSpacing: '0.22em',
-    textTransform: 'uppercase',
-    color: '#9a9590',
-    display: 'block',
-    marginBottom: '0.3rem',
-  };
-
   return (
     <>
       <Nav />
 
-      {/* Hero */}
-      <section
-        style={{
-          paddingTop: '160px',
-          paddingBottom: '5rem',
-          background: '#F8F5F2',
-          textAlign: 'center',
-        }}
-      >
-        <span
-          style={{
-            fontFamily: 'var(--font-body)',
-            fontSize: '0.68rem',
-            fontWeight: 500,
-            letterSpacing: '0.28em',
-            textTransform: 'uppercase',
-            color: '#be2828',
-            display: 'block',
-            marginBottom: '1rem',
-          }}
-        >
-          Écrivez-moi
-        </span>
-        <h1
-          style={{
-            fontFamily: 'var(--font-heading)',
-            fontSize: 'clamp(2.5rem, 5vw, 4.5rem)',
-            marginBottom: '1.2rem',
-          }}
-        >
-          Contact
-        </h1>
-        <p
-          style={{
-            fontFamily: 'var(--font-body)',
-            fontSize: '0.92rem',
-            color: '#3d3d3d',
-            letterSpacing: '0.025em',
-            maxWidth: '460px',
-            margin: '0 auto',
-          }}
-        >
-          Racontez-moi votre projet. Je vous répondrai dans les 48 heures.
-        </p>
-      </section>
+      <div style={{ minHeight: '100vh', display: 'grid', gridTemplateColumns: '1fr 1fr' }} className='contact-grid'>
 
-      {/* Formulaire + infos */}
-      <section style={{ background: '#F8F5F2', padding: '2rem 0 7rem' }}>
-        <div
-          className='grid-contact-layout px-site'
-          style={{ maxWidth: '1200px', margin: '0 auto' }}
-        >
-          {/* Infos */}
-          <div style={{ paddingTop: '0.5rem' }}>
-            <h2
-              style={{
+        {/* ── Colonne gauche : photo + infos ── */}
+        <div style={{ position: 'relative', minHeight: '100vh', display: 'flex', flexDirection: 'column', justifyContent: 'flex-end' }}>
+          <Image
+            src='https://images.unsplash.com/photo-1511285560929-80b456fea0bc?q=80&w=1200&auto=format&fit=crop'
+            alt='Mariage élégant'
+            fill
+            className='object-cover'
+            priority
+          />
+          <div style={{ position: 'absolute', inset: 0, background: 'linear-gradient(to top, rgba(10,8,6,0.85) 0%, rgba(10,8,6,0.3) 60%, transparent 100%)' }} />
+
+          <div style={{ position: 'relative', zIndex: 10, padding: '3rem 3.5rem', color: '#F8F5F2' }}>
+            <div style={{ marginBottom: '2.5rem' }}>
+              <span style={{
+                fontFamily: 'var(--font-body)',
+                fontSize: '0.6rem',
+                letterSpacing: '0.3em',
+                textTransform: 'uppercase',
+                color: '#be2828',
+                display: 'block',
+                marginBottom: '0.8rem',
+              }}>
+                Maison La Martina
+              </span>
+              <h1 style={{
                 fontFamily: 'var(--font-heading)',
-                fontSize: 'clamp(1.5rem, 2.5vw, 2rem)',
-                marginBottom: '2rem',
-                lineHeight: 1.2,
-              }}
-            >
-              Commençons<br /><em>par faire connaissance</em>
-            </h2>
-            <p style={{ fontSize: '0.88rem', color: '#3d3d3d', letterSpacing: '0.025em', lineHeight: 1.9, marginBottom: '3rem' }}>
-              Je lis chaque message avec attention. Si vos dates sont disponibles, je vous proposerai un échange téléphonique ou vidéo pour en apprendre davantage sur vous et votre projet.
-            </p>
+                fontSize: 'clamp(2.8rem, 4vw, 4rem)',
+                color: '#F8F5F2',
+                lineHeight: 1.1,
+                marginBottom: '1.2rem',
+                textTransform: 'uppercase',
+              }}>
+                Parlons de<br />votre mariage
+              </h1>
+              <p style={{
+                fontFamily: 'var(--font-body)',
+                fontSize: '0.88rem',
+                color: 'rgba(248,245,242,0.75)',
+                lineHeight: 1.8,
+                maxWidth: '340px',
+              }}>
+                Chaque histoire mérite d'être racontée avec soin. Partagez votre projet — je vous réponds sous 48 h.
+              </p>
+            </div>
 
-            <div style={{ display: 'flex', flexDirection: 'column', gap: '1.5rem' }}>
+            <div style={{ display: 'flex', flexDirection: 'column', gap: '1.2rem', borderTop: '1px solid rgba(248,245,242,0.15)', paddingTop: '2rem' }}>
               {[
                 { label: 'Email', value: 'hello@lamartinastudio.com', href: 'mailto:hello@lamartinastudio.com' },
                 { label: 'Téléphone', value: '+33 6 00 00 00 00', href: 'tel:+33600000000' },
-                { label: 'Instagram', value: '@lamartinastudio', href: '#' },
+                { label: 'Instagram', value: '@maisonlamartina', href: '#' },
               ].map((info) => (
-                <div key={info.label}>
-                  <span style={{ fontFamily: 'var(--font-body)', fontSize: '0.62rem', fontWeight: 500, letterSpacing: '0.22em', textTransform: 'uppercase', color: '#9a9590', display: 'block', marginBottom: '0.3rem' }}>
+                <div key={info.label} style={{ display: 'flex', alignItems: 'baseline', gap: '1.5rem' }}>
+                  <span style={{
+                    fontFamily: 'var(--font-body)',
+                    fontSize: '0.58rem',
+                    letterSpacing: '0.25em',
+                    textTransform: 'uppercase',
+                    color: 'rgba(248,245,242,0.45)',
+                    minWidth: '70px',
+                  }}>
                     {info.label}
                   </span>
-                  <a
-                    href={info.href}
-                    style={{ fontSize: '0.88rem', color: '#1A1A1A', letterSpacing: '0.025em', textDecoration: 'none' }}
-                    className='hover:text-[#be2828] transition-colors'
-                  >
+                  <a href={info.href} style={{
+                    fontFamily: 'var(--font-body)',
+                    fontSize: '0.82rem',
+                    color: 'rgba(248,245,242,0.85)',
+                    textDecoration: 'none',
+                    transition: 'color 0.2s',
+                  }}
+                  className='hover:text-white'>
                     {info.value}
                   </a>
                 </div>
               ))}
             </div>
           </div>
+        </div>
 
-          {/* Formulaire */}
-          <div>
+        {/* ── Colonne droite : formulaire ── */}
+        <div style={{
+          background: '#F8F5F2',
+          display: 'flex',
+          alignItems: 'center',
+          justifyContent: 'center',
+          padding: '6rem 4rem',
+          minHeight: '100vh',
+        }}>
+          <div style={{ width: '100%', maxWidth: '480px' }}>
+
             {sent ? (
-              <div style={{ textAlign: 'center', padding: '4rem 2rem' }}>
-                <span style={{ color: '#be2828', fontSize: '2rem', display: 'block', marginBottom: '1.5rem' }}>♥</span>
-                <h3 style={{ fontFamily: 'var(--font-heading)', fontSize: '2rem', fontStyle: 'italic', marginBottom: '1rem' }}>
+              <div style={{ textAlign: 'center' }}>
+                <span style={{
+                  fontFamily: 'Peristiwa, serif',
+                  fontSize: '3rem',
+                  color: '#be2828',
+                  display: 'block',
+                  marginBottom: '1.5rem',
+                }}>
+                  ♥
+                </span>
+                <h2 style={{
+                  fontFamily: 'var(--font-heading)',
+                  fontSize: '2.5rem',
+                  color: '#1A1A1A',
+                  marginBottom: '1rem',
+                  textTransform: 'uppercase',
+                }}>
                   Message envoyé
-                </h3>
-                <p style={{ fontSize: '0.88rem', color: '#3d3d3d', letterSpacing: '0.025em', lineHeight: 1.9 }}>
-                  Merci pour votre message. Je vous répondrai dans les 48 heures.
+                </h2>
+                <p style={{
+                  fontFamily: 'var(--font-body)',
+                  fontSize: '0.88rem',
+                  color: '#9a9590',
+                  lineHeight: 1.9,
+                }}>
+                  Merci pour votre confiance.<br />Je vous répondrai dans les 48 heures.
                 </p>
               </div>
             ) : (
-              <form onSubmit={handleSubmit} style={{ display: 'flex', flexDirection: 'column', gap: '2rem' }}>
-                {/* Prénom + Nom */}
-                <div
-                  style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '2rem' }}
-                  className='grid-cols-1 sm:grid-cols-2'
-                >
-                  <div>
-                    <label htmlFor='prenom' style={labelStyle}>Prénom</label>
-                    <input id='prenom' name='prenom' type='text' required value={form.prenom} onChange={handleChange} style={inputStyle} placeholder='Marie' />
-                  </div>
-                  <div>
-                    <label htmlFor='nom' style={labelStyle}>Nom</label>
-                    <input id='nom' name='nom' type='text' required value={form.nom} onChange={handleChange} style={inputStyle} placeholder='Dupont' />
-                  </div>
-                </div>
-
-                {/* Email */}
-                <div>
-                  <label htmlFor='email' style={labelStyle}>Email</label>
-                  <input id='email' name='email' type='email' required value={form.email} onChange={handleChange} style={inputStyle} placeholder='marie@exemple.com' />
-                </div>
-
-                {/* Date + Lieu */}
-                <div
-                  style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '2rem' }}
-                  className='grid-cols-1 sm:grid-cols-2'
-                >
-                  <div>
-                    <label htmlFor='date' style={labelStyle}>Date du mariage</label>
-                    <input id='date' name='date' type='date' value={form.date} onChange={handleChange} style={inputStyle} />
-                  </div>
-                  <div>
-                    <label htmlFor='lieu' style={labelStyle}>Lieu</label>
-                    <input id='lieu' name='lieu' type='text' value={form.lieu} onChange={handleChange} style={inputStyle} placeholder="Paris, Côte d'Azur…" />
-                  </div>
-                </div>
-
-                {/* Message */}
-                <div>
-                  <label htmlFor='message' style={labelStyle}>Message</label>
-                  <textarea
-                    id='message'
-                    name='message'
-                    required
-                    rows={5}
-                    value={form.message}
-                    onChange={handleChange}
-                    style={{ ...inputStyle, resize: 'none', borderBottom: '1px solid #e8e4e0' }}
-                    placeholder='Parlez-moi de vous, de votre mariage, de ce que vous recherchez…'
-                  />
-                </div>
-
-                <button
-                  type='submit'
-                  disabled={loading}
-                  style={{
+              <>
+                <div style={{ marginBottom: '3rem' }}>
+                  <span style={{
                     fontFamily: 'var(--font-body)',
-                    fontSize: '0.72rem',
-                    fontWeight: 500,
-                    letterSpacing: '0.22em',
+                    fontSize: '0.6rem',
+                    letterSpacing: '0.28em',
                     textTransform: 'uppercase',
-                    padding: '1rem 2.5rem',
-                    border: '1px solid #1A1A1A',
-                    background: loading ? '#1A1A1A' : 'transparent',
-                    color: loading ? '#F8F5F2' : '#1A1A1A',
-                    cursor: loading ? 'default' : 'pointer',
-                    transition: 'all 0.3s',
-                    alignSelf: 'flex-start',
-                  }}
-                  className={loading ? '' : 'hover:bg-[#1A1A1A] hover:text-[#F8F5F2]'}
-                >
-                  {loading ? 'Envoi en cours…' : 'Envoyer le message'}
-                </button>
-              </form>
+                    color: '#be2828',
+                    display: 'block',
+                    marginBottom: '0.8rem',
+                  }}>
+                    Votre projet
+                  </span>
+                  <h2 style={{
+                    fontFamily: 'var(--font-heading)',
+                    fontSize: 'clamp(1.8rem, 2.5vw, 2.4rem)',
+                    color: '#1A1A1A',
+                    lineHeight: 1.15,
+                    textTransform: 'uppercase',
+                  }}>
+                    Faisons connaissance
+                  </h2>
+                </div>
+
+                <form onSubmit={handleSubmit} style={{ display: 'flex', flexDirection: 'column', gap: '2.2rem' }}>
+
+                  <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '1.5rem' }}>
+                    {[
+                      { id: 'prenom', label: 'Prénom', placeholder: 'Marie', type: 'text', required: true },
+                      { id: 'nom', label: 'Nom', placeholder: 'Dupont', type: 'text', required: true },
+                    ].map(({ id, label, placeholder, type, required }) => (
+                      <div key={id}>
+                        <label htmlFor={id} style={{
+                          fontFamily: 'var(--font-body)',
+                          fontSize: '0.58rem',
+                          fontWeight: 500,
+                          letterSpacing: '0.25em',
+                          textTransform: 'uppercase',
+                          color: '#9a9590',
+                          display: 'block',
+                          marginBottom: '0.5rem',
+                        }}>
+                          {label}
+                        </label>
+                        <input
+                          id={id} name={id} type={type} required={required}
+                          value={form[id as keyof FormState]}
+                          onChange={handleChange}
+                          placeholder={placeholder}
+                          style={{
+                            width: '100%',
+                            background: 'transparent',
+                            border: 'none',
+                            borderBottom: '1px solid #d4cfc9',
+                            padding: '0.7rem 0',
+                            fontFamily: 'var(--font-body)',
+                            fontSize: '0.88rem',
+                            color: '#1A1A1A',
+                            outline: 'none',
+                          }}
+                        />
+                      </div>
+                    ))}
+                  </div>
+
+                  <div>
+                    <label htmlFor='email' style={{
+                      fontFamily: 'var(--font-body)',
+                      fontSize: '0.58rem',
+                      fontWeight: 500,
+                      letterSpacing: '0.25em',
+                      textTransform: 'uppercase',
+                      color: '#9a9590',
+                      display: 'block',
+                      marginBottom: '0.5rem',
+                    }}>
+                      Email
+                    </label>
+                    <input
+                      id='email' name='email' type='email' required
+                      value={form.email} onChange={handleChange}
+                      placeholder='marie@exemple.com'
+                      style={{
+                        width: '100%',
+                        background: 'transparent',
+                        border: 'none',
+                        borderBottom: '1px solid #d4cfc9',
+                        padding: '0.7rem 0',
+                        fontFamily: 'var(--font-body)',
+                        fontSize: '0.88rem',
+                        color: '#1A1A1A',
+                        outline: 'none',
+                      }}
+                    />
+                  </div>
+
+                  <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '1.5rem' }}>
+                    <div>
+                      <label htmlFor='date' style={{
+                        fontFamily: 'var(--font-body)',
+                        fontSize: '0.58rem',
+                        fontWeight: 500,
+                        letterSpacing: '0.25em',
+                        textTransform: 'uppercase',
+                        color: '#9a9590',
+                        display: 'block',
+                        marginBottom: '0.5rem',
+                      }}>
+                        Date du mariage
+                      </label>
+                      <input
+                        id='date' name='date' type='date'
+                        value={form.date} onChange={handleChange}
+                        style={{
+                          width: '100%',
+                          background: 'transparent',
+                          border: 'none',
+                          borderBottom: '1px solid #d4cfc9',
+                          padding: '0.7rem 0',
+                          fontFamily: 'var(--font-body)',
+                          fontSize: '0.88rem',
+                          color: '#1A1A1A',
+                          outline: 'none',
+                        }}
+                      />
+                    </div>
+                    <div>
+                      <label htmlFor='lieu' style={{
+                        fontFamily: 'var(--font-body)',
+                        fontSize: '0.58rem',
+                        fontWeight: 500,
+                        letterSpacing: '0.25em',
+                        textTransform: 'uppercase',
+                        color: '#9a9590',
+                        display: 'block',
+                        marginBottom: '0.5rem',
+                      }}>
+                        Lieu
+                      </label>
+                      <input
+                        id='lieu' name='lieu' type='text'
+                        value={form.lieu} onChange={handleChange}
+                        placeholder="Paris, Côte d'Azur…"
+                        style={{
+                          width: '100%',
+                          background: 'transparent',
+                          border: 'none',
+                          borderBottom: '1px solid #d4cfc9',
+                          padding: '0.7rem 0',
+                          fontFamily: 'var(--font-body)',
+                          fontSize: '0.88rem',
+                          color: '#1A1A1A',
+                          outline: 'none',
+                        }}
+                      />
+                    </div>
+                  </div>
+
+                  <div>
+                    <label htmlFor='message' style={{
+                      fontFamily: 'var(--font-body)',
+                      fontSize: '0.58rem',
+                      fontWeight: 500,
+                      letterSpacing: '0.25em',
+                      textTransform: 'uppercase',
+                      color: '#9a9590',
+                      display: 'block',
+                      marginBottom: '0.5rem',
+                    }}>
+                      Votre message
+                    </label>
+                    <textarea
+                      id='message' name='message' required rows={4}
+                      value={form.message} onChange={handleChange}
+                      placeholder='Parlez-moi de vous, de votre histoire, de ce que vous souhaitez garder de ce jour…'
+                      style={{
+                        width: '100%',
+                        background: 'transparent',
+                        border: 'none',
+                        borderBottom: '1px solid #d4cfc9',
+                        padding: '0.7rem 0',
+                        fontFamily: 'var(--font-body)',
+                        fontSize: '0.88rem',
+                        color: '#1A1A1A',
+                        outline: 'none',
+                        resize: 'none',
+                      }}
+                    />
+                  </div>
+
+                  <button
+                    type='submit'
+                    disabled={loading}
+                    style={{
+                      fontFamily: 'var(--font-heading)',
+                      fontSize: '0.72rem',
+                      letterSpacing: '0.22em',
+                      textTransform: 'uppercase',
+                      padding: '1.1rem 2.8rem',
+                      border: '1px solid #1A1A1A',
+                      background: loading ? '#1A1A1A' : 'transparent',
+                      color: loading ? '#F8F5F2' : '#1A1A1A',
+                      cursor: loading ? 'default' : 'pointer',
+                      transition: 'all 0.3s',
+                      alignSelf: 'flex-start',
+                      marginTop: '0.5rem',
+                    }}
+                    className={loading ? '' : 'hover:bg-[#1A1A1A] hover:text-[#F8F5F2]'}
+                  >
+                    {loading ? 'Envoi en cours…' : 'Envoyer le message'}
+                  </button>
+
+                </form>
+              </>
             )}
           </div>
         </div>
-      </section>
+      </div>
+
+      {/* CSS mobile */}
+      <style>{`
+        @media (max-width: 768px) {
+          .contact-grid {
+            grid-template-columns: 1fr !important;
+          }
+          .contact-grid > div:first-child {
+            min-height: 50vh !important;
+          }
+        }
+      `}</style>
 
       <Footer />
     </>
