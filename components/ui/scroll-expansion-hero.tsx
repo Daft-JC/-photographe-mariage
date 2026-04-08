@@ -197,11 +197,11 @@ const ScrollExpandMedia = ({
                 <motion.h1
                   className='text-5xl md:text-6xl lg:text-7xl font-light'
                   style={{
-                    fontFamily: 'Peristiwa, serif',
+                    fontFamily: 'var(--font-heading)',
                     color: '#be2828',
                     transform: `translateX(-${textShift}vw)`,
                     textShadow: '0 2px 20px rgba(0,0,0,0.3)',
-                    textTransform: 'none',
+                    textTransform: 'uppercase',
                   }}
                 >
                   {firstWord}
@@ -213,7 +213,7 @@ const ScrollExpandMedia = ({
                     color: '#F8F5F2',
                     transform: `translateX(${textShift}vw)`,
                     textShadow: '0 2px 20px rgba(0,0,0,0.3)',
-                    textTransform: 'none',
+                    textTransform: 'uppercase',
                   }}
                 >
                   {restOfTitle}
