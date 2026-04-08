@@ -351,7 +351,7 @@ export default function Home() {
                 Ce qu'ils en disent
               </span>
               <h2 style={{ fontFamily: 'var(--font-heading)', fontSize: 'clamp(1.8rem,3.5vw,3rem)' }}>
-                Des mots qui <em>touchent le cœur</em>
+                Des mots qui touchent le <em style={{ color: '#be2828', fontStyle: 'normal' }}>cœur</em>
               </h2>
             </div>
 
