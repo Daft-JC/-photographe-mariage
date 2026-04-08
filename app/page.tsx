@@ -116,7 +116,7 @@ export default function Home() {
       <Nav />
       <ScrollExpandMedia
         mediaSrc='/DSC02024.jpg'
-        bgVideoSrc='https://assets.mixkit.co/videos/40591/40591-1080.mp4'
+        bgImageSrc='/DSC02014.jpg'
         title='Maison La Martina'
         subtitle='Photographe & vidéaste de mariage'
         scrollToExpand='Faites défiler'
@@ -301,10 +301,9 @@ export default function Home() {
         {/* ── CITATION ── */}
         <section
           style={{
-            background: '#1A1A1A',
+            background: '#cc0000',
             padding: '7rem 3rem',
             textAlign: 'center',
-            border: '4px solid #cc0000',
           }}
         >
           <p
