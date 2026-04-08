@@ -317,7 +317,7 @@ export default function Home() {
               margin: '0 auto 1rem',
             }}
           >
-            « Fotografare è scegliere. È guardare il mondo con occhi nuovi. »
+            « Photographier, c'est choisir. C'est regarder le monde avec des yeux nouveaux. »
           </p>
           <span
             style={{

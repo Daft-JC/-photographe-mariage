@@ -113,15 +113,20 @@ const ScrollExpandMedia = ({
           {/* Background — fades out as media expands */}
           <motion.div
             className='absolute inset-0 z-0 h-full overflow-hidden'
-            style={!bgVideoSrc ? {
-              backgroundImage: bgImageSrc ? `url("${bgImageSrc}")` : undefined,
-              backgroundSize: 'cover',
-              backgroundPosition: 'center',
-              background: bgImageSrc ? undefined : bgColor,
-            } : {}}
+            style={!bgImageSrc && !bgVideoSrc ? { background: bgColor } : {}}
             animate={{ opacity: 1 - scrollProgress }}
             transition={{ duration: 0.1 }}
           >
+            {bgImageSrc && (
+              <Image
+                src={bgImageSrc}
+                alt='Background'
+                fill
+                className='object-cover object-center'
+                priority
+                style={{ objectFit: 'cover', objectPosition: 'center' }}
+              />
+            )}
             {bgVideoSrc && (
               <video
                 autoPlay
@@ -133,7 +138,7 @@ const ScrollExpandMedia = ({
                 <source src={bgVideoSrc} type='video/mp4' />
               </video>
             )}
-            <div className='absolute inset-0 bg-black/40' />
+            <div className='absolute inset-0 bg-black/20' />
           </motion.div>
 
           <div className='container mx-auto flex flex-col items-center justify-start relative z-10'>
