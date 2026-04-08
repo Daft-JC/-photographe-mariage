@@ -7,7 +7,17 @@
       "Bash(npm install:*)",
       "Bash(npm run:*)",
       "Bash(curl:*)",
-      "Bash(npx next:*)"
+      "Bash(npx next:*)",
+      "WebSearch",
+      "WebFetch(domain:unsplash.com)",
+      "Bash(xargs sed:*)",
+      "WebFetch(domain:www.pexels.com)",
+      "WebFetch(domain:videos.pexels.com)",
+      "WebFetch(domain:player.vimeo.com)",
+      "WebFetch(domain:pixabay.com)",
+      "WebFetch(domain:www.videezy.com)",
+      "WebFetch(domain:mixkit.co)",
+      "WebFetch(domain:assets.mixkit.co)"
     ]
   }
 }

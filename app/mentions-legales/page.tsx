@@ -57,7 +57,7 @@ export default function MentionsLegales() {
             fontWeight: 500,
             letterSpacing: '0.28em',
             textTransform: 'uppercase',
-            color: '#be2828',
+            color: '#e01515',
             display: 'block',
             marginBottom: '1rem',
           }}

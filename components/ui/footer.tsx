@@ -9,7 +9,7 @@ export default function Footer() {
       >
         <div>
           <Link href='/' style={{ fontFamily: 'var(--font-heading)', fontSize: '1.2rem', display: 'block', marginBottom: '1.2rem' }}>
-            <span style={{ fontFamily: 'var(--font-heading)', color: '#be2828' }}>Maison</span>{' '}<span style={{ fontFamily: 'Peristiwa, serif' }}>La Martina</span>
+            <span style={{ fontFamily: 'var(--font-heading)', color: '#e01515' }}>Maison</span>{' '}<span style={{ fontFamily: 'Peristiwa, serif' }}>La Martina</span>
           </Link>
           <p style={{ fontSize: '0.85rem', color: '#9a9590', lineHeight: 1.8, marginBottom: '1.5rem' }}>
             Photographe de mariage haut de gamme, spécialisé dans les mariages élégants et intimistes en France, Italie et partout en Europe.
@@ -61,7 +61,7 @@ export default function Footer() {
       >
         <span style={{ fontSize: '0.78rem', color: '#9a9590' }}>© 2025 Maison La Martina — Photographe de Mariage</span>
         <span style={{ fontSize: '0.78rem', color: '#9a9590' }}>
-          Réalisé avec <span style={{ color: '#be2828' }}>♥</span> &nbsp;·&nbsp;{' '}
+          Réalisé avec <span style={{ color: '#e01515' }}>♥</span> &nbsp;·&nbsp;{' '}
           <a href='/mentions-legales' className='hover:text-[#F8F5F2] transition-colors'>Mentions légales</a>
         </span>
       </div>

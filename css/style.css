@@ -1,6 +1,6 @@
 /* ===================================================
    PHOTOGRAPHE MARIAGE — Style Principal
-   Palette : #F8F5F2 | #1A1A1A | #be2828
+   Palette : #F8F5F2 | #1A1A1A | #e01515
    Fonts   : Cormorant Garamond (titres) · Raleway (corps)
    NOTE : Remplacez les imports Google Fonts par vos
           polices Perandory (titres) et Peristiwa (corps)
@@ -15,7 +15,7 @@
 :root {
   --color-bg:      #F8F5F2;
   --color-text:    #1A1A1A;
-  --color-accent:  #be2828;
+  --color-accent:  #e01515;
   --color-white:   #ffffff;
   --color-gray-l:  #e8e4e0;
   --color-gray-m:  #9a9590;
