@@ -123,7 +123,7 @@ const ScrollExpandMedia = ({
                 alt='Background'
                 fill
                 priority
-                style={{ objectFit: 'cover', objectPosition: 'center', transform: 'scale(1.15)', transformOrigin: 'center center' }}
+                style={{ objectFit: 'contain', objectPosition: 'center', transform: 'scale(0.75)', transformOrigin: 'center center' }}
               />
             )}
             {bgVideoSrc && (
