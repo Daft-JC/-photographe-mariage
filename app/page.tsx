@@ -304,6 +304,7 @@ export default function Home() {
             background: '#1A1A1A',
             padding: '7rem 3rem',
             textAlign: 'center',
+            border: '4px solid #cc0000',
           }}
         >
           <p
