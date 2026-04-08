@@ -188,6 +188,7 @@ const ScrollExpandMedia = ({
                     color: '#be2828',
                     transform: `translateX(-${textShift}vw)`,
                     textShadow: '0 2px 20px rgba(0,0,0,0.3)',
+                    textTransform: 'none',
                   }}
                 >
                   {firstWord}
@@ -199,6 +200,7 @@ const ScrollExpandMedia = ({
                     color: '#F8F5F2',
                     transform: `translateX(${textShift}vw)`,
                     textShadow: '0 2px 20px rgba(0,0,0,0.3)',
+                    textTransform: 'none',
                   }}
                 >
                   {restOfTitle}
