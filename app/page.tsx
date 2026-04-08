@@ -366,17 +366,17 @@ export default function Home() {
                 {
                   quote: "Alessio a su capter exactement ce que nous voulions — des émotions brutes, des regards vrais. On a pleuré en découvrant les photos. Un travail d'une sensibilité rare.",
                   name: 'Sophie & Maxime',
-                  detail: 'Mariage à Martigues · Juin 2025',
+                  detail: 'Mariage à Martigues · Septembre 2025',
                 },
                 {
                   quote: "Une discrétion absolue le jour J, et des images qui racontent notre histoire comme un film. Chaque photo est une peinture. Nous recommandons Alessio les yeux fermés.",
                   name: 'Camille & Julien',
-                  detail: 'Mariage à Marseille · Septembre 2025',
+                  detail: 'Mariage à Marseille · Octobre 2025',
                 },
                 {
                   quote: "Depuis nos fiançailles jusqu'au lendemain du mariage, Alessio nous a accompagnés avec une élégance et une générosité incroyables. Les photos sont au-delà de nos espérances.",
                   name: 'Lucie & Thomas',
-                  detail: 'Mariage à Aix-en-Provence · Mai 2025',
+                  detail: 'Mariage à Aix-en-Provence · Janvier 2026',
                 },
               ].map(({ quote, name, detail }) => (
                 <div
