@@ -9,6 +9,14 @@
   font-display: swap;
 }
 
+@font-face {
+  font-family: 'Peristiwa';
+  src: url('/fonts/Peristiwa.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
 :root {
   --color-bg:     #F8F5F2;
   --color-text:   #1A1A1A;
@@ -37,7 +45,8 @@ h1, h2, h3, h4, h5 {
   font-family: var(--font-heading);
   font-weight: 400;
   line-height: 1.15;
-  letter-spacing: 0.02em;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
 }
 
 /* ─── RESPONSIVE LAYOUT CLASSES ─── */

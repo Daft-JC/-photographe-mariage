@@ -546,7 +546,7 @@ export default function Home() {
           >
             <div>
               <Link href='/' style={{ fontFamily: 'var(--font-heading)', fontSize: '1.2rem', display: 'block', marginBottom: '1.2rem' }}>
-                Lamartina <span style={{ color: '#be2828' }}>Studio</span>
+                <span style={{ fontFamily: 'Peristiwa, serif' }}>Maison</span>{' '}<span style={{ fontFamily: 'var(--font-heading)' }}>La Martina</span>
               </Link>
               <p style={{ fontSize: '0.85rem', color: '#9a9590', lineHeight: 1.8, marginBottom: '1.5rem' }}>
                 Photographe de mariage haut de gamme, spécialisé dans les mariages élégants et intimistes en France, Italie et partout en Europe.
