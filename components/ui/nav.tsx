@@ -48,7 +48,7 @@ export default function Nav() {
               fontWeight: 400,
             }}
           >
-            <span style={{ fontFamily: 'Peristiwa, serif', color: '#be2828' }}>Maison</span>{' '}<span style={{ fontFamily: 'var(--font-heading)' }}>La Martina</span>
+            <span style={{ fontFamily: 'var(--font-heading)', color: '#be2828' }}>Maison</span>{' '}<span style={{ fontFamily: 'Peristiwa, serif' }}>La Martina</span>
           </Link>
 
           {/* Desktop links */}
