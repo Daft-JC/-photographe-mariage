@@ -5,7 +5,7 @@ const SITE_URL = 'https://www.lamartinastudio.com';
 export const metadata: Metadata = {
   title: 'Portfolio — Galerie de Mariages',
   description:
-    'Explorez le portfolio de Lamartina Studio : reportages de mariages élégants en Provence, Côte d\'Azur, Toscane, Paris, Monaco et partout en Europe. Photos de mariage émotionnelles et intemporelles.',
+    'Explorez le portfolio de Maison La Martina : reportages de mariages élégants en Provence, Côte d\'Azur, Toscane, Paris, Monaco et partout en Europe. Photos de mariage émotionnelles et intemporelles.',
   keywords: [
     'portfolio photographe mariage',
     'galerie photo mariage',
@@ -27,16 +27,16 @@ export const metadata: Metadata = {
     'photos réception mariage',
     'photos détails mariage',
     'inspiration mariage photo',
-    'Lamartina Studio portfolio',
+    'Maison La Martina portfolio',
     'Alessio Lamartina photos',
   ],
   alternates: {
     canonical: `${SITE_URL}/portfolio`,
   },
   openGraph: {
-    title: 'Portfolio — Lamartina Studio',
+    title: 'Portfolio — Maison La Martina',
     description:
-      'Explorez le portfolio de Lamartina Studio : reportages de mariages élégants en France, Italie et Europe.',
+      'Explorez le portfolio de Maison La Martina : reportages de mariages élégants en France, Italie et Europe.',
     url: `${SITE_URL}/portfolio`,
     type: 'website',
     images: [
@@ -44,13 +44,13 @@ export const metadata: Metadata = {
         url: `${SITE_URL}/og-portfolio.jpg`,
         width: 1200,
         height: 630,
-        alt: 'Portfolio Lamartina Studio — Photographe de Mariage',
+        alt: 'Portfolio Maison La Martina — Photographe de Mariage',
       },
     ],
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Portfolio — Lamartina Studio',
+    title: 'Portfolio — Maison La Martina',
     description: 'Galerie de mariages élégants en France, Italie et Europe.',
     images: [`${SITE_URL}/og-portfolio.jpg`],
   },
@@ -60,7 +60,7 @@ export default function PortfolioLayout({ children }: { children: React.ReactNod
   const jsonLd = {
     '@context': 'https://schema.org',
     '@type': 'ImageGallery',
-    name: 'Portfolio — Lamartina Studio',
+    name: 'Portfolio — Maison La Martina',
     description: 'Galerie de reportages de mariages haut de gamme en France, Italie et Europe.',
     url: `${SITE_URL}/portfolio`,
     author: {

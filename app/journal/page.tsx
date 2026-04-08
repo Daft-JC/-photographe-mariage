@@ -11,7 +11,7 @@ const SITE_URL = 'https://www.lamartinastudio.com';
 export const metadata: Metadata = {
   title: 'Journal — Reportages & Histoires de Mariages',
   description:
-    'Le journal de Lamartina Studio : reportages complets, histoires de couples et inspirations mariage. Mariages en Toscane, Provence, Côte d\'Azur, Paris et toute l\'Europe par Alessio Lamartina.',
+    'Le journal de Maison La Martina : reportages complets, histoires de couples et inspirations mariage. Mariages en Toscane, Provence, Côte d\'Azur, Paris et toute l\'Europe par Alessio Lamartina.',
   keywords: [
     'blog photographe mariage',
     'journal photographe mariage',
@@ -33,7 +33,7 @@ export const metadata: Metadata = {
     'inspiration mariage villa',
     'shooting mariage extérieur',
     'photos mariage plein air',
-    'Lamartina Studio journal',
+    'Maison La Martina journal',
     'Alessio Lamartina blog',
   ],
   alternates: {
@@ -108,7 +108,7 @@ const journalLd = {
     },
     {
       '@type': 'Blog',
-      name: 'Journal — Lamartina Studio',
+      name: 'Journal — Maison La Martina',
       description: 'Reportages complets et histoires de mariages par Alessio Lamartina, photographe de mariage haut de gamme.',
       url: 'https://www.lamartinastudio.com/journal',
       author: {
@@ -118,7 +118,7 @@ const journalLd = {
       },
       publisher: {
         '@type': 'Organization',
-        name: 'Lamartina Studio',
+        name: 'Maison La Martina',
         url: 'https://www.lamartinastudio.com',
       },
     },

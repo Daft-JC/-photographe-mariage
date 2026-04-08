@@ -4,7 +4,7 @@ import Footer from '@/components/ui/footer';
 
 export const metadata: Metadata = {
   title: 'Mentions Légales',
-  description: 'Mentions légales de Lamartina Studio, photographe de mariage professionnel.',
+  description: 'Mentions légales de Maison La Martina, photographe de mariage professionnel.',
   robots: { index: false, follow: false },
   alternates: { canonical: 'https://www.lamartinastudio.com/mentions-legales' },
 };
@@ -82,7 +82,7 @@ export default function MentionsLegales() {
         >
 
           <Section title="1. Éditeur du site">
-            <p><strong>Raison sociale :</strong> Lamartina Studio</p>
+            <p><strong>Raison sociale :</strong> Maison La Martina</p>
             <p><strong>Nom :</strong> Alessio Lamartina</p>
             <p><strong>Statut :</strong> [Auto-entrepreneur / SASU / EURL — à compléter]</p>
             <p><strong>SIRET :</strong> [XXX XXX XXX XXXXX — à compléter]</p>
@@ -139,14 +139,14 @@ export default function MentionsLegales() {
 
           <Section title="7. Liens hypertextes">
             <p>
-              Le site peut contenir des liens vers des sites tiers. Lamartina Studio ne saurait être tenu responsable
+              Le site peut contenir des liens vers des sites tiers. Maison La Martina ne saurait être tenu responsable
               du contenu de ces sites ni des pratiques de confidentialité de leurs éditeurs.
             </p>
           </Section>
 
           <Section title="8. Limitation de responsabilité">
             <p>
-              Lamartina Studio s'efforce d'assurer l'exactitude et la mise à jour des informations diffusées sur ce site.
+              Maison La Martina s'efforce d'assurer l'exactitude et la mise à jour des informations diffusées sur ce site.
               Toutefois, Alessio Lamartina ne peut garantir l'exhaustivité ni l'absence d'erreur des informations publiées
               et ne pourra être tenu responsable de tout dommage résultant de l'utilisation de ce site.
             </p>

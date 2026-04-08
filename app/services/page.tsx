@@ -11,7 +11,7 @@ const SITE_URL = 'https://www.lamartinastudio.com';
 export const metadata: Metadata = {
   title: 'Services & Tarifs — Formules Photographie de Mariage',
   description:
-    "Découvrez les formules et tarifs de Lamartina Studio pour votre reportage photo de mariage. Demi-journée, journée complète, séance engagement. Photographe haut de gamme disponible en France, Italie et Europe.",
+    "Découvrez les formules et tarifs de Maison La Martina pour votre reportage photo de mariage. Demi-journée, journée complète, séance engagement. Photographe haut de gamme disponible en France, Italie et Europe.",
   keywords: [
     'tarif photographe mariage',
     'prix photographe mariage France',
@@ -31,8 +31,8 @@ export const metadata: Metadata = {
     'wedding photography packages France',
     'luxury wedding photographer rates',
     'fine art wedding photographer pricing',
-    'Lamartina Studio tarifs',
-    'Lamartina Studio formules',
+    'Maison La Martina tarifs',
+    'Maison La Martina formules',
     'livraison galerie mariage',
     'galerie haute résolution mariage',
     'retouche photo mariage',
@@ -41,7 +41,7 @@ export const metadata: Metadata = {
     canonical: `${SITE_URL}/services`,
   },
   openGraph: {
-    title: 'Services & Tarifs — Lamartina Studio',
+    title: 'Services & Tarifs — Maison La Martina',
     description:
       'Formules et tarifs pour votre reportage photo de mariage haut de gamme avec Alessio Lamartina.',
     url: `${SITE_URL}/services`,
@@ -62,7 +62,7 @@ const servicesLd = {
     {
       '@type': 'Service',
       name: 'Reportage Photo de Mariage',
-      provider: { '@type': 'LocalBusiness', name: 'Lamartina Studio' },
+      provider: { '@type': 'LocalBusiness', name: 'Maison La Martina' },
       serviceType: 'Photographie de mariage',
       description: 'Reportage photo de mariage haut de gamme en France, Italie et Europe. Style naturel, émotionnel et intemporel. Livraison en galerie haute résolution sous 6 à 8 semaines.',
       areaServed: ['France', 'Italie', 'Europe'],
@@ -242,7 +242,7 @@ export default function Services() {
                 fontSize: 'clamp(1.8rem, 3.5vw, 3rem)',
               }}
             >
-              L'expérience <em>Lamartina Studio</em>
+              L'expérience <em>Maison La Martina</em>
             </h2>
           </div>
 

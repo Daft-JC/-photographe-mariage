@@ -23,7 +23,7 @@ export const metadata: Metadata = {
     'photographe mariage artistique Provence',
     'who is Alessio Lamartina',
     'about wedding photographer France',
-    'Lamartina Studio à propos',
+    'Maison La Martina à propos',
     'photographe mariage naturel émotionnel',
     'reportage mariage discret',
     'photographe mariage sensible',
@@ -78,7 +78,7 @@ const aproposLd = {
         ],
         worksFor: {
           '@type': 'LocalBusiness',
-          name: 'Lamartina Studio',
+          name: 'Maison La Martina',
           url: 'https://www.lamartinastudio.com',
         },
       },

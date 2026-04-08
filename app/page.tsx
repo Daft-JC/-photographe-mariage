@@ -11,7 +11,7 @@ export const metadata: Metadata = {
   alternates: { canonical: SITE_URL },
   openGraph: {
     url: SITE_URL,
-    title: 'Lamartina Studio — Photographe de Mariage France & Italie',
+    title: 'Maison La Martina — Photographe de Mariage France & Italie',
     description:
       'Alessio Lamartina, photographe de mariage haut de gamme en France, Italie et Europe. Reportages élégants, émotionnels et intemporels en Provence, Côte d\'Azur, Toscane, Paris, Monaco.',
   },
@@ -117,7 +117,7 @@ export default function Home() {
       <ScrollExpandMedia
         mediaSrc='https://images.unsplash.com/photo-1520854221256-17451cc331bf?q=80&w=1280&auto=format&fit=crop'
         bgImageSrc='https://images.unsplash.com/photo-1532712938310-34cb3982ef74?q=80&w=1920&auto=format&fit=crop'
-        title='Lamartina Studio'
+        title='Maison La Martina'
         subtitle='Photographe de Mariage · France · Italie · Europe'
         scrollToExpand='Défiler pour découvrir'
       >
@@ -594,7 +594,7 @@ export default function Home() {
               gap: '0.5rem',
             }}
           >
-            <span style={{ fontSize: '0.78rem', color: '#9a9590' }}>© 2024 Lamartina Studio — Photographe de Mariage</span>
+            <span style={{ fontSize: '0.78rem', color: '#9a9590' }}>© 2024 Maison La Martina — Photographe de Mariage</span>
             <span style={{ fontSize: '0.78rem', color: '#9a9590' }}>
               Réalisé avec <span style={{ color: '#be2828' }}>♥</span> &nbsp;·&nbsp;{' '}
               <a href='/mentions-legales' className='hover:text-[#F8F5F2] transition-colors'>Mentions légales</a>

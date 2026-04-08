@@ -17,7 +17,7 @@ export const metadata: Metadata = {
     'réservation photographe mariage',
     'booking wedding photographer France',
     'contacter Alessio Lamartina',
-    'Lamartina Studio contact',
+    'Maison La Martina contact',
     'demande devis mariage',
     'photographe mariage disponible',
     'photographe mariage 2024',
@@ -28,7 +28,7 @@ export const metadata: Metadata = {
     canonical: `${SITE_URL}/contact`,
   },
   openGraph: {
-    title: 'Contact — Lamartina Studio',
+    title: 'Contact — Maison La Martina',
     description:
       'Contactez Alessio Lamartina pour votre mariage. Vérifiez les disponibilités et obtenez un devis personnalisé.',
     url: `${SITE_URL}/contact`,
@@ -40,12 +40,12 @@ export default function ContactLayout({ children }: { children: React.ReactNode 
   const jsonLd = {
     '@context': 'https://schema.org',
     '@type': 'ContactPage',
-    name: 'Contact — Lamartina Studio',
+    name: 'Contact — Maison La Martina',
     description: 'Page de contact pour réserver Alessio Lamartina pour votre mariage.',
     url: `${SITE_URL}/contact`,
     mainEntity: {
       '@type': 'LocalBusiness',
-      name: 'Lamartina Studio',
+      name: 'Maison La Martina',
       email: 'hello@lamartinastudio.com',
       telephone: '+33600000000',
       url: SITE_URL,
