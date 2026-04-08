@@ -59,7 +59,7 @@ export default function Nav() {
                   href={l.href}
                   className='text-xs tracking-[0.22em] uppercase font-light transition-colors duration-200 hover:opacity-60'
                   style={{
-                    fontFamily: 'var(--font-body)',
+                    fontFamily: 'var(--font-heading)',
                     color: (scrolled || !isHome) ? '#1A1A1A' : '#F8F5F2',
                   }}
                 >
@@ -74,7 +74,7 @@ export default function Nav() {
             href='/contact'
             className='hidden md:inline-block text-xs tracking-[0.22em] uppercase px-6 py-3 border transition-all duration-300'
             style={{
-              fontFamily: 'var(--font-body)',
+              fontFamily: 'var(--font-heading)',
               color: (scrolled || !isHome) ? '#1A1A1A' : '#F8F5F2',
               borderColor: (scrolled || !isHome) ? '#1A1A1A' : 'rgba(255,255,255,0.55)',
             }}
