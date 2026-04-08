@@ -118,8 +118,8 @@ export default function Home() {
         mediaSrc='/DSC02024.jpg'
         bgVideoSrc='https://assets.mixkit.co/videos/40591/40591-1080.mp4'
         title='Maison La Martina'
-        subtitle='Photographe de Mariage · France · Italie · Europe'
-        scrollToExpand='Défiler pour découvrir'
+        subtitle='Photographe & vidéaste de mariage'
+        scrollToExpand='Faites défiler'
       >
 
         {/* ── PORTFOLIO APERÇU ── */}

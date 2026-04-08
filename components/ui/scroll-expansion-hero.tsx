@@ -179,11 +179,13 @@ const ScrollExpandMedia = ({
                   )}
                   {scrollToExpand && (
                     <p
-                      className='text-xs tracking-[0.22em] uppercase font-light'
+                      className='text-xs tracking-[0.22em] uppercase'
                       style={{
                         color: '#be2828',
                         transform: `translateX(${textShift}vw)`,
                         opacity: 1 - scrollProgress * 2,
+                        fontWeight: 700,
+                        fontStyle: 'italic',
                       }}
                     >
                       {scrollToExpand}
