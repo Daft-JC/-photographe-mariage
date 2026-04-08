@@ -172,6 +172,8 @@ const ScrollExpandMedia = ({
                         color: '#F8F5F2',
                         transform: `translateX(-${textShift}vw)`,
                         opacity: 1 - scrollProgress * 2,
+                        textAlign: 'center',
+                        width: '100%',
                       }}
                     >
                       {subtitle}
