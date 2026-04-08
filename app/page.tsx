@@ -301,7 +301,7 @@ export default function Home() {
         {/* ── CITATION ── */}
         <section
           style={{
-            background: '#cc0000',
+            background: '#F8F5F2',
             padding: '7rem 3rem',
             textAlign: 'center',
           }}
@@ -310,7 +310,7 @@ export default function Home() {
             style={{
               fontFamily: 'var(--font-heading)',
               fontSize: 'clamp(1.4rem,3vw,2.2rem)',
-              color: '#F8F5F2',
+              color: '#1A1A1A',
               fontStyle: 'italic',
               lineHeight: 1.5,
               maxWidth: '700px',
