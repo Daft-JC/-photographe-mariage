@@ -58,7 +58,7 @@ export default function Contact() {
                 fontSize: '0.6rem',
                 letterSpacing: '0.3em',
                 textTransform: 'uppercase',
-                color: '#e01515',
+                color: '#cc0000',
                 display: 'block',
                 marginBottom: '0.8rem',
               }}>
@@ -134,7 +134,7 @@ export default function Contact() {
                 <span style={{
                   fontFamily: 'Peristiwa, serif',
                   fontSize: '3rem',
-                  color: '#e01515',
+                  color: '#cc0000',
                   display: 'block',
                   marginBottom: '1.5rem',
                 }}>
@@ -166,7 +166,7 @@ export default function Contact() {
                     fontSize: '0.6rem',
                     letterSpacing: '0.28em',
                     textTransform: 'uppercase',
-                    color: '#e01515',
+                    color: '#cc0000',
                     display: 'block',
                     marginBottom: '0.8rem',
                   }}>

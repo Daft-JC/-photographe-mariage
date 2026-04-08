@@ -155,7 +155,7 @@ export default function Journal() {
             fontWeight: 500,
             letterSpacing: '0.28em',
             textTransform: 'uppercase',
-            color: '#e01515',
+            color: '#cc0000',
             display: 'block',
             marginBottom: '1rem',
           }}
@@ -208,7 +208,7 @@ export default function Journal() {
                   fontWeight: 500,
                   letterSpacing: '0.22em',
                   textTransform: 'uppercase',
-                  color: '#e01515',
+                  color: '#cc0000',
                   display: 'block',
                   marginBottom: '0.5rem',
                 }}
@@ -239,7 +239,7 @@ export default function Journal() {
                   borderBottom: '1px solid #1A1A1A',
                   paddingBottom: '2px',
                 }}
-                className='group-hover:text-[#e01515] group-hover:border-[#e01515] transition-colors duration-200'
+                className='group-hover:text-[#cc0000] group-hover:border-[#cc0000] transition-colors duration-200'
               >
                 Lire le reportage
               </span>
@@ -280,7 +280,7 @@ export default function Journal() {
                       fontWeight: 500,
                       letterSpacing: '0.2em',
                       textTransform: 'uppercase',
-                      color: '#e01515',
+                      color: '#cc0000',
                     }}
                   >
                     {article.category}

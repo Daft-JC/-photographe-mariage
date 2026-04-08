@@ -113,7 +113,7 @@ export default function APropos() {
             fontWeight: 500,
             letterSpacing: '0.28em',
             textTransform: 'uppercase',
-            color: '#e01515',
+            color: '#cc0000',
             display: 'block',
             marginBottom: '1rem',
           }}
@@ -226,7 +226,7 @@ export default function APropos() {
                 fontWeight: 500,
                 letterSpacing: '0.28em',
                 textTransform: 'uppercase',
-                color: '#e01515',
+                color: '#cc0000',
                 display: 'block',
                 marginBottom: '1rem',
               }}

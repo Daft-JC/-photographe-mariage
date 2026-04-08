@@ -181,7 +181,7 @@ const ScrollExpandMedia = ({
                     <p
                       className='text-xs tracking-[0.22em] uppercase'
                       style={{
-                        color: '#e01515',
+                        color: '#cc0000',
                         transform: `translateX(${textShift}vw)`,
                         opacity: 1 - scrollProgress * 2,
                         fontWeight: 700,
@@ -200,7 +200,7 @@ const ScrollExpandMedia = ({
                   className='text-5xl md:text-6xl lg:text-7xl font-light'
                   style={{
                     fontFamily: 'var(--font-heading)',
-                    color: '#e01515',
+                    color: '#cc0000',
                     transform: `translateX(-${textShift}vw)`,
                     textShadow: '0 2px 20px rgba(0,0,0,0.3)',
                     textTransform: 'uppercase',

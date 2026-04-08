@@ -133,7 +133,7 @@ export default function Home() {
                   fontWeight: 500,
                   letterSpacing: '0.28em',
                   textTransform: 'uppercase',
-                  color: '#e01515',
+                  color: '#cc0000',
                   display: 'block',
                   marginBottom: '1rem',
                 }}
@@ -143,7 +143,7 @@ export default function Home() {
               <h2
                 style={{ fontFamily: 'var(--font-heading)', fontSize: 'clamp(2rem,4vw,3.5rem)', marginBottom: '1.2rem' }}
               >
-                Chaque mariage,<br />une histoire <em style={{ fontFamily: 'var(--font-heading)', color: '#e01515', fontStyle: 'normal', textTransform: 'none' }}>unique</em>
+                Chaque mariage,<br />une histoire <em style={{ fontFamily: 'var(--font-heading)', color: '#cc0000', fontStyle: 'normal', textTransform: 'none' }}>unique</em>
               </h2>
               <p style={{ fontSize: '0.92rem', color: '#3d3d3d', letterSpacing: '0.025em', maxWidth: '520px', margin: '0 auto' }}>
                 Des instants volés, des regards complices, des émotions sincères.<br />
@@ -247,7 +247,7 @@ export default function Home() {
                   fontWeight: 500,
                   letterSpacing: '0.28em',
                   textTransform: 'uppercase',
-                  color: '#e01515',
+                  color: '#cc0000',
                   display: 'block',
                   marginBottom: '1rem',
                 }}
@@ -343,7 +343,7 @@ export default function Home() {
                   fontWeight: 500,
                   letterSpacing: '0.28em',
                   textTransform: 'uppercase',
-                  color: '#e01515',
+                  color: '#cc0000',
                   display: 'block',
                   marginBottom: '1rem',
                 }}
@@ -351,7 +351,7 @@ export default function Home() {
                 Ce qu'ils en disent
               </span>
               <h2 style={{ fontFamily: 'var(--font-heading)', fontSize: 'clamp(1.8rem,3.5vw,3rem)' }}>
-                Des mots qui touchent le <em style={{ color: '#e01515', fontStyle: 'normal' }}>cœur</em>
+                Des mots qui touchent le <em style={{ color: '#cc0000', fontStyle: 'normal' }}>cœur</em>
               </h2>
             </div>
 
@@ -384,7 +384,7 @@ export default function Home() {
                   style={{
                     background: '#fff',
                     padding: '3rem 2.5rem',
-                    borderTop: '2px solid #e01515',
+                    borderTop: '2px solid #cc0000',
                   }}
                 >
                   <p
@@ -404,7 +404,7 @@ export default function Home() {
                       style={{
                         fontFamily: 'Peristiwa, serif',
                         fontSize: '1rem',
-                        color: '#e01515',
+                        color: '#cc0000',
                         display: 'block',
                         marginBottom: '0.25rem',
                       }}
@@ -446,7 +446,7 @@ export default function Home() {
                 fontWeight: 500,
                 letterSpacing: '0.28em',
                 textTransform: 'uppercase',
-                color: '#e01515',
+                color: '#cc0000',
                 display: 'block',
                 marginBottom: '1rem',
               }}
@@ -496,7 +496,7 @@ export default function Home() {
                 fontWeight: 500,
                 letterSpacing: '0.28em',
                 textTransform: 'uppercase',
-                color: '#e01515',
+                color: '#cc0000',
                 display: 'block',
                 marginBottom: '0.8rem',
               }}
@@ -547,7 +547,7 @@ export default function Home() {
           >
             <div>
               <Link href='/' style={{ fontFamily: 'var(--font-heading)', fontSize: '1.2rem', display: 'block', marginBottom: '1.2rem' }}>
-                <span style={{ fontFamily: 'var(--font-heading)', color: '#e01515' }}>Maison</span>{' '}<span style={{ fontFamily: 'Peristiwa, serif' }}>La Martina</span>
+                <span style={{ fontFamily: 'var(--font-heading)', color: '#cc0000' }}>Maison</span>{' '}<span style={{ fontFamily: 'Peristiwa, serif' }}>La Martina</span>
               </Link>
               <p style={{ fontSize: '0.85rem', color: '#9a9590', lineHeight: 1.8, marginBottom: '1.5rem' }}>
                 Photographe de mariage haut de gamme, spécialisé dans les mariages élégants et intimistes en France, Italie et partout en Europe.
@@ -597,7 +597,7 @@ export default function Home() {
           >
             <span style={{ fontSize: '0.78rem', color: '#9a9590' }}>© 2024 Maison La Martina — Photographe de Mariage</span>
             <span style={{ fontSize: '0.78rem', color: '#9a9590' }}>
-              Réalisé avec <span style={{ color: '#e01515' }}>♥</span> &nbsp;·&nbsp;{' '}
+              Réalisé avec <span style={{ color: '#cc0000' }}>♥</span> &nbsp;·&nbsp;{' '}
               <a href='/mentions-legales' className='hover:text-[#F8F5F2] transition-colors'>Mentions légales</a>
             </span>
           </div>

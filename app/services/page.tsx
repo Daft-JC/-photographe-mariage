@@ -177,7 +177,7 @@ export default function Services() {
             fontWeight: 500,
             letterSpacing: '0.28em',
             textTransform: 'uppercase',
-            color: '#e01515',
+            color: '#cc0000',
             display: 'block',
             marginBottom: '1rem',
           }}
@@ -229,7 +229,7 @@ export default function Services() {
                 fontWeight: 500,
                 letterSpacing: '0.28em',
                 textTransform: 'uppercase',
-                color: '#e01515',
+                color: '#cc0000',
                 display: 'block',
                 marginBottom: '1rem',
               }}
@@ -290,7 +290,7 @@ export default function Services() {
                 fontWeight: 500,
                 letterSpacing: '0.28em',
                 textTransform: 'uppercase',
-                color: '#e01515',
+                color: '#cc0000',
                 display: 'block',
                 marginBottom: '1rem',
               }}
@@ -332,8 +332,8 @@ export default function Services() {
                       fontSize: '0.6rem',
                       letterSpacing: '0.2em',
                       textTransform: 'uppercase',
-                      color: '#e01515',
-                      border: '1px solid #e01515',
+                      color: '#cc0000',
+                      border: '1px solid #cc0000',
                       padding: '0.3rem 0.7rem',
                     }}
                   >
@@ -346,7 +346,7 @@ export default function Services() {
                     fontSize: '0.68rem',
                     letterSpacing: '0.2em',
                     textTransform: 'uppercase',
-                    color: f.accent ? '#9a9590' : '#e01515',
+                    color: f.accent ? '#9a9590' : '#cc0000',
                     display: 'block',
                     marginBottom: '0.6rem',
                   }}
@@ -392,7 +392,7 @@ export default function Services() {
                         marginBottom: '0.7rem',
                       }}
                     >
-                      <span style={{ color: '#e01515', fontSize: '0.8rem' }}>—</span>
+                      <span style={{ color: '#cc0000', fontSize: '0.8rem' }}>—</span>
                       <span
                         style={{
                           fontSize: '0.85rem',
