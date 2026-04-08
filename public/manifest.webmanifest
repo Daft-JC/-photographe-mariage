@@ -1,7 +1,7 @@
 {
-  "name": "Lamartina Studio — Photographe de Mariage",
-  "short_name": "Lamartina Studio",
-  "description": "Alessio Lamartina, photographe de mariage haut de gamme en France, Italie et Europe.",
+  "name": "Maison La Martina — Photographe de Mariage",
+  "short_name": "La Martina Studio",
+  "description": "Alessio La martina, photographe de mariage haut de gamme en France, Italie et Europe.",
   "start_url": "/",
   "display": "standalone",
   "background_color": "#F8F5F2",
@@ -27,7 +27,7 @@
       "src": "/screenshot-home.jpg",
       "sizes": "1280x720",
       "type": "image/jpeg",
-      "label": "Page d'accueil Lamartina Studio"
+      "label": "Page d'accueil La Martina Studio"
     }
   ]
 }
