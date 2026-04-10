@@ -4,6 +4,7 @@ import Nav from '@/components/ui/nav';
 import ScrollExpandMedia from '@/components/ui/scroll-expansion-hero';
 import Image from 'next/image';
 import Link from 'next/link';
+import { PortfolioGallery } from '@/components/ui/portfolio-gallery';
 
 const SITE_URL = 'https://www.lamartinastudio.com';
 
@@ -19,34 +20,34 @@ export const metadata: Metadata = {
 
 const portfolioItems = [
   {
-    src: 'https://images.unsplash.com/photo-1537633552985-df8429e8048b?q=80&w=800&auto=format&fit=crop',
-    label: 'Amore',
+    src: '/portfolio/ispirazione/DSC00797.jpg',
+    label: 'Ispirazione',
     aspect: 'tall',
   },
   {
-    src: 'https://images.unsplash.com/photo-1606216794074-735e91aa2c92?q=80&w=900&auto=format&fit=crop',
-    label: 'Il Giorno',
+    src: '/portfolio/amore/DSC01920.jpg',
+    label: 'Amore',
     aspect: 'wide',
   },
   {
-    src: 'https://images.unsplash.com/photo-1591604466107-ec97de577aff?q=80&w=600&auto=format&fit=crop',
+    src: '/portfolio/dettagli/DSC00123.jpg',
     label: 'Dettagli',
     aspect: 'square',
   },
   {
-    src: 'https://images.unsplash.com/photo-1511285560929-80b456fea0bc?q=80&w=1200&auto=format&fit=crop',
-    label: 'Ispirazione',
-    aspect: 'wide',
+    src: '/portfolio/amore/DSC01882.jpg',
+    label: 'Amore',
+    aspect: 'square',
   },
 ];
 
 const instaPhotos = [
-  'https://images.unsplash.com/photo-1522673607200-164d1b6ce486?q=80&w=400&auto=format&fit=crop',
-  'https://images.unsplash.com/photo-1519225421980-715cb0215aed?q=80&w=400&auto=format&fit=crop',
-  'https://images.unsplash.com/photo-1583939003579-730e3918a45a?q=80&w=400&auto=format&fit=crop',
-  'https://images.unsplash.com/photo-1529636798458-92182e662485?q=80&w=400&auto=format&fit=crop',
-  'https://images.unsplash.com/photo-1469371670807-013ccf25f16a?q=80&w=400&auto=format&fit=crop',
-  'https://images.unsplash.com/photo-1460978812857-470ed1c77af0?q=80&w=400&auto=format&fit=crop',
+  '/portfolio/amore/DSC05335.jpg',
+  '/portfolio/ispirazione/DSC00393.jpg',
+  '/portfolio/dettagli/DSC05328.jpg',
+  '/portfolio/amore/DSC05385.jpg',
+  '/portfolio/ispirazione/DSC01982.jpg',
+  '/portfolio/il-giorno/DSC01757.jpg',
 ];
 
 const homeFaqLd = {
@@ -116,114 +117,15 @@ export default function Home() {
       <Nav />
       <ScrollExpandMedia
         mediaSrc='/DSC02024.jpg'
-        bgImageSrc='/DSC02014.jpg'
+        mediaVideoSrc='/hero-web.mp4'
+        bgImageSrc='/bg-hero.jpg'
         title='Maison La Martina'
         subtitle='Photographe & vidéaste de mariage'
         scrollToExpand='Faites défiler'
       >
 
         {/* ── PORTFOLIO APERÇU ── */}
-        <section style={{ background: '#F8F5F2', padding: '5rem 0' }}>
-          <div className='px-site' style={{ maxWidth: '1400px', margin: '0 auto' }}>
-            <div style={{ textAlign: 'center', marginBottom: '4rem' }}>
-              <span
-                style={{
-                  fontFamily: 'var(--font-body)',
-                  fontSize: '0.68rem',
-                  fontWeight: 500,
-                  letterSpacing: '0.28em',
-                  textTransform: 'uppercase',
-                  color: '#cc0000',
-                  display: 'block',
-                  marginBottom: '1rem',
-                }}
-              >
-                Portfolio
-              </span>
-              <h2
-                style={{ fontFamily: 'var(--font-heading)', fontSize: 'clamp(2rem,4vw,3.5rem)', marginBottom: '1.2rem' }}
-              >
-                Chaque mariage,<br />une histoire <em style={{ fontFamily: 'var(--font-heading)', color: '#cc0000', fontStyle: 'normal', textTransform: 'none' }}>unique</em>
-              </h2>
-              <p style={{ fontSize: '0.92rem', color: '#3d3d3d', letterSpacing: '0.025em', maxWidth: '520px', margin: '0 auto' }}>
-                Des instants volés, des regards complices, des émotions sincères.<br />
-                Je capture ce que les mots ne peuvent pas dire.
-              </p>
-            </div>
-
-            {/* Grid */}
-            <div className='grid-home-portfolio'>
-              {/* Image 1 — tall left */}
-              <Link
-                href='/portfolio'
-                style={{ gridColumn: '1 / 5', gridRow: '1 / 3', position: 'relative', overflow: 'hidden', borderRadius: '4px', display: 'block', aspectRatio: '3/4' }}
-                className='group'
-              >
-                <Image src={portfolioItems[0].src} alt={portfolioItems[0].label} fill className='object-cover transition-transform duration-700 group-hover:scale-105' />
-                <div className='absolute inset-0 bg-black/0 group-hover:bg-black/30 transition-all duration-500 flex items-end p-6'>
-                  <span style={{ fontFamily: 'var(--font-heading)', color: '#F8F5F2', fontSize: '1.5rem', fontStyle: 'italic', opacity: 0 }} className='group-hover:opacity-100 transition-opacity duration-300'>{portfolioItems[0].label}</span>
-                </div>
-              </Link>
-
-              {/* Image 2 — top right wide */}
-              <Link
-                href='/portfolio'
-                style={{ gridColumn: '5 / 13', gridRow: '1 / 2', position: 'relative', overflow: 'hidden', borderRadius: '4px', display: 'block', aspectRatio: '16/9' }}
-                className='group'
-              >
-                <Image src={portfolioItems[1].src} alt={portfolioItems[1].label} fill className='object-cover transition-transform duration-700 group-hover:scale-105' />
-                <div className='absolute inset-0 bg-black/0 group-hover:bg-black/30 transition-all duration-500 flex items-end p-6'>
-                  <span style={{ fontFamily: 'var(--font-heading)', color: '#F8F5F2', fontSize: '1.5rem', fontStyle: 'italic', opacity: 0 }} className='group-hover:opacity-100 transition-opacity duration-300'>{portfolioItems[1].label}</span>
-                </div>
-              </Link>
-
-              {/* Image 3 — square */}
-              <Link
-                href='/portfolio'
-                style={{ gridColumn: '5 / 9', gridRow: '2 / 3', position: 'relative', overflow: 'hidden', borderRadius: '4px', display: 'block', aspectRatio: '1/1' }}
-                className='group'
-              >
-                <Image src={portfolioItems[2].src} alt={portfolioItems[2].label} fill className='object-cover transition-transform duration-700 group-hover:scale-105' />
-                <div className='absolute inset-0 bg-black/0 group-hover:bg-black/30 transition-all duration-500 flex items-end p-6'>
-                  <span style={{ fontFamily: 'var(--font-heading)', color: '#F8F5F2', fontSize: '1.5rem', fontStyle: 'italic', opacity: 0 }} className='group-hover:opacity-100 transition-opacity duration-300'>{portfolioItems[2].label}</span>
-                </div>
-              </Link>
-
-              {/* Image 4 — bottom right */}
-              <Link
-                href='/portfolio'
-                style={{ gridColumn: '9 / 13', gridRow: '2 / 3', position: 'relative', overflow: 'hidden', borderRadius: '4px', display: 'block', aspectRatio: '1/1' }}
-                className='group'
-              >
-                <Image src={portfolioItems[3].src} alt={portfolioItems[3].label} fill className='object-cover transition-transform duration-700 group-hover:scale-105' />
-                <div className='absolute inset-0 bg-black/0 group-hover:bg-black/30 transition-all duration-500 flex items-end p-6'>
-                  <span style={{ fontFamily: 'var(--font-heading)', color: '#F8F5F2', fontSize: '1.5rem', fontStyle: 'italic', opacity: 0 }} className='group-hover:opacity-100 transition-opacity duration-300'>{portfolioItems[3].label}</span>
-                </div>
-              </Link>
-            </div>
-
-            <div style={{ textAlign: 'center', marginTop: '3rem' }}>
-              <Link
-                href='/portfolio'
-                style={{
-                  fontFamily: 'var(--font-body)',
-                  fontSize: '0.72rem',
-                  fontWeight: 500,
-                  letterSpacing: '0.22em',
-                  textTransform: 'uppercase',
-                  padding: '0.95rem 2.5rem',
-                  border: '1px solid #1A1A1A',
-                  color: '#1A1A1A',
-                  display: 'inline-block',
-                  transition: 'all 0.4s ease',
-                }}
-                className='hover:bg-[#1A1A1A] hover:text-[#F8F5F2]'
-              >
-                Voir tout le portfolio
-              </Link>
-            </div>
-          </div>
-        </section>
+        <PortfolioGallery />
 
         {/* ── À PROPOS TEASER ── */}
         <section style={{ background: '#F8F5F2', padding: '5rem 0' }}>
@@ -233,10 +135,10 @@ export default function Home() {
           >
             <div style={{ position: 'relative', aspectRatio: '3/4', overflow: 'hidden', borderRadius: '4px' }}>
               <Image
-                src='https://images.unsplash.com/photo-1570696516188-ade861b84a49?q=80&w=700&auto=format&fit=crop'
+                src='/alessio.jpg'
                 alt='Alessio La Martina, photographe'
                 fill
-                className='object-cover'
+                className='object-cover object-center'
               />
             </div>
             <div>
@@ -304,6 +206,7 @@ export default function Home() {
             background: '#F8F5F2',
             padding: '7rem 3rem',
             textAlign: 'center',
+            border: '4px solid #cc0000',
           }}
         >
           <p
@@ -516,7 +419,7 @@ export default function Home() {
               }}
             >
               <svg width='16' height='16' viewBox='0 0 24 24' fill='none' stroke='currentColor' strokeWidth='1.5'><rect x='2' y='2' width='20' height='20' rx='5'/><circle cx='12' cy='12' r='5'/><circle cx='17.5' cy='6.5' r='1.5' fill='currentColor' stroke='none'/></svg>
-              @lamartinastudio
+              @maisonlamartina
             </a>
           </div>
           <div className='grid-instagram px-site'>
@@ -547,10 +450,10 @@ export default function Home() {
           >
             <div>
               <Link href='/' style={{ fontFamily: 'var(--font-heading)', fontSize: '1.2rem', display: 'block', marginBottom: '1.2rem' }}>
-                <span style={{ fontFamily: 'var(--font-heading)', color: '#cc0000' }}>Maison</span>{' '}<span style={{ fontFamily: 'Peristiwa, serif' }}>La Martina</span>
+                <span style={{ fontFamily: 'var(--font-heading)' }}>Maison</span>{' '}<span style={{ fontFamily: 'Peristiwa, serif', color: '#cc0000' }}>La Martina</span>
               </Link>
               <p style={{ fontSize: '0.85rem', color: '#9a9590', lineHeight: 1.8, marginBottom: '1.5rem' }}>
-                Photographe de mariage haut de gamme, spécialisé dans les mariages élégants et intimistes en France, Italie et partout en Europe.
+                Photographe de mariage spécialisé dans tous types de mariages en France, Italie et partout en Europe.
               </p>
               <div style={{ display: 'flex', gap: '1.5rem' }}>
                 {['Instagram', 'Pinterest', 'Facebook'].map((s) => (
@@ -577,7 +480,7 @@ export default function Home() {
             <div>
               <h4 style={{ fontFamily: 'var(--font-body)', fontSize: '0.68rem', letterSpacing: '0.22em', textTransform: 'uppercase', color: '#9a9590', marginBottom: '1.5rem' }}>Contact</h4>
               <ul style={{ display: 'flex', flexDirection: 'column', gap: '0.8rem' }}>
-                {[['mailto:hello@lamartinastudio.com', 'hello@lamartinastudio.com'], ['tel:+33600000000', '+33 6 00 00 00 00'], ['/contact', 'Disponibilités'], ['/contact', 'Devis']].map(([href, label]) => (
+                {[['mailto:alessio200225@gmail.com', 'alessio200225@gmail.com'], ['tel:+33652433221', '06 52 43 32 21'], ['/contact', 'Disponibilités'], ['/contact', 'Devis']].map(([href, label]) => (
                   <li key={label}><a href={href} style={{ fontSize: '0.85rem', color: '#9a9590' }} className='hover:text-[#F8F5F2] transition-colors'>{label}</a></li>
                 ))}
               </ul>

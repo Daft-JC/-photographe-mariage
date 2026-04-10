@@ -10,6 +10,12 @@ out/
 .env.local
 .env.*.local
 
+# Large original videos (keep only -web compressed versions)
+public/videos/teaser-nasser-oceane.mp4
+public/videos/teaser-naissa-greg.mp4
+public/videos/teaser-hania-sami.mp4
+public/hero.mp4
+
 # Misc
 .DS_Store
 *.pem

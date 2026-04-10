@@ -205,8 +205,8 @@ export const metadata: Metadata = {
     description:
       'Alessio La Martina, photographe de mariage haut de gamme en France, Italie et Europe.',
     images: [OG_IMAGE],
-    creator: '@lamartinastudio',
-    site: '@lamartinastudio',
+    creator: '@maisonlamartina',
+    site: '@maisonlamartina',
   },
 
   verification: {
@@ -265,8 +265,8 @@ const jsonLd = {
         height: 100,
       },
       image: OG_IMAGE,
-      email: 'hello@lamartinastudio.com',
-      telephone: '+33600000000',
+      email: 'alessio200225@gmail.com',
+      telephone: '+33652433221',
       priceRange: '€€€',
       currenciesAccepted: 'EUR',
       paymentAccepted: 'Virement bancaire, Chèque, Carte bancaire',
@@ -309,7 +309,7 @@ const jsonLd = {
         'Fine art wedding photography',
       ],
       sameAs: [
-        'https://www.instagram.com/lamartinastudio',
+        'https://www.instagram.com/maisonlamartina',
         'https://www.pinterest.fr/lamartinastudio',
         'https://www.facebook.com/lamartinastudio',
       ],
@@ -366,7 +366,7 @@ const jsonLd = {
       image: `${SITE_URL}/alessio-lamartina.jpg`,
       worksFor: { '@id': `${SITE_URL}/#business` },
       sameAs: [
-        'https://www.instagram.com/lamartinastudio',
+        'https://www.instagram.com/maisonlamartina',
         'https://www.pinterest.fr/lamartinastudio',
       ],
       knowsLanguage: ['fr', 'it', 'en'],

@@ -9,10 +9,10 @@ export default function Footer() {
       >
         <div>
           <Link href='/' style={{ fontFamily: 'var(--font-heading)', fontSize: '1.2rem', display: 'block', marginBottom: '1.2rem' }}>
-            <span style={{ fontFamily: 'var(--font-heading)', color: '#cc0000' }}>Maison</span>{' '}<span style={{ fontFamily: 'Peristiwa, serif' }}>La Martina</span>
+            <span style={{ fontFamily: 'var(--font-heading)' }}>Maison</span>{' '}<span style={{ fontFamily: 'Peristiwa, serif', color: '#cc0000' }}>La Martina</span>
           </Link>
           <p style={{ fontSize: '0.85rem', color: '#9a9590', lineHeight: 1.8, marginBottom: '1.5rem' }}>
-            Photographe de mariage haut de gamme, spécialisé dans les mariages élégants et intimistes en France, Italie et partout en Europe.
+            Photographe de mariage spécialisé dans tous types de mariages en France, Italie et partout en Europe.
           </p>
           <div style={{ display: 'flex', gap: '1.5rem' }}>
             {['Instagram', 'Pinterest', 'Facebook'].map((s) => (
@@ -23,7 +23,7 @@ export default function Footer() {
         <div>
           <h4 style={{ fontFamily: 'var(--font-body)', fontSize: '0.68rem', letterSpacing: '0.22em', textTransform: 'uppercase', color: '#9a9590', marginBottom: '1.5rem' }}>Navigation</h4>
           <ul style={{ display: 'flex', flexDirection: 'column', gap: '0.8rem' }}>
-            {[['/', 'Accueil'], ['/portfolio', 'Portfolio'], ['/a-propos', 'À propos'], ['/services', 'Services'], ['/journal', 'Journal'], ['/contact', 'Contact']].map(([href, label]) => (
+            {[['/', 'Accueil'], ['/portfolio', 'Portfolio'], ['/a-propos', 'À propos'], ['/services', 'Services'], ['/contact', 'Contact']].map(([href, label]) => (
               <li key={href}><Link href={href} style={{ fontSize: '0.85rem', color: '#9a9590' }} className='hover:text-[#F8F5F2] transition-colors'>{label}</Link></li>
             ))}
           </ul>
@@ -39,7 +39,7 @@ export default function Footer() {
         <div>
           <h4 style={{ fontFamily: 'var(--font-body)', fontSize: '0.68rem', letterSpacing: '0.22em', textTransform: 'uppercase', color: '#9a9590', marginBottom: '1.5rem' }}>Contact</h4>
           <ul style={{ display: 'flex', flexDirection: 'column', gap: '0.8rem' }}>
-            {[['mailto:hello@lamartinastudio.com', 'hello@lamartinastudio.com'], ['tel:+33600000000', '+33 6 00 00 00 00'], ['/contact', 'Disponibilités'], ['/contact', 'Devis']].map(([href, label]) => (
+            {[['mailto:alessio200225@gmail.com', 'alessio200225@gmail.com'], ['tel:+33652433221', '06 52 43 32 21'], ['/contact', 'Disponibilités'], ['/contact', 'Devis']].map(([href, label]) => (
               <li key={label}><a href={href} style={{ fontSize: '0.85rem', color: '#9a9590' }} className='hover:text-[#F8F5F2] transition-colors'>{label}</a></li>
             ))}
           </ul>

@@ -119,33 +119,57 @@ const steps = [
   {
     num: '04',
     title: 'Livraison',
-    text: 'Sous 6 à 8 semaines, vous recevez une galerie privée en haute résolution, soigneusement retouchée.',
+    text: 'Vos photos retouchées sont livrées sous 2 à 4 semaines. Vos vidéos sont livrées sous 2 à 3 mois.',
   },
 ];
 
 const formules = [
   {
-    label: 'Essentiale',
-    duration: 'Demi-journée',
-    desc: 'Cérémonie + cocktail. Idéal pour les mariages intimistes ou civils.',
-    price: 'Sur demande',
-    items: ['6 heures de couverture', 'Galerie privée en ligne', '250 photos retouchées', 'Livraison sous 6 semaines'],
+    label: 'Eternità',
+    duration: 'Offre Essentielle',
+    desc: 'Des préparatifs jusqu\'à la pièce montée, tout est couvert avec soin.',
+    price: '1 400€',
+    items: [
+      'Échange préparatoire (organisation & planning)',
+      'Présence des préparatifs jusqu\'à la pièce montée',
+      'Captation photo et vidéo tout au long de la journée',
+      '300 photos retouchées en haute définition (UHD)',
+      'Teaser vidéo (2 minutes)',
+      'Frais de déplacement en supplément',
+    ],
     accent: false,
   },
   {
     label: 'Il Giorno',
-    duration: 'Journée complète',
-    desc: 'De la préparation à la soirée. La formule la plus complète pour ne rien manquer.',
-    price: 'Sur demande',
-    items: ['12 heures de couverture', 'Galerie privée en ligne', '500+ photos retouchées', 'Séance couple incluse', 'Livraison sous 8 semaines', 'Album livre disponible en option'],
+    duration: 'Offre Signature',
+    desc: 'La formule complète avec teaser vidéo pour ne rien manquer de votre journée.',
+    price: '1 700€',
+    items: [
+      'Échange préparatoire (organisation & planning)',
+      'Présence des préparatifs jusqu\'à la pièce montée',
+      'Captation photo et vidéo complète',
+      '350 photos retouchées en haute définition (UHD)',
+      'Film du mariage (20 à 45 minutes)',
+      'Teaser vidéo (2 minutes)',
+      'Frais de déplacement en supplément',
+    ],
     accent: true,
   },
   {
-    label: 'Destinazione',
-    duration: 'Destination wedding',
-    desc: "Pour les mariages à l'étranger ou dans des lieux d'exception. Sur devis.",
-    price: 'Sur devis',
-    items: ['Couverture sur mesure', 'Déplacement inclus', 'Galerie privée en ligne', 'Photos retouchées', 'Séance engagement incluse', 'Album livre premium en option'],
+    label: 'Per Sempre',
+    duration: 'Offre Premium',
+    desc: 'Le reportage le plus complet, avec une vidéo longue pour revivre chaque instant.',
+    price: '1 800€',
+    items: [
+      'Échange préparatoire (organisation & planning)',
+      'Présence des préparatifs jusqu\'à la pièce montée',
+      'Captation photo et vidéo complète',
+      '400 photos retouchées en haute définition (UHD)',
+      'Vidéo longue de la journée (1h à 1h30)',
+      'Film du mariage (20 à 45 minutes)',
+      'Teaser vidéo (2 minutes)',
+      'Frais de déplacement en supplément',
+    ],
     accent: false,
   },
 ];
@@ -242,7 +266,7 @@ export default function Services() {
                 fontSize: 'clamp(1.8rem, 3.5vw, 3rem)',
               }}
             >
-              L'expérience <em>Maison La Martina</em>
+              L'expérience Maison <em style={{ color: '#cc0000', fontStyle: 'normal', fontFamily: 'Peristiwa, serif', textTransform: 'none' }}>La Martina</em>
             </h2>
           </div>
 
@@ -320,6 +344,8 @@ export default function Services() {
                   border: f.accent ? 'none' : '1px solid #e8e4e0',
                   background: f.accent ? '#1A1A1A' : '#fff',
                   position: 'relative',
+                  display: 'flex',
+                  flexDirection: 'column',
                 }}
               >
                 {f.accent && (
@@ -406,17 +432,6 @@ export default function Services() {
                   ))}
                 </div>
                 <div style={{ marginTop: 'auto' }}>
-                  <p
-                    style={{
-                      fontFamily: 'var(--font-heading)',
-                      fontSize: '1.1rem',
-                      fontStyle: 'italic',
-                      color: f.accent ? '#F8F5F2' : '#1A1A1A',
-                      marginBottom: '1.2rem',
-                    }}
-                  >
-                    {f.price}
-                  </p>
                   <Link
                     href='/contact'
                     style={{

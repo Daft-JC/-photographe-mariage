@@ -13,6 +13,7 @@ import { motion } from 'framer-motion';
 
 interface ScrollExpandMediaProps {
   mediaSrc: string;
+  mediaVideoSrc?: string;
   bgImageSrc?: string;
   bgVideoSrc?: string;
   bgColor?: string;
@@ -24,6 +25,7 @@ interface ScrollExpandMediaProps {
 
 const ScrollExpandMedia = ({
   mediaSrc,
+  mediaVideoSrc,
   bgImageSrc,
   bgVideoSrc,
   bgColor = 'linear-gradient(135deg, #F5EDE0 0%, #EDD8BB 40%, #E2C9A8 70%, #D9BFA0 100%)',
@@ -111,34 +113,32 @@ const ScrollExpandMedia = ({
         <div className='relative w-full flex flex-col items-center min-h-[100dvh]'>
 
           {/* Background — fades out as media expands */}
-          <motion.div
-            className='absolute inset-0 z-0 h-full overflow-hidden'
-            style={!bgImageSrc && !bgVideoSrc ? { background: bgColor } : {}}
-            animate={{ opacity: 1 - scrollProgress }}
-            transition={{ duration: 0.1 }}
+          <div
+            className='absolute z-0'
+            style={{
+              top: 0, left: 0, right: 0,
+              height: '100dvh',
+              opacity: 1 - scrollProgress,
+              backgroundImage: bgImageSrc ? `url(${bgImageSrc})` : undefined,
+              backgroundSize: bgImageSrc ? 'cover' : undefined,
+              backgroundPosition: bgImageSrc ? 'center center' : undefined,
+              backgroundRepeat: bgImageSrc ? 'no-repeat' : undefined,
+              background: !bgImageSrc && !bgVideoSrc ? bgColor : undefined,
+            }}
           >
-            {bgImageSrc && (
-              <Image
-                src={bgImageSrc}
-                alt='Background'
-                fill
-                priority
-                style={{ objectFit: 'contain', objectPosition: 'center', transform: 'scale(0.35)', transformOrigin: 'center center' }}
-              />
-            )}
             {bgVideoSrc && (
               <video
                 autoPlay
                 muted
                 loop
                 playsInline
-                style={{ position: 'absolute', inset: 0, width: '100%', height: '100%', objectFit: 'cover' }}
+                style={{ position: 'absolute', top: 0, left: 0, right: 0, bottom: 0, width: '100%', height: '100%', objectFit: 'cover' }}
               >
                 <source src={bgVideoSrc} type='video/mp4' />
               </video>
             )}
             <div className='absolute inset-0 bg-black/20' />
-          </motion.div>
+          </div>
 
           <div className='container mx-auto flex flex-col items-center justify-start relative z-10'>
             <div className='flex flex-col items-center justify-center w-full h-[100dvh] relative'>
@@ -154,13 +154,25 @@ const ScrollExpandMedia = ({
                   boxShadow: '0px 0px 60px rgba(0,0,0,0.25)',
                 }}
               >
-                <Image
-                  src={mediaSrc}
-                  alt={title || 'Hero'}
-                  fill
-                  className='object-cover'
-                  priority
-                />
+                {mediaVideoSrc ? (
+                  <video
+                    autoPlay
+                    muted
+                    loop
+                    playsInline
+                    style={{ position: 'absolute', inset: 0, width: '100%', height: '100%', objectFit: 'cover' }}
+                  >
+                    <source src={mediaVideoSrc} type='video/mp4' />
+                  </video>
+                ) : (
+                  <Image
+                    src={mediaSrc}
+                    alt={title || 'Hero'}
+                    fill
+                    className='object-cover'
+                    priority
+                  />
+                )}
                 <motion.div
                   className='absolute inset-0 bg-black/40'
                   animate={{ opacity: 0.6 - scrollProgress * 0.4 }}
@@ -203,10 +215,11 @@ const ScrollExpandMedia = ({
               {/* Title — splits and slides apart */}
               <div className='flex flex-col items-center justify-center gap-2 w-full relative z-10 pointer-events-none'>
                 <motion.h1
-                  className='text-5xl md:text-6xl lg:text-7xl font-light'
+                  className='font-light'
                   style={{
+                    fontSize: 'clamp(2rem, 4vw, 3.8rem)',
                     fontFamily: 'var(--font-heading)',
-                    color: '#cc0000',
+                    color: '#F8F5F2',
                     transform: `translateX(-${textShift}vw)`,
                     textShadow: '0 2px 20px rgba(0,0,0,0.3)',
                     textTransform: 'uppercase',
@@ -215,13 +228,14 @@ const ScrollExpandMedia = ({
                   {firstWord}
                 </motion.h1>
                 <motion.h1
-                  className='text-5xl md:text-6xl lg:text-7xl font-light'
+                  className='font-light'
                   style={{
+                    fontSize: 'clamp(2.5rem, 5vw, 4.8rem)',
                     fontFamily: 'var(--font-heading)',
-                    color: '#F8F5F2',
+                    color: '#cc0000',
                     transform: `translateX(${textShift}vw)`,
                     textShadow: '0 2px 20px rgba(0,0,0,0.3)',
-                    textTransform: 'uppercase',
+                    textTransform: 'none',
                   }}
                 >
                   {restOfTitle}

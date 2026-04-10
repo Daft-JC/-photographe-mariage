@@ -9,7 +9,6 @@ const links = [
   { href: '/portfolio', label: 'Portfolio' },
   { href: '/a-propos', label: 'À propos' },
   { href: '/services', label: 'Services' },
-  { href: '/journal', label: 'Journal' },
 ];
 
 export default function Nav() {
@@ -48,7 +47,7 @@ export default function Nav() {
               fontWeight: 400,
             }}
           >
-            <span style={{ fontFamily: 'var(--font-heading)', color: '#cc0000' }}>Maison</span>{' '}<span style={{ fontFamily: 'Peristiwa, serif' }}>La Martina</span>
+            <span style={{ fontFamily: 'var(--font-heading)' }}>Maison</span>{' '}<span style={{ fontFamily: 'Peristiwa, serif', color: '#cc0000' }}>La Martina</span>
           </Link>
 
           {/* Desktop links */}

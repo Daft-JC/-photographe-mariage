@@ -73,7 +73,7 @@ const aproposLd = {
         knowsLanguage: ['fr', 'it', 'en'],
         nationality: { '@type': 'Country', name: 'Italy' },
         sameAs: [
-          'https://www.instagram.com/lamartinastudio',
+          'https://www.instagram.com/maisonlamartina',
           'https://www.pinterest.fr/lamartinastudio',
         ],
         worksFor: {
@@ -139,7 +139,7 @@ export default function APropos() {
             margin: '0 auto',
           }}
         >
-          Photographe de mariage basé en France, opérant entre Paris, l'Italie et toute l'Europe.
+          Photographe & vidéaste de mariage basé en Provence, opérant en France, en Italie et toute l'Europe.
         </p>
       </section>
 
@@ -151,7 +151,7 @@ export default function APropos() {
         >
           <div style={{ position: 'relative', aspectRatio: '4/5', overflow: 'hidden', borderRadius: '4px' }}>
             <Image
-              src='https://images.unsplash.com/photo-1570696516188-ade861b84a49?q=80&w=800&auto=format&fit=crop'
+              src='/alessio.jpg'
               alt='Alessio La Martina, photographe'
               fill
               className='object-cover'
@@ -172,47 +172,42 @@ export default function APropos() {
               Je suis Alessio La Martina. Ce qui a tout déclenché, c'est une année passée en Australie — une année où j'ai pu consacrer entièrement mon temps à la photographie, et où j'ai compris que c'était ma voie.
             </p>
             <p style={{ fontSize: '0.92rem', color: '#3d3d3d', letterSpacing: '0.025em', marginBottom: '1.2rem', lineHeight: 1.9 }}>
-              De retour en Europe, c'est la photographie de mariage qui m'a touché au cœur. La lumière du jour J, l'émotion brute, la beauté des moments qui ne se répètent jamais — c'est là que j'ai trouvé mon langage.
+              De retour en Europe, c'est la photographie de mariage qui m'a touché au cœur. La lumière du jour J, l'émotion brute, la beauté des moments qui ne se répètent jamais — c'est là que j'ai trouvé mon langage. Naturellement, la vidéo est venue compléter ce regard : filmer un mariage, c'est lui donner une voix, un souffle, une vie que la photo seule ne peut pas toujours restituer.
             </p>
             <p style={{ fontSize: '0.92rem', color: '#3d3d3d', letterSpacing: '0.025em', lineHeight: 1.9 }}>
-              Mon approche est documentaire et intime. Je ne mets pas en scène — j'observe, j'anticipe, je capture. Chaque couple me confie l'une des journées les plus importantes de leur vie, et cette confiance, je la prends très au sérieux.
+              Mon approche est documentaire et intime, que ce soit à travers l'objectif ou la caméra. Je ne mets pas en scène — j'observe, j'anticipe, je capture. Chaque couple me confie l'une des journées les plus importantes de leur vie, et cette confiance, je la prends très au sérieux.
             </p>
           </div>
         </div>
       </section>
 
       {/* Citation */}
-      <section
-        style={{
-          background: '#1A1A1A',
-          padding: '7rem 3rem',
-          textAlign: 'center',
-        }}
-      >
-        <p
-          style={{
-            fontFamily: 'var(--font-heading)',
-            fontSize: 'clamp(1.4rem, 3vw, 2.2rem)',
-            color: '#F8F5F2',
-            fontStyle: 'italic',
-            lineHeight: 1.5,
-            maxWidth: '700px',
-            margin: '0 auto 1.2rem',
-          }}
-        >
-          « Je ne capture pas des photos.<br />Je préserve des émotions. »
-        </p>
-        <span
-          style={{
-            fontFamily: 'var(--font-body)',
-            fontSize: '0.72rem',
-            letterSpacing: '0.22em',
-            textTransform: 'uppercase',
-            color: '#9a9590',
-          }}
-        >
-          Alessio La Martina
-        </span>
+      <section style={{ background: '#F8F5F2', padding: '4rem 3rem', textAlign: 'center' }}>
+        <div style={{ display: 'inline-block', border: '2px solid #cc0000', padding: '4rem 28rem' }}>
+          <p
+            style={{
+              fontFamily: 'var(--font-heading)',
+              fontSize: 'clamp(1.4rem, 3vw, 2.2rem)',
+              color: '#1A1A1A',
+              fontStyle: 'italic',
+              lineHeight: 1.5,
+              marginBottom: '1.2rem',
+            }}
+          >
+            « Je ne capture pas des photos.<br />Je préserve des émotions. »
+          </p>
+          <span
+            style={{
+              fontFamily: 'var(--font-body)',
+              fontSize: '0.72rem',
+              letterSpacing: '0.22em',
+              textTransform: 'uppercase',
+              color: '#1A1A1A',
+            }}
+          >
+            Alessio La Martina
+          </span>
+        </div>
       </section>
 
       {/* Vision & approche */}
@@ -239,7 +234,7 @@ export default function APropos() {
                 fontSize: 'clamp(1.8rem, 3.5vw, 3rem)',
               }}
             >
-              Une approche <em>artistique et humaine</em>
+              Une approche humaine et <em style={{ color: '#cc0000', fontStyle: 'normal' }}>artistique</em>
             </h2>
           </div>
 

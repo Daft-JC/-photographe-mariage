@@ -9,18 +9,41 @@ import Footer from '@/components/ui/footer';
 const categories = ['Tous', 'Amore', 'Il Giorno', 'Dettagli', 'Ispirazione'];
 
 const photos = [
-  { src: 'https://images.unsplash.com/photo-1537633552985-df8429e8048b?q=80&w=900&auto=format&fit=crop', cat: 'Amore', span: 'tall' },
-  { src: 'https://images.unsplash.com/photo-1606216794074-735e91aa2c92?q=80&w=1200&auto=format&fit=crop', cat: 'Il Giorno', span: 'wide' },
-  { src: 'https://images.unsplash.com/photo-1591604466107-ec97de577aff?q=80&w=600&auto=format&fit=crop', cat: 'Dettagli', span: 'square' },
-  { src: 'https://images.unsplash.com/photo-1511285560929-80b456fea0bc?q=80&w=1200&auto=format&fit=crop', cat: 'Ispirazione', span: 'wide' },
-  { src: 'https://images.unsplash.com/photo-1522673607200-164d1b6ce486?q=80&w=700&auto=format&fit=crop', cat: 'Amore', span: 'square' },
-  { src: 'https://images.unsplash.com/photo-1519225421980-715cb0215aed?q=80&w=900&auto=format&fit=crop', cat: 'Il Giorno', span: 'tall' },
-  { src: 'https://images.unsplash.com/photo-1583939003579-730e3918a45a?q=80&w=700&auto=format&fit=crop', cat: 'Dettagli', span: 'square' },
-  { src: 'https://images.unsplash.com/photo-1529636798458-92182e662485?q=80&w=900&auto=format&fit=crop', cat: 'Ispirazione', span: 'wide' },
-  { src: 'https://images.unsplash.com/photo-1469371670807-013ccf25f16a?q=80&w=1200&auto=format&fit=crop', cat: 'Il Giorno', span: 'wide' },
-  { src: 'https://images.unsplash.com/photo-1460978812857-470ed1c77af0?q=80&w=700&auto=format&fit=crop', cat: 'Amore', span: 'square' },
-  { src: 'https://images.unsplash.com/photo-1570696516188-ade861b84a49?q=80&w=600&auto=format&fit=crop', cat: 'Ispirazione', span: 'tall' },
-  { src: 'https://images.unsplash.com/photo-1519741497674-611481863552?q=80&w=900&auto=format&fit=crop', cat: 'Il Giorno', span: 'square' },
+  // Amore
+  { src: '/portfolio/amore/DSC01882.jpg',   cat: 'Amore',      span: 'tall'   },
+  { src: '/portfolio/amore/DSC01920.jpg',   cat: 'Amore',      span: 'wide'   },
+  { src: '/portfolio/amore/DSC05240.jpg',   cat: 'Amore',      span: 'tall'   },
+  { src: '/portfolio/amore/DSC01855.jpg',   cat: 'Amore',      span: 'tall'   },
+  { src: '/portfolio/amore/DSC05323.jpg',   cat: 'Amore',      span: 'tall'   },
+  { src: '/portfolio/amore/DSC01259.jpg',   cat: 'Amore',      span: 'wide'   },
+  { src: '/portfolio/amore/DSC01973.jpg',   cat: 'Amore',      span: 'wide'   },
+  { src: '/portfolio/amore/DSC05335.jpg',   cat: 'Amore',      span: 'tall'   },
+  { src: '/portfolio/amore/DSC05340.jpg',   cat: 'Amore',      span: 'wide'   },
+  { src: '/portfolio/amore/DSC05385.jpg',   cat: 'Amore',      span: 'tall'   },
+  // Il Giorno
+  { src: '/portfolio/il-giorno/DSC01327.jpg', cat: 'Il Giorno', span: 'wide'  },
+  { src: '/portfolio/il-giorno/DSC01941.jpg', cat: 'Il Giorno', span: 'tall'  },
+  { src: '/portfolio/il-giorno/DSC02032.jpg', cat: 'Il Giorno', span: 'wide'  },
+  { src: '/portfolio/il-giorno/DSC01757.jpg', cat: 'Il Giorno', span: 'square'},
+  // Dettagli
+  { src: '/portfolio/dettagli/DSC00123.jpg',   cat: 'Dettagli', span: 'wide'  },
+  { src: '/portfolio/dettagli/DSC00142.jpg',   cat: 'Dettagli', span: 'wide'  },
+  { src: '/portfolio/dettagli/DSC00290-2.jpg', cat: 'Dettagli', span: 'tall'  },
+  { src: '/portfolio/dettagli/DSC01944.jpg',   cat: 'Dettagli', span: 'wide'  },
+  { src: '/portfolio/dettagli/DSC05328.jpg',   cat: 'Dettagli', span: 'tall'  },
+  { src: '/portfolio/dettagli/DSC05361.jpg',   cat: 'Dettagli', span: 'wide'  },
+  // Ispirazione
+  { src: '/portfolio/ispirazione/DSC00797.jpg', cat: 'Ispirazione', span: 'tall' },
+  { src: '/portfolio/ispirazione/DSC00793.jpg', cat: 'Ispirazione', span: 'tall' },
+  { src: '/portfolio/ispirazione/DSC01902.jpg', cat: 'Ispirazione', span: 'tall' },
+  { src: '/portfolio/ispirazione/DSC01927.jpg', cat: 'Ispirazione', span: 'wide' },
+  { src: '/portfolio/ispirazione/DSC02096.jpg', cat: 'Ispirazione', span: 'tall' },
+  { src: '/portfolio/ispirazione/DSC00792.jpg', cat: 'Ispirazione', span: 'tall' },
+  { src: '/portfolio/ispirazione/DSC01982.jpg', cat: 'Ispirazione', span: 'wide' },
+  { src: '/portfolio/ispirazione/DSC02085.jpg', cat: 'Ispirazione', span: 'tall' },
+  { src: '/portfolio/ispirazione/DSC01954.jpg', cat: 'Ispirazione', span: 'tall' },
+  { src: '/portfolio/ispirazione/DSC00393.jpg', cat: 'Ispirazione', span: 'wide' },
+  { src: '/portfolio/ispirazione/DSC05384.jpg', cat: 'Ispirazione', span: 'wide' },
 ];
 
 const aspectMap: Record<string, string> = {
@@ -161,6 +184,48 @@ export default function Portfolio() {
               </div>
             </div>
           ))}
+        </div>
+      </section>
+
+      {/* Section Vidéos */}
+      <section style={{ background: '#F8F5F2', padding: '0 0 7rem' }}>
+        <div style={{ maxWidth: '1400px', margin: '0 auto', padding: '0 3rem' }}>
+
+          <div style={{ textAlign: 'center', marginBottom: '4rem' }}>
+            <span style={{ fontFamily: 'var(--font-body)', fontSize: '0.68rem', fontWeight: 500, letterSpacing: '0.28em', textTransform: 'uppercase', color: '#cc0000', display: 'block', marginBottom: '1rem' }}>
+              Films
+            </span>
+            <h2 style={{ fontFamily: 'var(--font-heading)', fontSize: 'clamp(1.8rem, 3.5vw, 3rem)' }}>
+              Teasers <em style={{ color: '#cc0000', fontStyle: 'normal' }}>cinématiques</em>
+            </h2>
+          </div>
+
+          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '2rem' }}>
+            {[
+              { src: '/videos/teaser-nasser-oceane-web.mp4', title: 'Nasser & Océane' },
+              { src: '/videos/teaser-naissa-greg-web.mp4',   title: 'Naïssa & Greg'   },
+              { src: '/videos/teaser-hania-sami-web.mp4',    title: 'Hania & Sami'    },
+            ].map((video) => (
+              <div key={video.src} style={{ position: 'relative', borderRadius: '4px', overflow: 'hidden', background: '#1A1A1A' }}>
+                <video
+                  controls
+                  playsInline
+                  preload='metadata'
+                  style={{ width: '100%', display: 'block', aspectRatio: '16/9', objectFit: 'cover' }}
+                >
+                  <source src={video.src} type='video/mp4' />
+                </video>
+                <div style={{ padding: '1.2rem 1.5rem', background: '#1A1A1A' }}>
+                  <p style={{ fontFamily: 'var(--font-heading)', fontSize: '1.1rem', color: '#F8F5F2', fontStyle: 'italic' }}>
+                    {video.title}
+                  </p>
+                  <span style={{ fontFamily: 'var(--font-body)', fontSize: '0.65rem', letterSpacing: '0.2em', textTransform: 'uppercase', color: '#9a9590' }}>
+                    Teaser cinématique
+                  </span>
+                </div>
+              </div>
+            ))}
+          </div>
         </div>
       </section>
 

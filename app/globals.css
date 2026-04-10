@@ -146,3 +146,13 @@ h1, h2, h3, h4, h5 {
   .grid-footer  { grid-template-columns: 1fr; }
   .grid-steps   { grid-template-columns: 1fr; }
 }
+
+/* ─── MARQUEE ANIMATION ─── */
+@keyframes marquee {
+  from { transform: translateX(0); }
+  to   { transform: translateX(calc(-100% - var(--gap))); }
+}
+
+@theme {
+  --animate-marquee: marquee var(--duration) linear infinite;
+}

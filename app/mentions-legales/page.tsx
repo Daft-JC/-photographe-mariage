@@ -87,8 +87,8 @@ export default function MentionsLegales() {
             <p><strong>Statut :</strong> [Auto-entrepreneur / SASU / EURL — à compléter]</p>
             <p><strong>SIRET :</strong> [XXX XXX XXX XXXXX — à compléter]</p>
             <p><strong>Adresse :</strong> [Votre adresse — à compléter], Martigues, France</p>
-            <p><strong>Email :</strong> hello@lamartinastudio.com</p>
-            <p><strong>Téléphone :</strong> +33 6 00 00 00 00</p>
+            <p><strong>Email :</strong> alessio200225@gmail.com</p>
+            <p><strong>Téléphone :</strong> 06 52 43 32 21</p>
           </Section>
 
           <Section title="2. Directeur de la publication">
@@ -125,7 +125,7 @@ export default function MentionsLegales() {
             <p style={{ marginTop: '0.8rem' }}>
               Conformément au Règlement Général sur la Protection des Données (RGPD) et à la loi Informatique et Libertés,
               vous disposez d'un droit d'accès, de rectification et de suppression de vos données. Pour exercer ce droit,
-              contactez-nous à : <strong>hello@lamartinastudio.com</strong>
+              contactez-nous à : <strong>alessio200225@gmail.com</strong>
             </p>
           </Section>
 
