@@ -438,7 +438,7 @@ export default function Contact() {
           <motion.div style={{ position: 'absolute', inset: 0, background: spotBg, zIndex: 1 }} />
 
           {/* Texte */}
-          <div style={{ position: 'relative', zIndex: 10, padding: '3rem 3.5rem' }}>
+          <div style={{ position: 'relative', zIndex: 10, padding: '3rem 3.5rem' }} className='contact-text-block'>
             <h1 style={{
               fontFamily: 'var(--font-heading)',
               fontSize: 'clamp(2.8rem, 4vw, 4rem)',
@@ -692,6 +692,9 @@ export default function Contact() {
           .contact-grid { grid-template-columns: 1fr !important; }
           .contact-grid > div:first-child { min-height: max(520px, 85vh) !important; }
           .contact-btn-wrap { display: flex !important; justify-content: center !important; }
+          .contact-text-block { text-align: center !important; padding: 2.5rem 2rem !important; }
+          .contact-text-block p { max-width: 100% !important; }
+          .contact-text-block > div:last-child > div { justify-content: center !important; }
         }
       `}</style>
 

@@ -165,6 +165,18 @@ export default function Home() {
               <p style={{ fontSize: '0.92rem', color: '#3d3d3d', letterSpacing: '0.025em', marginBottom: '2.5rem' }}>
                 De retour en Europe, c'est la photographie de mariage qui m'a touché au cœur. La lumière du jour J, l'émotion brute, la beauté des moments qui ne se répètent jamais — c'est là que j'ai trouvé mon langage.
               </p>
+              <span
+                style={{
+                  fontFamily: 'var(--font-heading)',
+                  fontSize: '1.8rem',
+                  fontStyle: 'italic',
+                  color: '#1A1A1A',
+                  display: 'block',
+                  marginBottom: '2rem',
+                }}
+              >
+                Alessio La Martina
+              </span>
               <Link
                 href='/a-propos'
                 style={{
@@ -177,25 +189,11 @@ export default function Home() {
                   border: '1px solid #1A1A1A',
                   color: '#1A1A1A',
                   display: 'inline-block',
-                  marginBottom: '2rem',
                 }}
                 className='hover:bg-[#1A1A1A] hover:text-[#F8F5F2] transition-all duration-300'
               >
                 Mon univers
               </Link>
-              <br />
-              <span
-                style={{
-                  fontFamily: 'var(--font-heading)',
-                  fontSize: '1.8rem',
-                  fontStyle: 'italic',
-                  color: '#1A1A1A',
-                  display: 'block',
-                  marginTop: '0.5rem',
-                }}
-              >
-                Alessio La Martina
-              </span>
             </div>
           </div>
         </section>
