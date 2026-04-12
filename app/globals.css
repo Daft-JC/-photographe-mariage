@@ -140,6 +140,13 @@ h1, h2, h3, h4, h5 {
 
   /* Contact → stack */
   .grid-contact-layout { grid-template-columns: 1fr; gap: 2.5rem; }
+
+  /* Portfolio masonry → 1 colonne */
+  .portfolio-masonry { columns: 1 !important; max-width: 100% !important; }
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+  .portfolio-masonry { columns: 2 !important; max-width: 900px !important; margin: 0 auto !important; }
 }
 
 @media (max-width: 480px) {
@@ -151,6 +158,10 @@ h1, h2, h3, h4, h5 {
 @keyframes marquee {
   from { transform: translateX(0); }
   to   { transform: translateX(calc(-100% - var(--gap))); }
+}
+
+.animate-marquee {
+  animation: marquee var(--duration, 40s) linear infinite;
 }
 
 @theme {

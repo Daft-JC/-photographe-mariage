@@ -57,6 +57,10 @@ export default function Portfolio() {
 
   const filtered = active === 'Tous' ? photos : photos.filter((p) => p.cat === active);
 
+  // Colonnes dynamiques : moins de photos → moins de colonnes, mieux centré
+  const colCount = Math.min(3, Math.max(1, Math.round(filtered.length / 2)));
+  const colMaxWidth: Record<number, string> = { 1: '500px', 2: '900px', 3: '1400px' };
+
   return (
     <>
       <Nav />
@@ -139,13 +143,13 @@ export default function Portfolio() {
       <section style={{ background: '#F8F5F2', padding: '3rem 0 7rem' }}>
         <div
           style={{
-            maxWidth: '1400px',
+            maxWidth: colMaxWidth[colCount],
             margin: '0 auto',
             padding: '0 3rem',
-            columns: '3',
+            columns: colCount,
             columnGap: '1rem',
           }}
-          className='columns-1 sm:columns-2 lg:columns-3'
+          className='portfolio-masonry'
         >
           {filtered.map((photo, i) => (
             <div

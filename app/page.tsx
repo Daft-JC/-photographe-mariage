@@ -201,42 +201,38 @@ export default function Home() {
         </section>
 
         {/* ── CITATION ── */}
-        <section
-          style={{
-            background: '#F8F5F2',
-            padding: '7rem 3rem',
-            textAlign: 'center',
-            border: '4px solid #cc0000',
-          }}
-        >
-          <p
-            style={{
-              fontFamily: 'var(--font-heading)',
-              fontSize: 'clamp(1.4rem,3vw,2.2rem)',
-              color: '#1A1A1A',
-              fontStyle: 'italic',
-              lineHeight: 1.5,
-              maxWidth: '700px',
-              margin: '0 auto 1rem',
-            }}
-          >
-            « Photographier, c'est choisir. C'est regarder le monde avec des yeux nouveaux. »
-          </p>
-          <span
-            style={{
-              fontFamily: 'var(--font-body)',
-              fontSize: '0.72rem',
-              letterSpacing: '0.22em',
-              textTransform: 'uppercase',
-              color: '#1A1A1A',
-            }}
-          >
-            Gianni Berengo Gardin
-          </span>
+        <section style={{ background: '#F8F5F2', padding: '5rem 3rem', textAlign: 'center' }}>
+          <div style={{ maxWidth: '680px', margin: '0 auto' }}>
+            <div style={{ width: '1px', height: '50px', background: '#cc0000', margin: '0 auto 2.5rem' }} />
+            <p
+              style={{
+                fontFamily: 'var(--font-heading)',
+                fontSize: 'clamp(1.4rem,3vw,2.2rem)',
+                color: '#1A1A1A',
+                fontStyle: 'italic',
+                lineHeight: 1.5,
+                marginBottom: '1.5rem',
+              }}
+            >
+              « Photographier, c'est choisir. C'est regarder le monde avec des yeux nouveaux. »
+            </p>
+            <span
+              style={{
+                fontFamily: 'var(--font-body)',
+                fontSize: '0.72rem',
+                letterSpacing: '0.22em',
+                textTransform: 'uppercase',
+                color: '#9a9590',
+              }}
+            >
+              Gianni Berengo Gardin
+            </span>
+            <div style={{ width: '1px', height: '50px', background: '#cc0000', margin: '2.5rem auto 0' }} />
+          </div>
         </section>
 
         {/* ── TÉMOIGNAGES ── */}
-        <section style={{ background: '#F8F5F2', padding: '6rem 0' }}>
+        <section style={{ background: '#ffffff', padding: '6rem 0' }}>
           <div className='px-site' style={{ maxWidth: '1400px', margin: '0 auto' }}>
             <div style={{ textAlign: 'center', marginBottom: '4rem' }}>
               <span
@@ -285,7 +281,7 @@ export default function Home() {
                 <div
                   key={name}
                   style={{
-                    background: '#fff',
+                    background: '#F8F5F2',
                     padding: '3rem 2.5rem',
                     borderTop: '2px solid #cc0000',
                   }}
@@ -407,7 +403,9 @@ export default function Home() {
               Suivez l'aventure
             </span>
             <a
-              href='#'
+              href='https://www.instagram.com/maisonlamartina?igsh=a3FsbDduenlvcnNo'
+              target='_blank'
+              rel='noopener noreferrer'
               style={{
                 fontFamily: 'var(--font-body)',
                 fontSize: '0.8rem',
@@ -456,8 +454,21 @@ export default function Home() {
                 Photographe de mariage spécialisé dans tous types de mariages en France, Italie et partout en Europe.
               </p>
               <div style={{ display: 'flex', gap: '1.5rem' }}>
-                {['Instagram', 'Pinterest', 'Facebook'].map((s) => (
-                  <a key={s} href='#' style={{ fontSize: '0.75rem', letterSpacing: '0.1em', color: '#9a9590', transition: 'color 0.2s' }} className='hover:text-[#F8F5F2]'>{s}</a>
+                {[
+                  { name: 'Instagram', href: 'https://www.instagram.com/maisonlamartina?igsh=a3FsbDduenlvcnNo' },
+                  { name: 'Pinterest', href: '#' },
+                  { name: 'Facebook', href: '#' },
+                ].map(({ name, href }) => (
+                  <a
+                    key={name}
+                    href={href}
+                    target={href !== '#' ? '_blank' : undefined}
+                    rel={href !== '#' ? 'noopener noreferrer' : undefined}
+                    style={{ fontSize: '0.75rem', letterSpacing: '0.1em', color: '#9a9590', transition: 'color 0.2s' }}
+                    className='hover:text-[#F8F5F2]'
+                  >
+                    {name}
+                  </a>
                 ))}
               </div>
             </div>

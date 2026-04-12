@@ -182,8 +182,13 @@ export default function APropos() {
       </section>
 
       {/* Citation */}
-      <section style={{ background: '#F8F5F2', padding: '4rem 3rem', textAlign: 'center' }}>
-        <div style={{ display: 'inline-block', border: '2px solid #cc0000', padding: '4rem 28rem' }}>
+      <section style={{ background: '#F8F5F2', padding: '4rem 1.5rem', textAlign: 'center' }}>
+        <div style={{
+          border: '2px solid #cc0000',
+          padding: 'clamp(2rem, 5vw, 4rem) clamp(1.5rem, 8vw, 5rem)',
+          maxWidth: '700px',
+          margin: '0 auto',
+        }}>
           <p
             style={{
               fontFamily: 'var(--font-heading)',

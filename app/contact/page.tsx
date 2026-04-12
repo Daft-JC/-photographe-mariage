@@ -472,7 +472,7 @@ export default function Contact() {
               {[
                 { label: 'Email', value: 'alessio200225@gmail.com', href: 'mailto:alessio200225@gmail.com' },
                 { label: 'Téléphone', value: '06 52 43 32 21', href: 'tel:+33652433221' },
-                { label: 'Instagram', value: '@maisonlamartina', href: '#' },
+                { label: 'Instagram', value: '@maisonlamartina', href: 'https://www.instagram.com/maisonlamartina?igsh=a3FsbDduenlvcnNo' },
               ].map((info, i) => (
                 <motion.div
                   key={info.label}
@@ -490,6 +490,8 @@ export default function Contact() {
                   </span>
                   <motion.a
                     href={info.href}
+                    target={info.href.startsWith('http') ? '_blank' : undefined}
+                    rel={info.href.startsWith('http') ? 'noopener noreferrer' : undefined}
                     whileHover={{ color: '#ffffff', x: 6 }}
                     transition={{ duration: 0.2 }}
                     style={{
@@ -671,6 +673,7 @@ export default function Contact() {
                       initial={{ opacity: 0, y: 16 }}
                       animate={{ opacity: 1, y: 0 }}
                       transition={{ delay: 1.9, duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
+                      className='contact-btn-wrap'
                     >
                       <MagneticButton loading={loading}>
                         Envoyer le message
@@ -687,7 +690,8 @@ export default function Contact() {
       <style>{`
         @media (max-width: 768px) {
           .contact-grid { grid-template-columns: 1fr !important; }
-          .contact-grid > div:first-child { min-height: 50vh !important; }
+          .contact-grid > div:first-child { min-height: max(520px, 85vh) !important; }
+          .contact-btn-wrap { display: flex !important; justify-content: center !important; }
         }
       `}</style>
 
