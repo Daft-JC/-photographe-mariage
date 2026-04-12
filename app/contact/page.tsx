@@ -472,7 +472,7 @@ export default function Contact() {
               {[
                 { label: 'Email', value: 'alessio200225@gmail.com', href: 'mailto:alessio200225@gmail.com' },
                 { label: 'Téléphone', value: '06 52 43 32 21', href: 'tel:+33652433221' },
-                { label: 'Instagram', value: '@maisonlamartina', href: 'https://www.instagram.com/maisonlamartina?igsh=a3FsbDduenlvcnNo' },
+                { label: 'Instagram', value: '@maisonlamartina', href: 'https://www.instagram.com/maisonlamartina/' },
               ].map((info, i) => (
                 <motion.div
                   key={info.label}

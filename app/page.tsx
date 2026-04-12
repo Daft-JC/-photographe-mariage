@@ -401,7 +401,7 @@ export default function Home() {
               Suivez l'aventure
             </span>
             <a
-              href='https://www.instagram.com/maisonlamartina?igsh=a3FsbDduenlvcnNo'
+              href='https://www.instagram.com/maisonlamartina/'
               target='_blank'
               rel='noopener noreferrer'
               style={{
@@ -453,7 +453,7 @@ export default function Home() {
               </p>
               <div style={{ display: 'flex', gap: '1.5rem' }}>
                 {[
-                  { name: 'Instagram', href: 'https://www.instagram.com/maisonlamartina?igsh=a3FsbDduenlvcnNo' },
+                  { name: 'Instagram', href: 'https://www.instagram.com/maisonlamartina/' },
                   { name: 'Pinterest', href: '#' },
                   { name: 'Facebook', href: '#' },
                 ].map(({ name, href }) => (
