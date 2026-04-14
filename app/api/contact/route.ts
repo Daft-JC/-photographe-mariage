@@ -17,7 +17,7 @@ export async function POST(req: Request) {
 
     await resend.emails.send({
       from: 'Contact Site <onboarding@resend.dev>',
-      to: 'alessio200225@gmail.com',
+      to: 'contact@maisonlamartina.fr',
       replyTo: email,
       subject: `Nouvelle demande de ${prenom} ${nom}${dateFormatee ? ` — Mariage le ${dateFormatee}` : ''}`,
       html: `
