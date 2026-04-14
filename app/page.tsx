@@ -452,22 +452,15 @@ export default function Home() {
                 Photographe de mariage spécialisé dans tous types de mariages en France, Italie et partout en Europe.
               </p>
               <div style={{ display: 'flex', gap: '1.5rem' }}>
-                {[
-                  { name: 'Instagram', href: 'https://www.instagram.com/maisonlamartina/' },
-                  { name: 'Pinterest', href: '#' },
-                  { name: 'Facebook', href: '#' },
-                ].map(({ name, href }) => (
-                  <a
-                    key={name}
-                    href={href}
-                    target={href !== '#' ? '_blank' : undefined}
-                    rel={href !== '#' ? 'noopener noreferrer' : undefined}
-                    style={{ fontSize: '0.75rem', letterSpacing: '0.1em', color: '#9a9590', transition: 'color 0.2s' }}
-                    className='hover:text-[#F8F5F2]'
-                  >
-                    {name}
-                  </a>
-                ))}
+                <a
+                  href='https://www.instagram.com/maisonlamartina/'
+                  target='_blank'
+                  rel='noopener noreferrer'
+                  style={{ fontSize: '0.75rem', letterSpacing: '0.1em', color: '#9a9590', transition: 'color 0.2s' }}
+                  className='hover:text-[#F8F5F2]'
+                >
+                  Instagram
+                </a>
               </div>
             </div>
             <div>

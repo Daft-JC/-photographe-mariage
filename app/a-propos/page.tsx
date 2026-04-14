@@ -74,7 +74,6 @@ const aproposLd = {
         nationality: { '@type': 'Country', name: 'Italy' },
         sameAs: [
           'https://www.instagram.com/maisonlamartina',
-          'https://www.pinterest.fr/lamartinastudio',
         ],
         worksFor: {
           '@type': 'LocalBusiness',

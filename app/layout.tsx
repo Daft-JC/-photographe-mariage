@@ -310,8 +310,6 @@ const jsonLd = {
       ],
       sameAs: [
         'https://www.instagram.com/maisonlamartina',
-        'https://www.pinterest.fr/lamartinastudio',
-        'https://www.facebook.com/lamartinastudio',
       ],
       openingHoursSpecification: {
         '@type': 'OpeningHoursSpecification',
@@ -367,7 +365,6 @@ const jsonLd = {
       worksFor: { '@id': `${SITE_URL}/#business` },
       sameAs: [
         'https://www.instagram.com/maisonlamartina',
-        'https://www.pinterest.fr/lamartinastudio',
       ],
       knowsLanguage: ['fr', 'it', 'en'],
       nationality: { '@type': 'Country', name: 'Italy' },
