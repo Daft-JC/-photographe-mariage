@@ -46,7 +46,7 @@ export default function ContactLayout({ children }: { children: React.ReactNode 
     mainEntity: {
       '@type': 'LocalBusiness',
       name: 'Maison La Martina',
-      email: 'alessio200225@gmail.com',
+      email: 'contact@maisonlamartina.com',
       telephone: '+33652433221',
       url: SITE_URL,
     },

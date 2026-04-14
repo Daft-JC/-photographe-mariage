@@ -480,7 +480,7 @@ export default function Contact() {
               borderTop: '1px solid rgba(248,245,242,0.15)', paddingTop: '2rem',
             }}>
               {[
-                { label: 'Email', value: 'alessio200225@gmail.com', href: 'mailto:alessio200225@gmail.com' },
+                { label: 'Email', value: 'contact@maisonlamartina.com', href: 'mailto:contact@maisonlamartina.com' },
                 { label: 'Téléphone', value: '06 52 43 32 21', href: 'tel:+33652433221' },
                 { label: 'Instagram', value: '@maisonlamartina', href: 'https://www.instagram.com/maisonlamartina/' },
               ].map((info, i) => (

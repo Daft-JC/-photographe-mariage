@@ -489,7 +489,7 @@ export default function Home() {
             <div>
               <h4 style={{ fontFamily: 'var(--font-body)', fontSize: '0.68rem', letterSpacing: '0.22em', textTransform: 'uppercase', color: '#9a9590', marginBottom: '1.5rem' }}>Contact</h4>
               <ul style={{ display: 'flex', flexDirection: 'column', gap: '0.8rem' }}>
-                {[['mailto:alessio200225@gmail.com', 'alessio200225@gmail.com'], ['tel:+33652433221', '06 52 43 32 21'], ['/contact', 'Disponibilités'], ['/contact', 'Devis']].map(([href, label]) => (
+                {[['mailto:contact@maisonlamartina.com', 'contact@maisonlamartina.com'], ['tel:+33652433221', '06 52 43 32 21'], ['/contact', 'Disponibilités'], ['/contact', 'Devis']].map(([href, label]) => (
                   <li key={label}><a href={href} style={{ fontSize: '0.85rem', color: '#9a9590' }} className='hover:text-[#F8F5F2] transition-colors'>{label}</a></li>
                 ))}
               </ul>

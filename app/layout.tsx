@@ -265,7 +265,7 @@ const jsonLd = {
         height: 100,
       },
       image: OG_IMAGE,
-      email: 'alessio200225@gmail.com',
+      email: 'contact@maisonlamartina.com',
       telephone: '+33652433221',
       priceRange: '€€€',
       currenciesAccepted: 'EUR',

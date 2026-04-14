@@ -87,7 +87,7 @@ export default function MentionsLegales() {
             <p><strong>Statut :</strong> [Auto-entrepreneur / SASU / EURL — à compléter]</p>
             <p><strong>SIRET :</strong> [XXX XXX XXX XXXXX — à compléter]</p>
             <p><strong>Adresse :</strong> [Votre adresse — à compléter], Martigues, France</p>
-            <p><strong>Email :</strong> alessio200225@gmail.com</p>
+            <p><strong>Email :</strong> contact@maisonlamartina.com</p>
             <p><strong>Téléphone :</strong> 06 52 43 32 21</p>
           </Section>
 
@@ -125,7 +125,7 @@ export default function MentionsLegales() {
             <p style={{ marginTop: '0.8rem' }}>
               Conformément au Règlement Général sur la Protection des Données (RGPD) et à la loi Informatique et Libertés,
               vous disposez d'un droit d'accès, de rectification et de suppression de vos données. Pour exercer ce droit,
-              contactez-nous à : <strong>alessio200225@gmail.com</strong>
+              contactez-nous à : <strong>contact@maisonlamartina.com</strong>
             </p>
           </Section>
 
