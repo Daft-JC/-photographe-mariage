@@ -306,10 +306,10 @@ function SuccessParticles() {
    PAGE PRINCIPALE
 ══════════════════════════════════════ */
 type FormState = {
-  prenom: string; nom: string; email: string;
+  prenom: string; nom: string; email: string; telephone: string;
   date: string; lieu: string; message: string;
 };
-const empty: FormState = { prenom: '', nom: '', email: '', date: '', lieu: '', message: '' };
+const empty: FormState = { prenom: '', nom: '', email: '', telephone: '', date: '', lieu: '', message: '' };
 
 export default function Contact() {
   const [form, setForm] = useState<FormState>(empty);
@@ -655,11 +655,18 @@ export default function Contact() {
                       />
                     </div>
 
-                    <AnimatedField
-                      id='email' label='Email' type='email'
-                      placeholder='marie@exemple.com'
-                      required value={form.email} onChange={handleChange} delay={1.5}
-                    />
+                    <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '1.5rem' }}>
+                      <AnimatedField
+                        id='email' label='Email' type='email'
+                        placeholder='marie@exemple.com'
+                        required value={form.email} onChange={handleChange} delay={1.5}
+                      />
+                      <AnimatedField
+                        id='telephone' label='Téléphone' type='tel'
+                        placeholder='06 00 00 00 00'
+                        value={form.telephone} onChange={handleChange} delay={1.55}
+                      />
+                    </div>
 
                     <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '1.5rem' }}>
                       <AnimatedField

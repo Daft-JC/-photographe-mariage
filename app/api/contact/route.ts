@@ -5,7 +5,7 @@ const resend = new Resend(process.env.RESEND_API_KEY);
 
 export async function POST(req: Request) {
   try {
-    const { prenom, nom, email, date, lieu, message } = await req.json();
+    const { prenom, nom, email, telephone, date, lieu, message } = await req.json();
 
     if (!prenom || !nom || !email || !message) {
       return NextResponse.json({ error: 'Champs requis manquants' }, { status: 400 });
@@ -65,11 +65,22 @@ export async function POST(req: Request) {
                 </tr>
               </table>
 
-              <!-- Email -->
-              <div style="margin-bottom:28px;">
-                <p style="margin:0 0 4px;font-size:10px;letter-spacing:0.25em;text-transform:uppercase;color:#9a9590;font-family:Arial,sans-serif;">Email</p>
-                <a href="mailto:${email}" style="font-size:15px;color:#8B0000;font-family:Georgia,serif;text-decoration:none;">${email}</a>
-              </div>
+              <!-- Email + Téléphone -->
+              <table width="100%" cellpadding="0" cellspacing="0" style="margin-bottom:28px;">
+                <tr>
+                  <td width="50%" style="padding-right:12px;vertical-align:top;">
+                    <p style="margin:0 0 4px;font-size:10px;letter-spacing:0.25em;text-transform:uppercase;color:#9a9590;font-family:Arial,sans-serif;">Email</p>
+                    <a href="mailto:${email}" style="font-size:15px;color:#8B0000;font-family:Georgia,serif;text-decoration:none;">${email}</a>
+                  </td>
+                  <td width="50%" style="padding-left:12px;vertical-align:top;">
+                    <p style="margin:0 0 4px;font-size:10px;letter-spacing:0.25em;text-transform:uppercase;color:#9a9590;font-family:Arial,sans-serif;">Téléphone</p>
+                    ${telephone
+                      ? `<a href="tel:${telephone}" style="font-size:15px;color:#1A1A1A;font-family:Georgia,serif;text-decoration:none;">${telephone}</a>`
+                      : `<span style="font-size:15px;color:#c0bdb9;font-style:italic;font-family:Georgia,serif;">Non précisé</span>`
+                    }
+                  </td>
+                </tr>
+              </table>
 
               <!-- Date + Lieu -->
               <table width="100%" cellpadding="0" cellspacing="0" style="margin-bottom:32px;">

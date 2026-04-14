@@ -420,12 +420,12 @@ export default function Home() {
           </div>
           <div className='grid-instagram px-site'>
             {instaPhotos.map((src, i) => (
-              <div key={i} style={{ position: 'relative', aspectRatio: '1/1', overflow: 'hidden' }} className='group cursor-pointer'>
+              <a key={i} href='https://www.instagram.com/maisonlamartina/' target='_blank' rel='noopener noreferrer' style={{ position: 'relative', aspectRatio: '1/1', overflow: 'hidden', display: 'block' }} className='group cursor-pointer'>
                 <Image src={src} alt='' fill className='object-cover transition-transform duration-500 group-hover:scale-110' />
                 <div className='absolute inset-0 bg-black/0 group-hover:bg-black/40 transition-all duration-300 flex items-center justify-center'>
                   <svg className='opacity-0 group-hover:opacity-100 transition-opacity duration-300' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='white' strokeWidth='1.5'><rect x='2' y='2' width='20' height='20' rx='5'/><circle cx='12' cy='12' r='5'/></svg>
                 </div>
-              </div>
+              </a>
             ))}
           </div>
         </section>
