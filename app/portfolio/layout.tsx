@@ -1,35 +1,11 @@
 import type { Metadata } from 'next';
 
-const SITE_URL = 'https://www.lamartinastudio.com';
+const SITE_URL = 'https://www.maisonlamartina.fr';
 
 export const metadata: Metadata = {
-  title: 'Portfolio — Galerie de Mariages',
+  title: 'Portfolio — photos et films de mariage en Provence',
   description:
     'Explorez le portfolio de Maison La Martina : reportages de mariages élégants en Provence, Côte d\'Azur, Toscane, Paris, Monaco et partout en Europe. Photos de mariage émotionnelles et intemporelles.',
-  keywords: [
-    'portfolio photographe mariage',
-    'galerie photo mariage',
-    'photos mariage Provence',
-    'photos mariage Côte d\'Azur',
-    'photos mariage Toscane',
-    'photos mariage élégantes',
-    'reportage photo mariage France',
-    'reportage photo mariage Italie',
-    'galerie mariage haut de gamme',
-    'wedding photography portfolio',
-    'wedding photos France',
-    'wedding photos Italy',
-    'fine art wedding photos',
-    'mariage château photos',
-    'mariage villa photos',
-    'photos couple mariage',
-    'photos cérémonie mariage',
-    'photos réception mariage',
-    'photos détails mariage',
-    'inspiration mariage photo',
-    'Maison La Martina portfolio',
-    'Alessio La Martina photos',
-  ],
   alternates: {
     canonical: `${SITE_URL}/portfolio`,
   },
@@ -41,9 +17,7 @@ export const metadata: Metadata = {
     type: 'website',
     images: [
       {
-        url: `${SITE_URL}/og-portfolio.jpg`,
-        width: 1200,
-        height: 630,
+        url: `${SITE_URL}/portfolio/amore/DSC01920.jpg`,
         alt: 'Portfolio Maison La Martina — Photographe de Mariage',
       },
     ],
@@ -52,7 +26,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: 'Portfolio — Maison La Martina',
     description: 'Galerie de mariages élégants en France, Italie et Europe.',
-    images: [`${SITE_URL}/og-portfolio.jpg`],
+    images: [`${SITE_URL}/portfolio/amore/DSC01920.jpg`],
   },
 };
 

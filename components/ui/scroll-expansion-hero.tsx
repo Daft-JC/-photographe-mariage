@@ -214,32 +214,36 @@ const ScrollExpandMedia = ({
 
               {/* Title — splits and slides apart */}
               <div className='flex flex-col items-center justify-center gap-2 w-full relative z-10 pointer-events-none'>
-                <motion.h1
-                  className='font-light'
-                  style={{
-                    fontSize: 'clamp(2rem, 4vw, 3.8rem)',
-                    fontFamily: 'var(--font-heading)',
-                    color: '#F8F5F2',
-                    transform: `translateX(-${textShift}vw)`,
-                    textShadow: '0 2px 20px rgba(0,0,0,0.3)',
-                    textTransform: 'uppercase',
-                  }}
-                >
-                  {firstWord}
-                </motion.h1>
-                <motion.h1
-                  className='font-light'
-                  style={{
-                    fontSize: 'clamp(2.5rem, 5vw, 4.8rem)',
-                    fontFamily: 'var(--font-heading)',
-                    color: '#cc0000',
-                    transform: `translateX(${textShift}vw)`,
-                    textShadow: '0 2px 20px rgba(0,0,0,0.3)',
-                    textTransform: 'none',
-                  }}
-                >
-                  {restOfTitle}
-                </motion.h1>
+                <h1 className='flex flex-col items-center gap-2 m-0'>
+                  <motion.span
+                    className='font-light block text-center'
+                    style={{
+                      fontSize: 'clamp(2rem, 4vw, 3.8rem)',
+                      fontFamily: 'var(--font-heading)',
+                      color: '#F8F5F2',
+                      transform: `translateX(-${textShift}vw)`,
+                      textShadow: '0 2px 20px rgba(0,0,0,0.3)',
+                      textTransform: 'uppercase',
+                    }}
+                  >
+                    {firstWord}
+                  </motion.span>
+                  <motion.span
+                    className='font-light block text-center'
+                    style={{
+                      fontSize: 'clamp(2.5rem, 5vw, 4.8rem)',
+                      fontFamily: 'var(--font-heading)',
+                      color: '#cc0000',
+                      transform: `translateX(${textShift}vw)`,
+                      textShadow: '0 2px 20px rgba(0,0,0,0.3)',
+                      textTransform: 'none',
+                    }}
+                  >
+                    {restOfTitle}
+                  </motion.span>
+                  {/* Le sous-titre visible dans l'image complète le titre pour Google */}
+                  {subtitle && <span className='sr-only'>— {subtitle}</span>}
+                </h1>
               </div>
 
             </div>

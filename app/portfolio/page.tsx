@@ -6,6 +6,13 @@ import Link from 'next/link';
 import Nav from '@/components/ui/nav';
 import Footer from '@/components/ui/footer';
 
+const ALT: Record<string, string> = {
+  Amore: 'Portrait de couple de mariés — photographe mariage Provence',
+  'Il Giorno': 'Reportage du jour du mariage — Maison La Martina',
+  Dettagli: 'Détail de décoration de mariage',
+  Ispirazione: 'Photo de mariage artistique en lumière naturelle',
+};
+
 const categories = ['Tous', 'Amore', 'Il Giorno', 'Dettagli', 'Ispirazione'];
 
 const photos = [
@@ -166,7 +173,7 @@ export default function Portfolio() {
               <div style={{ position: 'relative', aspectRatio: aspectMap[photo.span] }}>
                 <Image
                   src={photo.src}
-                  alt={photo.cat}
+                  alt={ALT[photo.cat] ?? 'Photo de mariage — Maison La Martina'}
                   fill
                   className='object-cover transition-transform duration-700 group-hover:scale-105'
                 />

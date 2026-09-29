@@ -6,7 +6,7 @@ export const metadata: Metadata = {
   title: 'Mentions Légales',
   description: 'Mentions légales de Maison La Martina, photographe de mariage professionnel.',
   robots: { index: false, follow: false },
-  alternates: { canonical: 'https://www.lamartinastudio.com/mentions-legales' },
+  alternates: { canonical: 'https://www.maisonlamartina.fr/mentions-legales' },
 };
 
 const Section = ({ title, children }: { title: string; children: React.ReactNode }) => (
@@ -87,19 +87,19 @@ export default function MentionsLegales() {
             <p><strong>Statut :</strong> [Auto-entrepreneur / SASU / EURL — à compléter]</p>
             <p><strong>SIRET :</strong> [XXX XXX XXX XXXXX — à compléter]</p>
             <p><strong>Adresse :</strong> [Votre adresse — à compléter], Martigues, France</p>
-            <p><strong>Email :</strong> contact@maisonlamartina.com</p>
+            <p><strong>Email :</strong> contact@maisonlamartina.fr</p>
             <p><strong>Téléphone :</strong> 06 52 43 32 21</p>
           </Section>
 
           <Section title="2. Directeur de la publication">
-            <p>Alessio La Martina, en qualité de responsable du site lamartinastudio.com.</p>
+            <p>Alessio La Martina, en qualité de responsable du site maisonlamartina.fr.</p>
           </Section>
 
           <Section title="3. Hébergement">
             <p>Ce site est hébergé par :</p>
             <p><strong>Vercel Inc.</strong><br />
-            340 Pine Street, Suite 701<br />
-            San Francisco, CA 94104 — États-Unis<br />
+            440 N Barranca Ave #4133<br />
+            Covina, CA 91723 — États-Unis<br />
             <a href="https://vercel.com" style={{ color: '#1A1A1A' }}>vercel.com</a></p>
           </Section>
 
@@ -125,7 +125,7 @@ export default function MentionsLegales() {
             <p style={{ marginTop: '0.8rem' }}>
               Conformément au Règlement Général sur la Protection des Données (RGPD) et à la loi Informatique et Libertés,
               vous disposez d'un droit d'accès, de rectification et de suppression de vos données. Pour exercer ce droit,
-              contactez-nous à : <strong>contact@maisonlamartina.com</strong>
+              contactez-nous à : <strong>contact@maisonlamartina.fr</strong>
             </p>
           </Section>
 
@@ -161,7 +161,7 @@ export default function MentionsLegales() {
               marginTop: '4rem',
             }}
           >
-            Dernière mise à jour : avril 2025
+            Dernière mise à jour : septembre 2026
           </p>
 
         </div>

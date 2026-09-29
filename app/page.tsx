@@ -1,21 +1,15 @@
 import type { Metadata } from 'next';
-import Script from 'next/script';
 import Nav from '@/components/ui/nav';
 import ScrollExpandMedia from '@/components/ui/scroll-expansion-hero';
 import Image from 'next/image';
 import Link from 'next/link';
 import { PortfolioGallery } from '@/components/ui/portfolio-gallery';
-
-const SITE_URL = 'https://www.lamartinastudio.com';
+import Footer from '@/components/ui/footer';
+import { SITE_URL } from '@/lib/site';
+import { VILLES } from '@/lib/villes';
 
 export const metadata: Metadata = {
   alternates: { canonical: SITE_URL },
-  openGraph: {
-    url: SITE_URL,
-    title: 'Maison La Martina — Photographe de Mariage France & Italie',
-    description:
-      'Alessio La Martina, photographe de mariage haut de gamme en France, Italie et Europe. Reportages élégants, émotionnels et intemporels en Provence, Côte d\'Azur, Toscane, Paris, Monaco.',
-  },
 };
 
 const portfolioItems = [
@@ -50,69 +44,47 @@ const instaPhotos = [
   '/portfolio/il-giorno/DSC01757.jpg',
 ];
 
+// Source unique : affichée dans la page ET déclarée à Google.
+// Les chiffres doivent rester alignés avec app/services/page.tsx.
+const FAQ = [
+  {
+    q: 'Où travaillez-vous en tant que photographe de mariage ?',
+    a: "Je suis basé à Martigues et je photographie principalement des mariages en Provence : Marseille, Aix-en-Provence, Martigues, la Côte Bleue, les Alpilles ou le Luberon. Je me déplace aussi partout en France, en Italie et en Europe.",
+  },
+  {
+    q: 'Proposez-vous la photo et la vidéo ?',
+    a: "Oui, je suis photographe et vidéaste : toutes mes formules réunissent photo et vidéo, du teaser de 2 minutes au film du mariage et à la vidéo longue de la journée.",
+  },
+  {
+    q: 'Quels sont vos tarifs ?',
+    a: "Trois formules : Eternità à 1 400 €, Il Giorno à 1 700 € et Per Sempre à 1 800 €, des préparatifs jusqu'à la pièce montée. Les frais de déplacement sont en supplément.",
+  },
+  {
+    q: 'Combien de photos recevons-nous, et quand ?',
+    a: 'Entre 300 et 400 photos retouchées en haute définition selon la formule. Les photos sont livrées sous 2 à 4 semaines, les vidéos sous 2 à 3 mois.',
+  },
+  {
+    q: 'Quel est votre style ?',
+    a: "Une approche documentaire et intime : je ne mets pas en scène, j'observe, j'anticipe et je capture. Je privilégie la lumière naturelle et les émotions vraies.",
+  },
+];
+
 const homeFaqLd = {
   '@context': 'https://schema.org',
   '@type': 'FAQPage',
-  mainEntity: [
-    {
-      '@type': 'Question',
-      name: 'Où travaillez-vous en tant que photographe de mariage ?',
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: 'Je travaille principalement en France (Provence, Côte d\'Azur, Paris, Lyon, Bordeaux) et en Italie (Toscane, Rome, Florence, Côte Amalfitaine, Lac de Côme). Je suis également disponible pour des mariages destination partout en Europe : Espagne, Grèce, Portugal, Monaco, Suisse et ailleurs.',
-      },
-    },
-    {
-      '@type': 'Question',
-      name: 'Combien de temps à l\'avance faut-il réserver un photographe de mariage ?',
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: 'Je recommande de réserver idéalement 12 à 18 mois avant votre mariage, surtout pour les dates de printemps et d\'été très demandées. N\'hésitez pas à me contacter même si votre mariage est dans moins d\'un an — des dates restent parfois disponibles.',
-      },
-    },
-    {
-      '@type': 'Question',
-      name: 'Quel est votre style de photographie de mariage ?',
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: 'Mon approche est naturelle, documentaire et élégante. Je privilégie la lumière naturelle, les émotions authentiques et les moments spontanés. Mon esthétique est fine art : des images lumineuses, intemporelles, qui ressemblent à de véritables peintures.',
-      },
-    },
-    {
-      '@type': 'Question',
-      name: 'Combien de photos recevons-nous après le mariage ?',
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: 'Pour une journée complète, vous recevrez entre 400 et 700 images soigneusement sélectionnées et retouchées, livrées en haute résolution dans une galerie privée en ligne. La livraison se fait sous 6 à 8 semaines.',
-      },
-    },
-    {
-      '@type': 'Question',
-      name: 'Proposez-vous des séances engagement avant le mariage ?',
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: 'Oui, je propose des séances engagement (séance photo de couple avant le mariage). C\'est une excellente façon de faire connaissance et de vous mettre à l\'aise devant l\'objectif avant le grand jour. Ces séances peuvent avoir lieu en Provence, en Italie ou dans le lieu de votre choix.',
-      },
-    },
-    {
-      '@type': 'Question',
-      name: 'Vous déplacez-vous pour des mariages hors de France ?',
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: 'Absolument. Je suis un photographe de mariage destination et je voyage régulièrement en Italie, en Espagne, en Grèce, au Portugal, en Suisse et dans toute l\'Europe. Les frais de déplacement sont calculés en fonction de la destination.',
-      },
-    },
-  ],
+  mainEntity: FAQ.map((f) => ({
+    '@type': 'Question',
+    name: f.q,
+    acceptedAnswer: { '@type': 'Answer', text: f.a },
+  })),
 };
 
 export default function Home() {
   return (
     <>
-      <Script
-        id='json-ld-home-faq'
+      <script
         type='application/ld+json'
         dangerouslySetInnerHTML={{ __html: JSON.stringify(homeFaqLd) }}
-        strategy='beforeInteractive'
       />
       <Nav />
       <ScrollExpandMedia
@@ -120,7 +92,7 @@ export default function Home() {
         mediaVideoSrc='/hero-web.mp4'
         bgImageSrc='/bg-hero.jpg'
         title='Maison La Martina'
-        subtitle='Photographe & vidéaste de mariage'
+        subtitle='Photographe & vidéaste de mariage en Provence'
         scrollToExpand='Faites défiler'
       >
 
@@ -329,8 +301,8 @@ export default function Home() {
         {/* ── CTA ── */}
         <section style={{ position: 'relative', minHeight: '500px', display: 'flex', alignItems: 'center', justifyContent: 'center', overflow: 'hidden' }}>
           <Image
-            src='https://images.unsplash.com/photo-1465495976277-4387d4b0b4c6?q=80&w=1920&auto=format&fit=crop'
-            alt='Votre mariage'
+            src='/portfolio/amore/DSC01259.jpg'
+            alt='Mariés souriants devant un escalier en pierre, photo en noir et blanc'
             fill
             className='object-cover'
           />
@@ -421,7 +393,7 @@ export default function Home() {
           <div className='grid-instagram px-site'>
             {instaPhotos.map((src, i) => (
               <a key={i} href='https://www.instagram.com/maisonlamartina/' target='_blank' rel='noopener noreferrer' style={{ position: 'relative', aspectRatio: '1/1', overflow: 'hidden', display: 'block' }} className='group cursor-pointer'>
-                <Image src={src} alt='' fill className='object-cover transition-transform duration-500 group-hover:scale-110' />
+                <Image src={src} alt='Photo de mariage publiée sur Instagram — Maison La Martina' fill className='object-cover transition-transform duration-500 group-hover:scale-110' />
                 <div className='absolute inset-0 bg-black/0 group-hover:bg-black/40 transition-all duration-300 flex items-center justify-center'>
                   <svg className='opacity-0 group-hover:opacity-100 transition-opacity duration-300' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='white' strokeWidth='1.5'><rect x='2' y='2' width='20' height='20' rx='5'/><circle cx='12' cy='12' r='5'/></svg>
                 </div>
@@ -430,83 +402,34 @@ export default function Home() {
           </div>
         </section>
 
-        {/* ── FOOTER ── */}
-        <footer style={{ background: '#1A1A1A', color: '#F8F5F2', padding: '5rem 0 2rem' }}>
-          <div
-            style={{
-              maxWidth: '1400px',
-              margin: '0 auto',
-              padding: '0 3rem',
-              display: 'grid',
-              gridTemplateColumns: '2fr 1fr 1fr 1fr',
-              gap: '3rem',
-              marginBottom: '3rem',
-            }}
-            className='grid-cols-1 md:grid-cols-4'
-          >
-            <div>
-              <Link href='/' style={{ fontFamily: 'var(--font-heading)', fontSize: '1.2rem', display: 'block', marginBottom: '1.2rem' }}>
-                <span style={{ fontFamily: 'var(--font-heading)' }}>Maison</span>{' '}<span style={{ fontFamily: 'Peristiwa, serif', color: '#cc0000' }}>La Martina</span>
-              </Link>
-              <p style={{ fontSize: '0.85rem', color: '#9a9590', lineHeight: 1.8, marginBottom: '1.5rem' }}>
-                Photographe de mariage spécialisé dans tous types de mariages en France, Italie et partout en Europe.
-              </p>
-              <div style={{ display: 'flex', gap: '1.5rem' }}>
-                <a
-                  href='https://www.instagram.com/maisonlamartina/'
-                  target='_blank'
-                  rel='noopener noreferrer'
-                  style={{ fontSize: '0.75rem', letterSpacing: '0.1em', color: '#9a9590', transition: 'color 0.2s' }}
-                  className='hover:text-[#F8F5F2]'
-                >
-                  Instagram
-                </a>
-              </div>
-            </div>
-            <div>
-              <h4 style={{ fontFamily: 'var(--font-body)', fontSize: '0.68rem', letterSpacing: '0.22em', textTransform: 'uppercase', color: '#9a9590', marginBottom: '1.5rem' }}>Navigation</h4>
-              <ul style={{ display: 'flex', flexDirection: 'column', gap: '0.8rem' }}>
-                {[['/', 'Accueil'], ['/portfolio', 'Portfolio'], ['/a-propos', 'À propos'], ['/services', 'Services'], ['/journal', 'Journal'], ['/contact', 'Contact']].map(([href, label]) => (
-                  <li key={href}><Link href={href} style={{ fontSize: '0.85rem', color: '#9a9590' }} className='hover:text-[#F8F5F2] transition-colors'>{label}</Link></li>
-                ))}
-              </ul>
-            </div>
-            <div>
-              <h4 style={{ fontFamily: 'var(--font-body)', fontSize: '0.68rem', letterSpacing: '0.22em', textTransform: 'uppercase', color: '#9a9590', marginBottom: '1.5rem' }}>Portfolio</h4>
-              <ul style={{ display: 'flex', flexDirection: 'column', gap: '0.8rem' }}>
-                {['Amore', 'Il Giorno', 'Dettagli', 'Ispirazione'].map((l) => (
-                  <li key={l}><Link href='/portfolio' style={{ fontSize: '0.85rem', color: '#9a9590' }} className='hover:text-[#F8F5F2] transition-colors'>{l}</Link></li>
-                ))}
-              </ul>
-            </div>
-            <div>
-              <h4 style={{ fontFamily: 'var(--font-body)', fontSize: '0.68rem', letterSpacing: '0.22em', textTransform: 'uppercase', color: '#9a9590', marginBottom: '1.5rem' }}>Contact</h4>
-              <ul style={{ display: 'flex', flexDirection: 'column', gap: '0.8rem' }}>
-                {[['mailto:contact@maisonlamartina.com', 'contact@maisonlamartina.com'], ['tel:+33652433221', '06 52 43 32 21'], ['/contact', 'Disponibilités'], ['/contact', 'Devis']].map(([href, label]) => (
-                  <li key={label}><a href={href} style={{ fontSize: '0.85rem', color: '#9a9590' }} className='hover:text-[#F8F5F2] transition-colors'>{label}</a></li>
-                ))}
-              </ul>
-            </div>
-          </div>
-          <div
-            style={{
-              maxWidth: '1400px',
-              margin: '0 auto',
-              padding: '2rem 3rem 0',
-              borderTop: '1px solid rgba(255,255,255,0.08)',
-              display: 'flex',
-              justifyContent: 'space-between',
-              flexWrap: 'wrap',
-              gap: '0.5rem',
-            }}
-          >
-            <span style={{ fontSize: '0.78rem', color: '#9a9590' }}>© 2024 Maison La Martina — Photographe de Mariage</span>
-            <span style={{ fontSize: '0.78rem', color: '#9a9590' }}>
-              Réalisé avec <span style={{ color: '#cc0000' }}>♥</span> &nbsp;·&nbsp;{' '}
-              <a href='/mentions-legales' className='hover:text-[#F8F5F2] transition-colors'>Mentions légales</a>
+        {/* ── FAQ ── */}
+        <section style={{ background: '#ffffff', padding: '6rem 0' }}>
+          <div className='px-site' style={{ maxWidth: '900px', margin: '0 auto' }}>
+            <span style={{ fontFamily: 'var(--font-body)', fontSize: '0.68rem', fontWeight: 500, letterSpacing: '0.28em', textTransform: 'uppercase', color: '#cc0000', display: 'block', marginBottom: '1rem' }}>
+              Questions fréquentes
             </span>
+            <h2 style={{ fontFamily: 'var(--font-heading)', fontSize: 'clamp(1.8rem,3.5vw,3rem)', marginBottom: '2rem' }}>
+              Photographe de mariage en Provence : vos questions
+            </h2>
+            {FAQ.map((f) => (
+              <div key={f.q} style={{ borderTop: '1px solid #e8e4e0', padding: '1.5rem 0' }}>
+                <h3 style={{ fontFamily: 'var(--font-body)', fontSize: '1rem', fontWeight: 500, marginBottom: '0.6rem' }}>{f.q}</h3>
+                <p style={{ fontSize: '0.92rem', color: '#3d3d3d', lineHeight: 1.9 }}>{f.a}</p>
+              </div>
+            ))}
+            <p style={{ fontSize: '0.85rem', color: '#3d3d3d', marginTop: '2rem' }}>
+              Je photographie votre mariage à{' '}
+              {VILLES.map((v, i) => (
+                <span key={v.slug}>
+                  <Link href={`/photographe-mariage/${v.slug}`} style={{ textDecoration: 'underline' }}>{v.nom}</Link>
+                  {i < VILLES.length - 1 ? ', ' : '.'}
+                </span>
+              ))}
+            </p>
           </div>
-        </footer>
+        </section>
+
+        <Footer />
 
       </ScrollExpandMedia>
     </>

@@ -434,8 +434,8 @@ export default function Contact() {
               style={{ position: 'absolute', inset: '-5%' }}
             >
               <Image
-                src='https://images.unsplash.com/photo-1511285560929-80b456fea0bc?q=80&w=1200&auto=format&fit=crop'
-                alt='Mariage élégant'
+                src='/portfolio/il-giorno/DSC01941.jpg'
+                alt='Reportage de mariage — Maison La Martina'
                 fill className='object-cover' priority
               />
             </motion.div>
@@ -480,7 +480,7 @@ export default function Contact() {
               borderTop: '1px solid rgba(248,245,242,0.15)', paddingTop: '2rem',
             }}>
               {[
-                { label: 'Email', value: 'contact@maisonlamartina.com', href: 'mailto:contact@maisonlamartina.com' },
+                { label: 'Email', value: 'contact@maisonlamartina.fr', href: 'mailto:contact@maisonlamartina.fr' },
                 { label: 'Téléphone', value: '06 52 43 32 21', href: 'tel:+33652433221' },
                 { label: 'Instagram', value: '@maisonlamartina', href: 'https://www.instagram.com/maisonlamartina/' },
               ].map((info, i) => (

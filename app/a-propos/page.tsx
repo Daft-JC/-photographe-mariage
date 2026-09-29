@@ -1,4 +1,3 @@
-import Script from 'next/script';
 import Image from 'next/image';
 import Link from 'next/link';
 import Nav from '@/components/ui/nav';
@@ -6,28 +5,12 @@ import Footer from '@/components/ui/footer';
 
 import type { Metadata } from 'next';
 
-const SITE_URL = 'https://www.lamartinastudio.com';
+const SITE_URL = 'https://www.maisonlamartina.fr';
 
 export const metadata: Metadata = {
-  title: 'À propos — Alessio La Martina, Photographe de Mariage',
+  title: 'Alessio La Martina, photographe et vidéaste de mariage',
   description:
     "Découvrez l'univers d'Alessio La Martina, photographe de mariage haut de gamme basé en Provence. Son histoire, sa vision artistique et sa philosophie du reportage photo de mariage en France, Italie et Europe.",
-  keywords: [
-    'Alessio La Martina photographe',
-    'à propos photographe mariage',
-    'photographe mariage Provence biographie',
-    'photographe franco-italien mariage',
-    'histoire photographe mariage',
-    'vision photographe mariage',
-    'style photographe mariage',
-    'photographe mariage artistique Provence',
-    'who is Alessio La Martina',
-    'about wedding photographer France',
-    'Maison La Martina à propos',
-    'photographe mariage naturel émotionnel',
-    'reportage mariage discret',
-    'photographe mariage sensible',
-  ],
   alternates: {
     canonical: `${SITE_URL}/a-propos`,
   },
@@ -37,14 +20,7 @@ export const metadata: Metadata = {
       "Découvrez l'univers d'Alessio La Martina, photographe de mariage haut de gamme en Provence, France, Italie et Europe.",
     url: `${SITE_URL}/a-propos`,
     type: 'profile',
-    images: [
-      {
-        url: `${SITE_URL}/og-apropos.jpg`,
-        width: 1200,
-        height: 630,
-        alt: 'Alessio La Martina — Photographe de Mariage',
-      },
-    ],
+    images: [{ url: `${SITE_URL}/alessio.jpg`, alt: 'Alessio La Martina, photographe de mariage' }],
   },
 };
 
@@ -54,8 +30,8 @@ const aproposLd = {
     {
       '@type': 'BreadcrumbList',
       itemListElement: [
-        { '@type': 'ListItem', position: 1, name: 'Accueil', item: 'https://www.lamartinastudio.com' },
-        { '@type': 'ListItem', position: 2, name: 'À propos', item: 'https://www.lamartinastudio.com/a-propos' },
+        { '@type': 'ListItem', position: 1, name: 'Accueil', item: 'https://www.maisonlamartina.fr' },
+        { '@type': 'ListItem', position: 2, name: 'À propos', item: 'https://www.maisonlamartina.fr/a-propos' },
       ],
     },
     {
@@ -67,9 +43,9 @@ const aproposLd = {
         familyName: 'Lamartina',
         jobTitle: 'Photographe de Mariage',
         description:
-          'Photographe de mariage haut de gamme basé en Provence, spécialisé dans les reportages élégants et émotionnels en France, Italie et Europe.',
-        url: 'https://www.lamartinastudio.com/a-propos',
-        image: 'https://www.lamartinastudio.com/alessio-lamartina.jpg',
+          'Photographe de mariage haut de gamme basé en Provence, auteur de reportages élégants et émotionnels en France, Italie et Europe.',
+        url: 'https://www.maisonlamartina.fr/a-propos',
+        image: 'https://www.maisonlamartina.fr/alessio.jpg',
         knowsLanguage: ['fr', 'it', 'en'],
         nationality: { '@type': 'Country', name: 'Italy' },
         sameAs: [
@@ -78,7 +54,7 @@ const aproposLd = {
         worksFor: {
           '@type': 'LocalBusiness',
           name: 'Maison La Martina',
-          url: 'https://www.lamartinastudio.com',
+          url: 'https://www.maisonlamartina.fr',
         },
       },
     },
@@ -88,11 +64,9 @@ const aproposLd = {
 export default function APropos() {
   return (
     <>
-      <Script
-        id='json-ld-apropos'
+      <script
         type='application/ld+json'
         dangerouslySetInnerHTML={{ __html: JSON.stringify(aproposLd) }}
-        strategy='beforeInteractive'
       />
       <Nav />
 
@@ -295,8 +269,8 @@ export default function APropos() {
       <section style={{ background: '#F8F5F2', padding: '0 0 7rem' }}>
         <div style={{ position: 'relative', height: '55vh', overflow: 'hidden', marginBottom: '5rem' }}>
           <Image
-            src='https://images.unsplash.com/photo-1523438885200-e635ba2c371e?q=80&w=1920&auto=format&fit=crop'
-            alt='Mariage en Italie'
+            src='/portfolio/ispirazione/DSC01954.jpg'
+            alt='Photo de mariage en lumière naturelle — Maison La Martina'
             fill
             className='object-cover'
           />

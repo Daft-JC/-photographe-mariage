@@ -1,4 +1,3 @@
-import Script from 'next/script';
 import Image from 'next/image';
 import Link from 'next/link';
 import Nav from '@/components/ui/nav';
@@ -6,37 +5,12 @@ import Footer from '@/components/ui/footer';
 
 import type { Metadata } from 'next';
 
-const SITE_URL = 'https://www.lamartinastudio.com';
+const SITE_URL = 'https://www.maisonlamartina.fr';
 
 export const metadata: Metadata = {
-  title: 'Services & Tarifs — Formules Photographie de Mariage',
+  title: 'Tarifs photographe et vidéaste de mariage — formules',
   description:
-    "Découvrez les formules et tarifs de Maison La Martina pour votre reportage photo de mariage. Demi-journée, journée complète, séance engagement. Photographe haut de gamme disponible en France, Italie et Europe.",
-  keywords: [
-    'tarif photographe mariage',
-    'prix photographe mariage France',
-    'prix photographe mariage Provence',
-    'formule photographe mariage',
-    'prestation photographe mariage',
-    'offre photographe mariage',
-    'devis photographe mariage',
-    'package photographe mariage',
-    'photographe mariage journée complète',
-    'photographe mariage demi-journée',
-    'séance engagement tarif',
-    'séance couple avant mariage prix',
-    'combien coûte photographe mariage',
-    'budget photographe mariage',
-    'wedding photographer price France',
-    'wedding photography packages France',
-    'luxury wedding photographer rates',
-    'fine art wedding photographer pricing',
-    'Maison La Martina tarifs',
-    'Maison La Martina formules',
-    'livraison galerie mariage',
-    'galerie haute résolution mariage',
-    'retouche photo mariage',
-  ],
+    "Tarifs photographe et vidéaste de mariage en Provence : Eternità 1 400 €, Il Giorno 1 700 €, Per Sempre 1 800 €. Photos retouchées, teaser et film du mariage.",
   alternates: {
     canonical: `${SITE_URL}/services`,
   },
@@ -55,45 +29,24 @@ const servicesLd = {
     {
       '@type': 'BreadcrumbList',
       itemListElement: [
-        { '@type': 'ListItem', position: 1, name: 'Accueil', item: 'https://www.lamartinastudio.com' },
-        { '@type': 'ListItem', position: 2, name: 'Services', item: 'https://www.lamartinastudio.com/services' },
+        { '@type': 'ListItem', position: 1, name: 'Accueil', item: 'https://www.maisonlamartina.fr' },
+        { '@type': 'ListItem', position: 2, name: 'Services', item: 'https://www.maisonlamartina.fr/services' },
       ],
     },
     {
       '@type': 'Service',
       name: 'Reportage Photo de Mariage',
-      provider: { '@type': 'LocalBusiness', name: 'Maison La Martina' },
+      provider: { '@id': 'https://www.maisonlamartina.fr/#business' },
       serviceType: 'Photographie de mariage',
-      description: 'Reportage photo de mariage haut de gamme en France, Italie et Europe. Style naturel, émotionnel et intemporel. Livraison en galerie haute résolution sous 6 à 8 semaines.',
+      description: 'Reportage photo et vidéo de mariage en Provence, en France et en Italie. Photos livrées sous 2 à 4 semaines, vidéos sous 2 à 3 mois.',
       areaServed: ['France', 'Italie', 'Europe'],
       hasOfferCatalog: {
         '@type': 'OfferCatalog',
         name: 'Formules de Photographie de Mariage',
         itemListElement: [
-          {
-            '@type': 'Offer',
-            itemOffered: {
-              '@type': 'Service',
-              name: 'Demi-journée',
-              description: 'Couverture demi-journée de votre mariage (4 heures environ). Idéale pour les cérémonies civiles ou mariages intimistes.',
-            },
-          },
-          {
-            '@type': 'Offer',
-            itemOffered: {
-              '@type': 'Service',
-              name: 'Journée complète',
-              description: 'Couverture complète de votre mariage du matin au dîner. Présence discrète et attentive tout au long de la journée.',
-            },
-          },
-          {
-            '@type': 'Offer',
-            itemOffered: {
-              '@type': 'Service',
-              name: 'Séance Engagement',
-              description: 'Séance photo de couple avant le mariage. Idéale pour apprendre à se connaître et créer des souvenirs inoubliables.',
-            },
-          },
+          { '@type': 'Offer', name: 'Eternità — Offre Essentielle', price: '1400', priceCurrency: 'EUR', description: '300 photos retouchées et teaser vidéo de 2 minutes, des préparatifs à la pièce montée.' },
+          { '@type': 'Offer', name: 'Il Giorno — Offre Signature', price: '1700', priceCurrency: 'EUR', description: '350 photos retouchées, film du mariage de 20 à 45 minutes et teaser vidéo.' },
+          { '@type': 'Offer', name: 'Per Sempre — Offre Premium', price: '1800', priceCurrency: 'EUR', description: '400 photos retouchées, vidéo longue de la journée, film du mariage et teaser vidéo.' },
         ],
       },
     },
@@ -177,11 +130,9 @@ const formules = [
 export default function Services() {
   return (
     <>
-      <Script
-        id='json-ld-services'
+      <script
         type='application/ld+json'
         dangerouslySetInnerHTML={{ __html: JSON.stringify(servicesLd) }}
-        strategy='beforeInteractive'
       />
       <Nav />
 
@@ -234,8 +185,8 @@ export default function Services() {
       {/* Image */}
       <section style={{ position: 'relative', height: '50vh', overflow: 'hidden' }}>
         <Image
-          src='https://images.unsplash.com/photo-1465495976277-4387d4b0b4c6?q=80&w=1920&auto=format&fit=crop'
-          alt='Mariage élégant'
+          src='/portfolio/amore/DSC05240.jpg'
+          alt='Couple de mariés — reportage Maison La Martina'
           fill
           className='object-cover'
         />

@@ -1,25 +1,10 @@
 import { MetadataRoute } from 'next';
-
-const SITE_URL = 'https://www.lamartinastudio.com';
+import { SITE_URL } from '@/lib/site';
 
 export default function robots(): MetadataRoute.Robots {
   return {
-    rules: [
-      {
-        userAgent: '*',
-        allow: '/',
-        disallow: ['/api/', '/_next/', '/static/'],
-      },
-      {
-        userAgent: 'Googlebot',
-        allow: '/',
-      },
-      {
-        userAgent: 'Bingbot',
-        allow: '/',
-      },
-    ],
+    // /_next/ doit rester accessible : Google en a besoin pour afficher les pages
+    rules: [{ userAgent: '*', allow: '/', disallow: ['/api/'] }],
     sitemap: `${SITE_URL}/sitemap.xml`,
-    host: SITE_URL,
   };
 }

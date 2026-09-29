@@ -1,4 +1,3 @@
-import Script from 'next/script';
 import Image from 'next/image';
 import Link from 'next/link';
 import Nav from '@/components/ui/nav';
@@ -6,36 +5,15 @@ import Footer from '@/components/ui/footer';
 
 import type { Metadata } from 'next';
 
-const SITE_URL = 'https://www.lamartinastudio.com';
+const SITE_URL = 'https://www.maisonlamartina.fr';
 
 export const metadata: Metadata = {
   title: 'Journal — Reportages & Histoires de Mariages',
   description:
     'Le journal de Maison La Martina : reportages complets, histoires de couples et inspirations mariage. Mariages en Toscane, Provence, Côte d\'Azur, Paris et toute l\'Europe par Alessio La Martina.',
-  keywords: [
-    'blog photographe mariage',
-    'journal photographe mariage',
-    'reportage mariage blog',
-    'histoire mariage Toscane',
-    'mariage Provence reportage',
-    'inspiration mariage photo',
-    'blog mariage haut de gamme',
-    'témoignage mariage photographe',
-    'mariage France blog',
-    'mariage Italie blog',
-    'mariage destination reportage',
-    'wedding blog France',
-    'wedding stories France',
-    'real weddings Provence',
-    'real weddings Tuscany',
-    'inspiration mariage champêtre',
-    'inspiration mariage château',
-    'inspiration mariage villa',
-    'shooting mariage extérieur',
-    'photos mariage plein air',
-    'Maison La Martina journal',
-    'Alessio La Martina blog',
-  ],
+  // Articles d'exemple (photos de banque d'images) : non indexés tant que
+  // de vrais reportages ne les remplacent pas.
+  robots: { index: false, follow: true },
   alternates: {
     canonical: `${SITE_URL}/journal`,
   },
@@ -102,24 +80,24 @@ const journalLd = {
     {
       '@type': 'BreadcrumbList',
       itemListElement: [
-        { '@type': 'ListItem', position: 1, name: 'Accueil', item: 'https://www.lamartinastudio.com' },
-        { '@type': 'ListItem', position: 2, name: 'Journal', item: 'https://www.lamartinastudio.com/journal' },
+        { '@type': 'ListItem', position: 1, name: 'Accueil', item: 'https://www.maisonlamartina.fr' },
+        { '@type': 'ListItem', position: 2, name: 'Journal', item: 'https://www.maisonlamartina.fr/journal' },
       ],
     },
     {
       '@type': 'Blog',
       name: 'Journal — Maison La Martina',
       description: 'Reportages complets et histoires de mariages par Alessio La Martina, photographe de mariage haut de gamme.',
-      url: 'https://www.lamartinastudio.com/journal',
+      url: 'https://www.maisonlamartina.fr/journal',
       author: {
         '@type': 'Person',
         name: 'Alessio La Martina',
-        url: 'https://www.lamartinastudio.com/a-propos',
+        url: 'https://www.maisonlamartina.fr/a-propos',
       },
       publisher: {
         '@type': 'Organization',
         name: 'Maison La Martina',
-        url: 'https://www.lamartinastudio.com',
+        url: 'https://www.maisonlamartina.fr',
       },
     },
   ],
@@ -131,11 +109,9 @@ export default function Journal() {
 
   return (
     <>
-      <Script
-        id='json-ld-journal'
+      <script
         type='application/ld+json'
         dangerouslySetInnerHTML={{ __html: JSON.stringify(journalLd) }}
-        strategy='beforeInteractive'
       />
       <Nav />
 
